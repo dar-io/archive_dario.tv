@@ -1,0 +1,17 @@
+
+{{#if image}}
+  <div class="gel-responsive-image gel-responsive-image--16by9">
+    {{#if label-text}}
+      {{> atoms/label label-classes="promo__label" }}
+    {{/if}}
+  	<img class="image {{image-classes}}" src="{{image}}" alt="" height="" width="" />
+  </div>
+ {{/if}}
+
+{{#if background-image}}
+  <div class="gel-responsive-image gel-responsive-image--16by9"   style="background-image: url({{background-image}});">
+    {{#if label-text}}
+      {{> atoms/label label-classes="promo__label" }}
+    {{/if}}
+  </div>
+{{/if}}

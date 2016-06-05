@@ -1,0 +1,35 @@
+{
+	"infinito-items": [
+
+		{
+			"classes": "fixed-width",
+			"card": {
+				"classes": "test",
+				"image": "",
+				"image-gif": "assets/gif/bp-sticky-nav.gif",
+				"video-src": "",
+        "category": "animation",
+        "title": "Brand Personality",
+				"subtitle": "This is subtitle",
+				"summary": "Prototype description ",
+				"contributor": "Dario Ramalho",
+				"url": "https://dl.dropboxusercontent.com/spa/23m7ish8zi8u5s2/Exports/BP_prototype_articles_v002/BP_prototype_articles_v002.html"
+			}
+		},
+		{
+			"classes": "fixed-width",
+			"card": {
+				"classes": "test",
+				"image": "assets/gif/Live-event-promo.gif",
+				"image-gif": "",
+				"video-src": "",
+				"category": "animation",
+				"title": "Live Event Promo",
+				"subtitle": "This is subtitle",
+				"summary": "This animation shows when a new item is added into the stream",
+				"contributor": "Dario Ramalho",
+				"url": ""
+			}
+		}
+	]
+}

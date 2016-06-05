@@ -1,0 +1,45 @@
+@import 'vendor/normalize';
+@import 'mixins';
+
+// GEL
+//
+
+// GEL Tools
+// - https://github.com/bbc/gel-sass-tools
+@import 'vendor/gel-sass-tools/sass-tools';
+
+// External Dependencies
+// - https://github.com/sass-mq/sass-mq
+@import 'vendor/mq';
+
+// GEL Foundations
+// - https://github.com/bbc/gel-typography
+@import 'vendor/gel-typography/typography';
+
+// - https://github.com/bbc/gel-grid/tree/v1
+@import 'vendor/gel-grid/grid';
+
+
+// GEL Styling
+// - Defaults
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}

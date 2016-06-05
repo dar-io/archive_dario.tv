@@ -1,0 +1,36 @@
+{{#card}}
+<article class="card at-links-faux-block-link {{classes}}">
+  <header class="card__thumb" >
+
+{{#if image-gif}}
+
+    <a class="image-gif" href="#" ><img data-gifffer="{{image-gif}}" data-gifffer-width="100%" data-gifffer-height="100%" /></a>
+{{/if}}
+
+{{#if image}}
+    <style> .image{background-image: url({{image}});}</style>
+    <a class="image" href="#" ><img src=""/></a>
+{{/if}}
+
+{{#if video-src}}
+  {{molecule "video"}}
+{{/if}}
+
+  </header>
+  <!-- <date class="card__date">
+    <span class="card__date__day">11</span>
+    <br/>
+    <span class="card__date__month">Juin</span>
+  </date> -->
+
+  <div class="card__body">
+    <div class="card__category {{category}}"><a href="">{{category}}</a></div>
+    <h2 class="card__title"><a href="{{url}}">{{title}}</a></h2>
+    <p class="card__description">{{summary}}</p>
+  </div>
+
+  <footer class="card__footer">
+    <span class="card__contributor"><a href="#">{{contributor}}</a></span>
+   </footer>
+</article>
+ {{/card}}
