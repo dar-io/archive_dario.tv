@@ -1,5 +1,5 @@
 # Site settings
-baseurl: "" 
+baseurl: ""
 
 # Color settings (Hex value without #)
 color_alpha: feeaeb
@@ -9,20 +9,20 @@ color_beta: 05009e
 google_analytics: UA—XXXXXXXX-X
 
 # Instagram API
-instagram_key: 
+instagram_key:
 instagram_caption: true
 
 # SEO settings
 title: Cartwheel
-description: 
-url: ""
+description:
+url: "http://dario.tv/"
 email:
-twitter_username: 
-default_img: 
+twitter_username:
+default_img:
 
 # Profile settings
 social:
-  twitter: 
+  twitter:
 
 # Build settings
 exclude: ["node_modules", "gulpfile.js", "assets/js/app.js", "README.md", "Gemfile", "Gemfile.lock"]
@@ -34,4 +34,4 @@ sass:
   style: compressed
 
 # Gems
-gems: [jekyll-sitemap, octopress-autoprefixer]
+plugins: [jekyll-sitemap, octopress-autoprefixer]

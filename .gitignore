@@ -1,14 +1,4 @@
 .DS_Store
 
-node_modules/
-.publish/
-
-tasks/tmp/
-
-distribute/
-
-gulpfile.js
-assets/js/app.js
-README.md
-Gemfile
-Gemfile.lock
+_site
+.sass-cache/
