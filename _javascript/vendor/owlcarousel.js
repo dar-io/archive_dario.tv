@@ -1,1557 +1,139 @@
-<<<<<<< HEAD
-// app.js
-//
-
-(function(w, $, store, undefined) {
-  "use strict";
-
-  // Disable default behaviour for all links that have the 'disabled' class.
-  $('.disabled').on('click', false);
-
-  // Clear localStorage on ESC
-  $(document).on('keyup', function(e) {
-    if(e.keyCode === 27) {
-      store.clear();
-      location.reload();
-    }
-
-  });
-
-  // ON EVERY PAGE LOAD
-  //
-
-  // Create a local storage variable to track which topics a user has added.
-  var addedTopics = {};
-
-  // Then check localStorage to see if a user has already got added topics.
-  if( store.has('addedTopicsLocal') ) {
-    // If they have, sync our local 'addedTopics' variable with the localStorage one.
-    addedTopics = store.get('addedTopicsLocal');
-  } else {
-
-    // Otherwise set default topic added states.
-    addedTopics['signedin']      = false;
-    addedTopics['us-election']   = false;
-    addedTopics['eu-referendum'] = false;
-    addedTopics['oscars-2016']   = false;
-    addedTopics['location-set']  = false;
-
-    // And then sync them with localStorage
-    store.set('addedTopicsLocal', addedTopics);
-  }
-
-  // Now we either know what the user has added, or have set default added topics,
-  // update the topics classes on the body.
-  updateBodyTopicsClasses();
-
-
-  // ON USER INTERACTION
-  //
-
-  // Attach a click handler to all buttons that have a data-toggle-add-topic attribute, and when clicked
-
-//   if ( $( "body" ).is( ".t-signedIn" ) ) {
-
-
-// }
-
-
-     $('#orb-search-form[data-toggle-add-topic]').on('submit', function(e) {
-      event.preventDefault();
-    // Get the topic name from the data attribute
-    var topic        = $(this).data('toggle-add-topic');
-
-    // Check to see if it has already been added, so we know whether to add or remove
-    var isTopicAdded = addedTopics[ topic ];
-
-    if( isTopicAdded ) {
-      setTopicRemoved( topic );
-
-
-
-    } else {
-      setTopicAdded( topic );
-
-      // Display notification after a topic is added
-      $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideDown('fast');
-        window.setTimeout(close3,5000);
-
-      function close3() {
-        $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideToggle('fast');
-        }
-    }
-
-
-  });
-
-
-
-     $('a[data-toggle-add-topic]').on('click', function(e) {
-      event.preventDefault();
-    // Get the topic name from the data attribute
-    var topic        = $(this).data('toggle-add-topic');
-
-    // Check to see if it has already been added, so we know whether to add or remove
-    var isTopicAdded = addedTopics[ topic ];
-
-    if( isTopicAdded ) {
-      setTopicRemoved( topic );
-
-
-
-    } else {
-      setTopicAdded( topic );
-
-      // Display notification after a topic is added
-      $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideDown('fast');
-        window.setTimeout(close3,5000);
-
-      function close3() {
-        $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideToggle('fast');
-        }
-    }
-
-
-  });
-
-
-
-
-  // $('a[data-sign-in]').on('click', function(e) {
-
-  //   // Get the topic name from the data attribute
-  //   var topic        = $(this).data('sign-in');
-
-  //   // Check to see if it has already been added, so we know whether to add or remove
-  //   var isTopicAdded = addedTopics[ topic ];
-
-  //   if( isTopicAdded ) {
-  //     setTopicRemoved( topic );
-  //   } else {
-  //     setTopicAdded( topic );
-  //   }
-  //  location.reload();
-  // });
-
-  // Give this function a topic name and it will ADD the topic to localStorage and the local tracking variable, and then update body topics classes.
-  function setTopicAdded( topic ) {
-    addedTopics[ topic ] = true;
-    store.set( 'addedTopicsLocal', addedTopics, true);
-    updateBodyTopicsClasses();
-  }
-
-  // Give this function a topic name and it will REMOVE the topic from localStorage and the local tracking variable, and then update body topics classes.
-  function setTopicRemoved( topic ) {
-    addedTopics[ topic ] = false;
-    store.set( 'addedTopicsLocal', addedTopics, true);
-    updateBodyTopicsClasses();
-  }
-
-  // This function loops over our local tracking variable and if a topic is marked as added, then add a class to body, otherwise remove it from the body.
-  function updateBodyTopicsClasses() {
-
-    $.each( addedTopics, function(topic, isAdded) {
-
-      if( isAdded ) {
-
-        $('body').addClass( 't-' + topic );
-
-      } else {
-        $('body').removeClass( 't-' + topic );
-
-      }
-    });
-  }
-
-})(this, jQuery, store);
-=======
-
-(function (root, factory) {
-  if ( typeof define === 'function' && define.amd ) {
-    define([], factory(root));
-  } else if ( typeof exports === 'object' ) {
-    module.exports = factory(root);
-  } else {
-    root.smoothScroll = factory(root);
-  }
-})(typeof global !== 'undefined' ? global : this.window || this.global, (function (root) {
-
-  'use strict';
-
-
-  var smoothScroll = {}; 
-  var supports = 'querySelector' in document && 'addEventListener' in root; 
-  var settings, anchor, toggle, fixedHeader, headerHeight, eventTimeout, animationInterval;
-
-  var defaults = {
-    selector: '[data-scroll]',
-    selectorHeader: null,
-    speed: 500,
-    easing: 'easeInOutCubic',
-    offset: 0,
-    callback: function () {}
-  };
-
-
-
-  var extend = function () {
-
-    var extended = {};
-    var deep = false;
-    var i = 0;
-    var length = arguments.length;
-
-    if ( Object.prototype.toString.call( arguments[0] ) === '[object Boolean]' ) {
-      deep = arguments[0];
-      i++;
-    }
-
-    var merge = function (obj) {
-      for ( var prop in obj ) {
-        if ( Object.prototype.hasOwnProperty.call( obj, prop ) ) {
-          if ( deep && Object.prototype.toString.call(obj[prop]) === '[object Object]' ) {
-            extended[prop] = extend( true, extended[prop], obj[prop] );
-          } else {
-            extended[prop] = obj[prop];
-          }
-        }
-      }
-    };
-
-    for ( ; i < length; i++ ) {
-      var obj = arguments[i];
-      merge(obj);
-    }
-
-    return extended;
-
-  };
-
-  var getHeight = function ( elem ) {
-    return Math.max( elem.scrollHeight, elem.offsetHeight, elem.clientHeight );
-  };
-
-  var getClosest = function ( elem, selector ) {
-
-    if (!Element.prototype.matches) {
-      Element.prototype.matches =
-        Element.prototype.matchesSelector ||
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.msMatchesSelector ||
-        Element.prototype.oMatchesSelector ||
-        Element.prototype.webkitMatchesSelector ||
-        function(s) {
-          var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-            i = matches.length;
-          while (--i >= 0 && matches.item(i) !== this) {}
-          return i > -1;
-        };
-    }
-
-    for ( ; elem && elem !== document; elem = elem.parentNode ) {
-      if ( elem.matches( selector ) ) return elem;
-    }
-
-    return null;
-
-  };
-
-  var escapeCharacters = function ( id ) {
-
-    if ( id.charAt(0) === '#' ) {
-      id = id.substr(1);
-    }
-
-    var string = String(id);
-    var length = string.length;
-    var index = -1;
-    var codeUnit;
-    var result = '';
-    var firstCodeUnit = string.charCodeAt(0);
-    while (++index < length) {
-      codeUnit = string.charCodeAt(index);
-
-      if (codeUnit === 0x0000) {
-        throw new InvalidCharacterError(
-          'Invalid character: the input contains U+0000.'
-        );
-      }
-
-      if (
-        (codeUnit >= 0x0001 && codeUnit <= 0x001F) || codeUnit == 0x007F ||
-        (index === 0 && codeUnit >= 0x0030 && codeUnit <= 0x0039) ||
-        (
-          index === 1 &&
-          codeUnit >= 0x0030 && codeUnit <= 0x0039 &&
-          firstCodeUnit === 0x002D
-        )
-      ) {
-        result += '\\' + codeUnit.toString(16) + ' ';
-        continue;
-      }
-
-      if (
-        codeUnit >= 0x0080 ||
-        codeUnit === 0x002D ||
-        codeUnit === 0x005F ||
-        codeUnit >= 0x0030 && codeUnit <= 0x0039 ||
-        codeUnit >= 0x0041 && codeUnit <= 0x005A ||
-        codeUnit >= 0x0061 && codeUnit <= 0x007A
-      ) {
-        result += string.charAt(index);
-        continue;
-      }
-
-      result += '\\' + string.charAt(index);
-
-    }
-
-    return '#' + result;
-
-  };
-
-  var easingPattern = function ( type, time ) {
-    var pattern;
-    if ( type === 'easeInQuad' ) pattern = time * time; 
-    if ( type === 'easeOutQuad' ) pattern = time * (2 - time); 
-    if ( type === 'easeInOutQuad' ) pattern = time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time; 
-    if ( type === 'easeInCubic' ) pattern = time * time * time; 
-    if ( type === 'easeOutCubic' ) pattern = (--time) * time * time + 1; 
-    if ( type === 'easeInOutCubic' ) pattern = time < 0.5 ? 4 * time * time * time : (time - 1) * (2 * time - 2) * (2 * time - 2) + 1; 
-    if ( type === 'easeInQuart' ) pattern = time * time * time * time; 
-    if ( type === 'easeOutQuart' ) pattern = 1 - (--time) * time * time * time; 
-    if ( type === 'easeInOutQuart' ) pattern = time < 0.5 ? 8 * time * time * time * time : 1 - 8 * (--time) * time * time * time; 
-    if ( type === 'easeInQuint' ) pattern = time * time * time * time * time; 
-    if ( type === 'easeOutQuint' ) pattern = 1 + (--time) * time * time * time * time; 
-    if ( type === 'easeInOutQuint' ) pattern = time < 0.5 ? 16 * time * time * time * time * time : 1 + 16 * (--time) * time * time * time * time; 
-    return pattern || time; 
-  };
-
-  var getEndLocation = function ( anchor, headerHeight, offset ) {
-    var location = 0;
-    if (anchor.offsetParent) {
-      do {
-        location += anchor.offsetTop;
-        anchor = anchor.offsetParent;
-      } while (anchor);
-    }
-    location = Math.max(location - headerHeight - offset, 0);
-    return Math.min(location, getDocumentHeight() - getViewportHeight());
-  };
-
-  var getViewportHeight = function() {
-    return Math.max( document.documentElement.clientHeight, root.innerHeight || 0 );
-  };
-
-  var getDocumentHeight = function () {
-    return Math.max(
-      document.body.scrollHeight, document.documentElement.scrollHeight,
-      document.body.offsetHeight, document.documentElement.offsetHeight,
-      document.body.clientHeight, document.documentElement.clientHeight
-    );
-  };
-
-  var getDataOptions = function ( options ) {
-    return !options || !(typeof JSON === 'object' && typeof JSON.parse === 'function') ? {} : JSON.parse( options );
-  };
-
-  var getHeaderHeight = function ( header ) {
-    return !header ? 0 : ( getHeight( header ) + header.offsetTop );
-  };
-
-  var adjustFocus = function ( anchor, endLocation, isNum ) {
-
-    if ( isNum ) return;
-
-    anchor.focus();
-    if ( document.activeElement.id !== anchor.id ) {
-      anchor.setAttribute( 'tabindex', '-1' );
-      anchor.focus();
-      anchor.style.outline = 'none';
-    }
-    root.scrollTo( 0 , endLocation );
-
-  };
-
-  smoothScroll.animateScroll = function ( anchor, toggle, options ) {
-
-    var overrides = getDataOptions( toggle ? toggle.getAttribute('data-options') : null );
-    var animateSettings = extend( settings || defaults, options || {}, overrides ); 
-
-    var isNum = Object.prototype.toString.call( anchor ) === '[object Number]' ? true : false;
-    var anchorElem = isNum || !anchor.tagName ? null : anchor;
-    if ( !isNum && !anchorElem ) return;
-    var startLocation = root.pageYOffset; 
-    if ( animateSettings.selectorHeader && !fixedHeader ) {
-      fixedHeader = document.querySelector( animateSettings.selectorHeader );
-    }
-    if ( !headerHeight ) {
-      headerHeight = getHeaderHeight( fixedHeader );
-    }
-    var endLocation = isNum ? anchor : getEndLocation( anchorElem, headerHeight, parseInt(animateSettings.offset, 10) ); 
-    var distance = endLocation - startLocation; 
-    var documentHeight = getDocumentHeight();
-    var timeLapsed = 0;
-    var percentage, position;
-
-    var stopAnimateScroll = function ( position, endLocation, animationInterval ) {
-      var currentLocation = root.pageYOffset;
-      if ( position == endLocation || currentLocation == endLocation || ( (root.innerHeight + currentLocation) >= documentHeight ) ) {
-
-        clearInterval(animationInterval);
-
-        adjustFocus( anchor, endLocation, isNum );
-
-        animateSettings.callback( anchor, toggle );
-
-      }
-    };
-
-    var loopAnimateScroll = function () {
-      timeLapsed += 16;
-      percentage = ( timeLapsed / parseInt(animateSettings.speed, 10) );
-      percentage = ( percentage > 1 ) ? 1 : percentage;
-      position = startLocation + ( distance * easingPattern(animateSettings.easing, percentage) );
-      root.scrollTo( 0, Math.floor(position) );
-      stopAnimateScroll(position, endLocation, animationInterval);
-    };
-
-    var startAnimateScroll = function () {
-      clearInterval(animationInterval);
-      animationInterval = setInterval(loopAnimateScroll, 16);
-    };
-
-    if ( root.pageYOffset === 0 ) {
-      root.scrollTo( 0, 0 );
-    }
-
-    startAnimateScroll();
-
-  };
-
-  var hashChangeHandler = function (event) {
-
-    var hash;
-    try {
-      hash = escapeCharacters( decodeURIComponent( root.location.hash ) );
-    } catch(e) {
-      hash = escapeCharacters( root.location.hash );
-    }
-
-    if ( !anchor ) return;
-
-    anchor.id = anchor.getAttribute( 'data-scroll-id' );
-
-    smoothScroll.animateScroll( anchor, toggle );
-
-    anchor = null;
-    toggle = null;
-
-  };
-
-  var clickHandler = function (event) {
-
-    if ( event.button !== 0 || event.metaKey || event.ctrlKey ) return;
-
-    toggle = getClosest( event.target, settings.selector );
-    if ( !toggle || toggle.tagName.toLowerCase() !== 'a' ) return;
-
-    if ( toggle.hostname !== root.location.hostname || toggle.pathname !== root.location.pathname || !/#/.test(toggle.href) ) return;
-
-    var hash;
-    try {
-      hash = escapeCharacters( decodeURIComponent( toggle.hash ) );
-    } catch(e) {
-      hash = escapeCharacters( toggle.hash );
-    }
-
-    if ( hash === '#' ) {
-
-      event.preventDefault();
-
-      anchor = document.body;
-
-      var id = anchor.id ? anchor.id : 'smooth-scroll-top';
-      anchor.setAttribute( 'data-scroll-id', id );
-      anchor.id = '';
-
-      if ( root.location.hash.substring(1) === id ) {
-        hashChangeHandler();
-      } else {
-        root.location.hash = id;
-      }
-
-      return;
-
-    }
-
-    anchor = document.querySelector( hash );
-
-    if ( !anchor ) return;
-    anchor.setAttribute( 'data-scroll-id', anchor.id );
-    anchor.id = '';
-
-    if ( toggle.hash === root.location.hash ) {
-      event.preventDefault();
-      hashChangeHandler();
-    }
-
-  };
-
-  var resizeThrottler = function (event) {
-    if ( !eventTimeout ) {
-      eventTimeout = setTimeout((function() {
-        eventTimeout = null; 
-        headerHeight = getHeaderHeight( fixedHeader ); 
-      }), 66);
-    }
-  };
-
-  smoothScroll.destroy = function () {
-
-    if ( !settings ) return;
-
-    document.removeEventListener( 'click', clickHandler, false );
-    root.removeEventListener( 'resize', resizeThrottler, false );
-
-    settings = null;
-    anchor = null;
-    toggle = null;
-    fixedHeader = null;
-    headerHeight = null;
-    eventTimeout = null;
-    animationInterval = null;
-  };
-
-  smoothScroll.init = function ( options ) {
-
-    if ( !supports ) return;
-
-    smoothScroll.destroy();
-
-    settings = extend( defaults, options || {} ); 
-    fixedHeader = settings.selectorHeader ? document.querySelector( settings.selectorHeader ) : null; 
-    headerHeight = getHeaderHeight( fixedHeader );
-
-    document.addEventListener( 'click', clickHandler, false );
-
-    root.addEventListener('hashchange', hashChangeHandler, false);
-
-    if ( fixedHeader ) {
-      root.addEventListener( 'resize', resizeThrottler, false );
-    }
-
-  };
-
-
-
-  return smoothScroll;
-
-}));
-
-(function() {
-  var MutationObserver, Util, WeakMap, getComputedStyle, getComputedStyleRX,
-    bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
-
-  Util = (function() {
-    function Util() {}
-
-    Util.prototype.extend = function(custom, defaults) {
-      var key, value;
-      for (key in defaults) {
-        value = defaults[key];
-        if (custom[key] == null) {
-          custom[key] = value;
-        }
-      }
-      return custom;
-    };
-
-    Util.prototype.isMobile = function(agent) {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent);
-    };
-
-    Util.prototype.createEvent = function(event, bubble, cancel, detail) {
-      var customEvent;
-      if (bubble == null) {
-        bubble = false;
-      }
-      if (cancel == null) {
-        cancel = false;
-      }
-      if (detail == null) {
-        detail = null;
-      }
-      if (document.createEvent != null) {
-        customEvent = document.createEvent('CustomEvent');
-        customEvent.initCustomEvent(event, bubble, cancel, detail);
-      } else if (document.createEventObject != null) {
-        customEvent = document.createEventObject();
-        customEvent.eventType = event;
-      } else {
-        customEvent.eventName = event;
-      }
-      return customEvent;
-    };
-
-    Util.prototype.emitEvent = function(elem, event) {
-      if (elem.dispatchEvent != null) {
-        return elem.dispatchEvent(event);
-      } else if (event in (elem != null)) {
-        return elem[event]();
-      } else if (("on" + event) in (elem != null)) {
-        return elem["on" + event]();
-      }
-    };
-
-    Util.prototype.addEvent = function(elem, event, fn) {
-      if (elem.addEventListener != null) {
-        return elem.addEventListener(event, fn, false);
-      } else if (elem.attachEvent != null) {
-        return elem.attachEvent("on" + event, fn);
-      } else {
-        return elem[event] = fn;
-      }
-    };
-
-    Util.prototype.removeEvent = function(elem, event, fn) {
-      if (elem.removeEventListener != null) {
-        return elem.removeEventListener(event, fn, false);
-      } else if (elem.detachEvent != null) {
-        return elem.detachEvent("on" + event, fn);
-      } else {
-        return delete elem[event];
-      }
-    };
-
-    Util.prototype.innerHeight = function() {
-      if ('innerHeight' in window) {
-        return window.innerHeight;
-      } else {
-        return document.documentElement.clientHeight;
-      }
-    };
-
-    return Util;
-
-  })();
-
-  WeakMap = this.WeakMap || this.MozWeakMap || (WeakMap = (function() {
-    function WeakMap() {
-      this.keys = [];
-      this.values = [];
-    }
-
-    WeakMap.prototype.get = function(key) {
-      var i, item, j, len, ref;
-      ref = this.keys;
-      for (i = j = 0, len = ref.length; j < len; i = ++j) {
-        item = ref[i];
-        if (item === key) {
-          return this.values[i];
-        }
-      }
-    };
-
-    WeakMap.prototype.set = function(key, value) {
-      var i, item, j, len, ref;
-      ref = this.keys;
-      for (i = j = 0, len = ref.length; j < len; i = ++j) {
-        item = ref[i];
-        if (item === key) {
-          this.values[i] = value;
-          return;
-        }
-      }
-      this.keys.push(key);
-      return this.values.push(value);
-    };
-
-    return WeakMap;
-
-  })());
-
-  MutationObserver = this.MutationObserver || this.WebkitMutationObserver || this.MozMutationObserver || (MutationObserver = (function() {
-    function MutationObserver() {
-      if (typeof console !== "undefined" && console !== null) {
-        console.warn('MutationObserver is not supported by your browser.');
-      }
-      if (typeof console !== "undefined" && console !== null) {
-        console.warn('WOW.js cannot detect dom mutations, please call .sync() after loading new content.');
-      }
-    }
-
-    MutationObserver.notSupported = true;
-
-    MutationObserver.prototype.observe = function() {};
-
-    return MutationObserver;
-
-  })());
-
-  getComputedStyle = this.getComputedStyle || function(el, pseudo) {
-    this.getPropertyValue = function(prop) {
-      var ref;
-      if (prop === 'float') {
-        prop = 'styleFloat';
-      }
-      if (getComputedStyleRX.test(prop)) {
-        prop.replace(getComputedStyleRX, function(_, _char) {
-          return _char.toUpperCase();
-        });
-      }
-      return ((ref = el.currentStyle) != null ? ref[prop] : void 0) || null;
-    };
-    return this;
-  };
-
-  getComputedStyleRX = /(\-([a-z]){1})/g;
-
-  this.WOW = (function() {
-    WOW.prototype.defaults = {
-      boxClass: 'wow',
-      animateClass: 'animated',
-      offset: 0,
-      mobile: true,
-      live: true,
-      callback: null
-    };
-
-    function WOW(options) {
-      if (options == null) {
-        options = {};
-      }
-      this.scrollCallback = bind(this.scrollCallback, this);
-      this.scrollHandler = bind(this.scrollHandler, this);
-      this.resetAnimation = bind(this.resetAnimation, this);
-      this.start = bind(this.start, this);
-      this.scrolled = true;
-      this.config = this.util().extend(options, this.defaults);
-      this.animationNameCache = new WeakMap();
-      this.wowEvent = this.util().createEvent(this.config.boxClass);
-    }
-
-    WOW.prototype.init = function() {
-      var ref;
-      this.element = window.document.documentElement;
-      if ((ref = document.readyState) === "interactive" || ref === "complete") {
-        this.start();
-      } else {
-        this.util().addEvent(document, 'DOMContentLoaded', this.start);
-      }
-      return this.finished = [];
-    };
-
-    WOW.prototype.start = function() {
-      var box, j, len, ref;
-      this.stopped = false;
-      this.boxes = (function() {
-        var j, len, ref, results;
-        ref = this.element.querySelectorAll("." + this.config.boxClass);
-        results = [];
-        for (j = 0, len = ref.length; j < len; j++) {
-          box = ref[j];
-          results.push(box);
-        }
-        return results;
-      }).call(this);
-      this.all = (function() {
-        var j, len, ref, results;
-        ref = this.boxes;
-        results = [];
-        for (j = 0, len = ref.length; j < len; j++) {
-          box = ref[j];
-          results.push(box);
-        }
-        return results;
-      }).call(this);
-      if (this.boxes.length) {
-        if (this.disabled()) {
-          this.resetStyle();
-        } else {
-          ref = this.boxes;
-          for (j = 0, len = ref.length; j < len; j++) {
-            box = ref[j];
-            this.applyStyle(box, true);
-          }
-        }
-      }
-      if (!this.disabled()) {
-        this.util().addEvent(window, 'scroll', this.scrollHandler);
-        this.util().addEvent(window, 'resize', this.scrollHandler);
-        this.interval = setInterval(this.scrollCallback, 50);
-      }
-      if (this.config.live) {
-        return new MutationObserver((function(_this) {
-          return function(records) {
-            var k, len1, node, record, results;
-            results = [];
-            for (k = 0, len1 = records.length; k < len1; k++) {
-              record = records[k];
-              results.push((function() {
-                var l, len2, ref1, results1;
-                ref1 = record.addedNodes || [];
-                results1 = [];
-                for (l = 0, len2 = ref1.length; l < len2; l++) {
-                  node = ref1[l];
-                  results1.push(this.doSync(node));
-                }
-                return results1;
-              }).call(_this));
-            }
-            return results;
-          };
-        })(this)).observe(document.body, {
-          childList: true,
-          subtree: true
-        });
-      }
-    };
-
-    WOW.prototype.stop = function() {
-      this.stopped = true;
-      this.util().removeEvent(window, 'scroll', this.scrollHandler);
-      this.util().removeEvent(window, 'resize', this.scrollHandler);
-      if (this.interval != null) {
-        return clearInterval(this.interval);
-      }
-    };
-
-    WOW.prototype.sync = function(element) {
-      if (MutationObserver.notSupported) {
-        return this.doSync(this.element);
-      }
-    };
-
-    WOW.prototype.doSync = function(element) {
-      var box, j, len, ref, results;
-      if (element == null) {
-        element = this.element;
-      }
-      if (element.nodeType !== 1) {
-        return;
-      }
-      element = element.parentNode || element;
-      ref = element.querySelectorAll("." + this.config.boxClass);
-      results = [];
-      for (j = 0, len = ref.length; j < len; j++) {
-        box = ref[j];
-        if (indexOf.call(this.all, box) < 0) {
-          this.boxes.push(box);
-          this.all.push(box);
-          if (this.stopped || this.disabled()) {
-            this.resetStyle();
-          } else {
-            this.applyStyle(box, true);
-          }
-          results.push(this.scrolled = true);
-        } else {
-          results.push(void 0);
-        }
-      }
-      return results;
-    };
-
-    WOW.prototype.show = function(box) {
-      this.applyStyle(box);
-      box.className = box.className + " " + this.config.animateClass;
-      if (this.config.callback != null) {
-        this.config.callback(box);
-      }
-      this.util().emitEvent(box, this.wowEvent);
-      this.util().addEvent(box, 'animationend', this.resetAnimation);
-      this.util().addEvent(box, 'oanimationend', this.resetAnimation);
-      this.util().addEvent(box, 'webkitAnimationEnd', this.resetAnimation);
-      this.util().addEvent(box, 'MSAnimationEnd', this.resetAnimation);
-      return box;
-    };
-
-    WOW.prototype.applyStyle = function(box, hidden) {
-      var delay, duration, iteration;
-      duration = box.getAttribute('data-wow-duration');
-      delay = box.getAttribute('data-wow-delay');
-      iteration = box.getAttribute('data-wow-iteration');
-      return this.animate((function(_this) {
-        return function() {
-          return _this.customStyle(box, hidden, duration, delay, iteration);
-        };
-      })(this));
-    };
-
-    WOW.prototype.animate = (function() {
-      if ('requestAnimationFrame' in window) {
-        return function(callback) {
-          return window.requestAnimationFrame(callback);
-        };
-      } else {
-        return function(callback) {
-          return callback();
-        };
-      }
-    })();
-
-    WOW.prototype.resetStyle = function() {
-      var box, j, len, ref, results;
-      ref = this.boxes;
-      results = [];
-      for (j = 0, len = ref.length; j < len; j++) {
-        box = ref[j];
-        results.push(box.style.visibility = 'visible');
-      }
-      return results;
-    };
-
-    WOW.prototype.resetAnimation = function(event) {
-      var target;
-      if (event.type.toLowerCase().indexOf('animationend') >= 0) {
-        target = event.target || event.srcElement;
-        return target.className = target.className.replace(this.config.animateClass, '').trim();
-      }
-    };
-
-    WOW.prototype.customStyle = function(box, hidden, duration, delay, iteration) {
-      if (hidden) {
-        this.cacheAnimationName(box);
-      }
-      box.style.visibility = hidden ? 'hidden' : 'visible';
-      if (duration) {
-        this.vendorSet(box.style, {
-          animationDuration: duration
-        });
-      }
-      if (delay) {
-        this.vendorSet(box.style, {
-          animationDelay: delay
-        });
-      }
-      if (iteration) {
-        this.vendorSet(box.style, {
-          animationIterationCount: iteration
-        });
-      }
-      this.vendorSet(box.style, {
-        animationName: hidden ? 'none' : this.cachedAnimationName(box)
-      });
-      return box;
-    };
-
-    WOW.prototype.vendors = ["moz", "webkit"];
-
-    WOW.prototype.vendorSet = function(elem, properties) {
-      var name, results, value, vendor;
-      results = [];
-      for (name in properties) {
-        value = properties[name];
-        elem["" + name] = value;
-        results.push((function() {
-          var j, len, ref, results1;
-          ref = this.vendors;
-          results1 = [];
-          for (j = 0, len = ref.length; j < len; j++) {
-            vendor = ref[j];
-            results1.push(elem["" + vendor + (name.charAt(0).toUpperCase()) + (name.substr(1))] = value);
-          }
-          return results1;
-        }).call(this));
-      }
-      return results;
-    };
-
-    WOW.prototype.vendorCSS = function(elem, property) {
-      var j, len, ref, result, style, vendor;
-      style = getComputedStyle(elem);
-      result = style.getPropertyCSSValue(property);
-      ref = this.vendors;
-      for (j = 0, len = ref.length; j < len; j++) {
-        vendor = ref[j];
-        result = result || style.getPropertyCSSValue("-" + vendor + "-" + property);
-      }
-      return result;
-    };
-
-    WOW.prototype.animationName = function(box) {
-      var animationName;
-      try {
-        animationName = this.vendorCSS(box, 'animation-name').cssText;
-      } catch (_error) {
-        animationName = getComputedStyle(box).getPropertyValue('animation-name');
-      }
-      if (animationName === 'none') {
-        return '';
-      } else {
-        return animationName;
-      }
-    };
-
-    WOW.prototype.cacheAnimationName = function(box) {
-      return this.animationNameCache.set(box, this.animationName(box));
-    };
-
-    WOW.prototype.cachedAnimationName = function(box) {
-      return this.animationNameCache.get(box);
-    };
-
-    WOW.prototype.scrollHandler = function() {
-      return this.scrolled = true;
-    };
-
-    WOW.prototype.scrollCallback = function() {
-      var box;
-      if (this.scrolled) {
-        this.scrolled = false;
-        this.boxes = (function() {
-          var j, len, ref, results;
-          ref = this.boxes;
-          results = [];
-          for (j = 0, len = ref.length; j < len; j++) {
-            box = ref[j];
-            if (!(box)) {
-              continue;
-            }
-            if (this.isVisible(box)) {
-              this.show(box);
-              continue;
-            }
-            results.push(box);
-          }
-          return results;
-        }).call(this);
-        if (!(this.boxes.length || this.config.live)) {
-          return this.stop();
-        }
-      }
-    };
-
-    WOW.prototype.offsetTop = function(element) {
-      var top;
-      while (element.offsetTop === void 0) {
-        element = element.parentNode;
-      }
-      top = element.offsetTop;
-      while (element = element.offsetParent) {
-        top += element.offsetTop;
-      }
-      return top;
-    };
-
-    WOW.prototype.isVisible = function(box) {
-      var bottom, offset, top, viewBottom, viewTop;
-      offset = box.getAttribute('data-wow-offset') || this.config.offset;
-      viewTop = window.pageYOffset;
-      viewBottom = viewTop + Math.min(this.element.clientHeight, this.util().innerHeight()) - offset;
-      top = this.offsetTop(box);
-      bottom = top + box.clientHeight;
-      return top <= viewBottom && bottom >= viewTop;
-    };
-
-    WOW.prototype.util = function() {
-      return this._util != null ? this._util : this._util = new Util();
-    };
-
-    WOW.prototype.disabled = function() {
-      return !this.config.mobile && this.util().isMobile(navigator.userAgent);
-    };
-
-    return WOW;
-
-  })();
-
-}).call(this);
-
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function (global, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(['exports', 'module'], factory);
-  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
-    factory(exports, module);
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(mod.exports, mod);
-    global.fetchJsonp = mod.exports;
-  }
-})(this, function (exports, module) {
-  'use strict';
-
-  var defaultOptions = {
-    timeout: 5000,
-    jsonpCallback: 'callback',
-    jsonpCallbackFunction: null
-  };
-
-  function generateCallbackFunction() {
-    return 'jsonp_' + Date.now() + '_' + Math.ceil(Math.random() * 100000);
-  }
-
-  function clearFunction(functionName) {
-    try {
-      delete window[functionName];
-    } catch (e) {
-      window[functionName] = undefined;
-    }
-  }
-
-  function removeScript(scriptId) {
-    var script = document.getElementById(scriptId);
-    document.getElementsByTagName('head')[0].removeChild(script);
-  }
-
-  function fetchJsonp(_url) {
-    var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-    var url = _url;
-    var timeout = options.timeout || defaultOptions.timeout;
-    var jsonpCallback = options.jsonpCallback || defaultOptions.jsonpCallback;
-
-    var timeoutId = undefined;
-
-    return new Promise(function (resolve, reject) {
-      var callbackFunction = options.jsonpCallbackFunction || generateCallbackFunction();
-      var scriptId = jsonpCallback + '_' + callbackFunction;
-
-      window[callbackFunction] = function (response) {
-        resolve({
-          ok: true,
-          json: function json() {
-            return Promise.resolve(response);
-          }
-        });
-
-        if (timeoutId) clearTimeout(timeoutId);
-
-        removeScript(scriptId);
-
-        clearFunction(callbackFunction);
-      };
-
-      url += url.indexOf('?') === -1 ? '?' : '&';
-
-      var jsonpScript = document.createElement('script');
-      jsonpScript.setAttribute('src', '' + url + jsonpCallback + '=' + callbackFunction);
-      jsonpScript.id = scriptId;
-      document.getElementsByTagName('head')[0].appendChild(jsonpScript);
-
-      timeoutId = setTimeout(function () {
-        reject(new Error('JSONP request to ' + _url + ' timed out'));
-
-        clearFunction(callbackFunction);
-        removeScript(scriptId);
-      }, timeout);
-    });
-  }
-
-
-  module.exports = fetchJsonp;
-});
-},{}],2:[function(require,module,exports){
-(function (root) {
-
-  var setTimeoutFunc = setTimeout;
-
-  function noop() {}
-
-  function bind(fn, thisArg) {
-    return function () {
-      fn.apply(thisArg, arguments);
-    };
-  }
-
-  function Promise(fn) {
-    if (typeof this !== 'object') throw new TypeError('Promises must be constructed via new');
-    if (typeof fn !== 'function') throw new TypeError('not a function');
-    this._state = 0;
-    this._handled = false;
-    this._value = undefined;
-    this._deferreds = [];
-
-    doResolve(fn, this);
-  }
-
-  function handle(self, deferred) {
-    while (self._state === 3) {
-      self = self._value;
-    }
-    if (self._state === 0) {
-      self._deferreds.push(deferred);
-      return;
-    }
-    self._handled = true;
-    Promise._immediateFn(function () {
-      var cb = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
-      if (cb === null) {
-        (self._state === 1 ? resolve : reject)(deferred.promise, self._value);
-        return;
-      }
-      var ret;
-      try {
-        ret = cb(self._value);
-      } catch (e) {
-        reject(deferred.promise, e);
-        return;
-      }
-      resolve(deferred.promise, ret);
-    });
-  }
-
-  function resolve(self, newValue) {
-    try {
-      if (newValue === self) throw new TypeError('A promise cannot be resolved with itself.');
-      if (newValue && (typeof newValue === 'object' || typeof newValue === 'function')) {
-        var then = newValue.then;
-        if (newValue instanceof Promise) {
-          self._state = 3;
-          self._value = newValue;
-          finale(self);
-          return;
-        } else if (typeof then === 'function') {
-          doResolve(bind(then, newValue), self);
-          return;
-        }
-      }
-      self._state = 1;
-      self._value = newValue;
-      finale(self);
-    } catch (e) {
-      reject(self, e);
-    }
-  }
-
-  function reject(self, newValue) {
-    self._state = 2;
-    self._value = newValue;
-    finale(self);
-  }
-
-  function finale(self) {
-    if (self._state === 2 && self._deferreds.length === 0) {
-      Promise._immediateFn(function() {
-        if (!self._handled) {
-          Promise._unhandledRejectionFn(self._value);
-        }
-      });
-    }
-
-    for (var i = 0, len = self._deferreds.length; i < len; i++) {
-      handle(self, self._deferreds[i]);
-    }
-    self._deferreds = null;
-  }
-
-  function Handler(onFulfilled, onRejected, promise) {
-    this.onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : null;
-    this.onRejected = typeof onRejected === 'function' ? onRejected : null;
-    this.promise = promise;
-  }
-
-  function doResolve(fn, self) {
-    var done = false;
-    try {
-      fn(function (value) {
-        if (done) return;
-        done = true;
-        resolve(self, value);
-      }, function (reason) {
-        if (done) return;
-        done = true;
-        reject(self, reason);
-      });
-    } catch (ex) {
-      if (done) return;
-      done = true;
-      reject(self, ex);
-    }
-  }
-
-  Promise.prototype['catch'] = function (onRejected) {
-    return this.then(null, onRejected);
-  };
-
-  Promise.prototype.then = function (onFulfilled, onRejected) {
-    var prom = new (this.constructor)(noop);
-
-    handle(this, new Handler(onFulfilled, onRejected, prom));
-    return prom;
-  };
-
-  Promise.all = function (arr) {
-    var args = Array.prototype.slice.call(arr);
-
-    return new Promise(function (resolve, reject) {
-      if (args.length === 0) return resolve([]);
-      var remaining = args.length;
-
-      function res(i, val) {
-        try {
-          if (val && (typeof val === 'object' || typeof val === 'function')) {
-            var then = val.then;
-            if (typeof then === 'function') {
-              then.call(val, function (val) {
-                res(i, val);
-              }, reject);
-              return;
-            }
-          }
-          args[i] = val;
-          if (--remaining === 0) {
-            resolve(args);
-          }
-        } catch (ex) {
-          reject(ex);
-        }
-      }
-
-      for (var i = 0; i < args.length; i++) {
-        res(i, args[i]);
-      }
-    });
-  };
-
-  Promise.resolve = function (value) {
-    if (value && typeof value === 'object' && value.constructor === Promise) {
-      return value;
-    }
-
-    return new Promise(function (resolve) {
-      resolve(value);
-    });
-  };
-
-  Promise.reject = function (value) {
-    return new Promise(function (resolve, reject) {
-      reject(value);
-    });
-  };
-
-  Promise.race = function (values) {
-    return new Promise(function (resolve, reject) {
-      for (var i = 0, len = values.length; i < len; i++) {
-        values[i].then(resolve, reject);
-      }
-    });
-  };
-
-  Promise._immediateFn = (typeof setImmediate === 'function' && function (fn) { setImmediate(fn); }) ||
-    function (fn) {
-      setTimeoutFunc(fn, 0);
-    };
-
-  Promise._unhandledRejectionFn = function _unhandledRejectionFn(err) {
-    if (typeof console !== 'undefined' && console) {
-      console.warn('Possible Unhandled Promise Rejection:', err); 
-    }
-  };
-
-  Promise._setImmediateFn = function _setImmediateFn(fn) {
-    Promise._immediateFn = fn;
-  };
-
-  Promise._setUnhandledRejectionFn = function _setUnhandledRejectionFn(fn) {
-    Promise._unhandledRejectionFn = fn;
-  };
-
-    if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Promise;
-  } else if (!root.Promise) {
-    root.Promise = Promise;
-  }
-
-})(this);
-
-},{}],3:[function(require,module,exports){
-'use strict';
-
-var Promise = require('promise-polyfill');
-var fetchJsonp = require('fetch-jsonp');
-
-
-var instafetch = {};
-var supports = !!document.querySelector && !!document.addEventListener;
-var settings, checked, url, targetEl, article, a, figure, img, div, p;
-var baseUrl = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=';
-
-var defaults = {
-  accessToken: null,
-  target: 'instafetch',
-  numOfPics: 20,
-  caption: false
-};
-
-
-var forEach = function(collection, callback, scope) {
-  if (Object.prototype.toString.call(collection) === '[object Object]') {
-    for (var prop in collection) {
-      if (Object.prototype.hasOwnProperty.call(collection, prop)) {
-        callback.call(scope, collection[prop], prop, collection);
-      }
-    }
-  } else {
-    for (var i = 0, len = collection.length; i < len; i++) {
-      callback.call(scope, collection[i], i, collection);
-    }
-  }
-};
-
-var extend = function(defaults, options) {
-  var extended = {};
-  forEach(defaults, function(value, prop) {
-    extended[prop] = defaults[prop];
-  });
-  forEach(options, function(value, prop) {
-    extended[prop] = options[prop];
-  });
-  return extended;
-};
-
-var checkSettings = function(options) {
-  if (typeof options.accessToken !== 'string') {
-    console.log('accessToken must be a string.');
-    return false;
-  }
-  if (typeof options.target !== 'string') {
-    console.log('target must be a string.');
-    return false;
-  }
-  if (typeof options.numOfPics !== 'number') {
-    console.log('numOfPics must be a number.');
-    return false;
-  }
-  if (typeof options.caption !== 'boolean') {
-    console.log('caption must be a boolean.');
-    return false;
-  }
-
-  return true;
-};
-
-var fetchFeed = function(options) {
-  url = baseUrl + options.accessToken + '&count=' + options.numOfPics + '&callback=?';
-
-  if (!window.Promise) {
-    window.Promise = Promise;
-  }
-
-  fetchJsonp(url).then(function(response) {
-    return response.json();
-  }).then(function(json) {
-    if (json.meta.code === 200) {
-      displayFeed(json, options);
-    } else {
-      console.log(json.meta.error_message);
-    }
-  }).catch(function(error) {
-    console.log(error);
-  });
-};
-
-var displayFeed = function(json, options) {
-  targetEl = document.getElementById(options.target);
-  if (!targetEl) {
-    console.log('No element with id="' + options.target + '" was found on the page.');
-    return;
-  }
-
-  json.data.forEach(function(data) {
-    article = document.createElement('article');
-    a = document.createElement('a');
-    a.href = data.link;
-    a.target = '_blank';
-    figure = document.createElement('figure');
-    img = document.createElement('img');
-    img.src = data.images.standard_resolution.url;
-    figure.appendChild(img);
-    a.appendChild(figure);
-    article.appendChild(a);
-
-    if (options.caption) {
-      div = document.createElement('div');
-      p = document.createElement('p');
-      p.innerHTML = data.caption.text;
-      div.appendChild(p);
-      a.appendChild(div);
-    }
-
-    targetEl.appendChild(article);
-  });
-};
-
-instafetch.destroy = function() {
-  if (!settings) {
-    return;
-  }
-
-  settings = null;
-  checked = null;
-  url = null;
-  targetEl = null;
-  article = null;
-  a = null;
-  figure = null;
-  img = null;
-  div = null;
-  p = null;
-};
-
-instafetch.init = function(options) {
-  if (!supports) {
-    return;
-  }
-
-  instafetch.destroy();
-
-  settings = extend(defaults, options || {});
-
-  checked = checkSettings(settings);
-
-  if (checked) {
-    fetchFeed(settings);
-  }
-};
-
-
-window.instafetch = instafetch;
-
-},{"fetch-jsonp":1,"promise-polyfill":2}]},{},[3])
-
+/**
+ * Owl Carousel v2.2.0
+ * Copyright 2013-2016 David Deutsch
+ * Licensed under MIT (https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE)
+ */
+/**
+ * Owl carousel
+ * @version 2.1.6
+ * @author Bartosz Wojciechowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ * @todo Lazy Load Icon
+ * @todo prevent animationend bubling
+ * @todo itemsScaleUp
+ * @todo Test Zepto
+ * @todo stagePadding calculate wrong active classes
+ */
 ;(function($, window, document, undefined) {
 
+  /**
+   * Creates a carousel.
+   * @class The Owl Carousel.
+   * @public
+   * @param {HTMLElement|jQuery} element - The element to create the carousel for.
+   * @param {Object} [options] - The options
+   */
   function Owl(element, options) {
 
+    /**
+     * Current settings for the carousel.
+     * @public
+     */
     this.settings = null;
 
+    /**
+     * Current options set by the caller including defaults.
+     * @public
+     */
     this.options = $.extend({}, Owl.Defaults, options);
 
+    /**
+     * Plugin element.
+     * @public
+     */
     this.$element = $(element);
 
+    /**
+     * Proxied event handlers.
+     * @protected
+     */
     this._handlers = {};
 
+    /**
+     * References to the running plugins of this carousel.
+     * @protected
+     */
     this._plugins = {};
 
+    /**
+     * Currently suppressed events to prevent them from beeing retriggered.
+     * @protected
+     */
     this._supress = {};
 
+    /**
+     * Absolute current position.
+     * @protected
+     */
     this._current = null;
 
+    /**
+     * Animation speed in milliseconds.
+     * @protected
+     */
     this._speed = null;
 
+    /**
+     * Coordinates of all items in pixel.
+     * @todo The name of this member is missleading.
+     * @protected
+     */
     this._coordinates = [];
 
+    /**
+     * Current breakpoint.
+     * @todo Real media queries would be nice.
+     * @protected
+     */
     this._breakpoint = null;
 
+    /**
+     * Current width of the plugin element.
+     */
     this._width = null;
 
+    /**
+     * All real items.
+     * @protected
+     */
     this._items = [];
 
+    /**
+     * All cloned items.
+     * @protected
+     */
     this._clones = [];
 
+    /**
+     * Merge values of all items.
+     * @todo Maybe this could be part of a plugin.
+     * @protected
+     */
     this._mergers = [];
 
+    /**
+     * Widths of all items.
+     */
     this._widths = [];
 
+    /**
+     * Invalidated parts within the update process.
+     * @protected
+     */
     this._invalidated = {};
 
+    /**
+     * Ordered list of workers for the update process.
+     * @protected
+     */
     this._pipe = [];
 
+    /**
+     * Current state information for the drag operation.
+     * @todo #261
+     * @protected
+     */
     this._drag = {
       time: null,
       target: null,
@@ -1563,6 +145,11 @@ window.instafetch = instafetch;
       direction: null
     };
 
+    /**
+     * Current state information and their tags.
+     * @type {Object}
+     * @protected
+     */
     this._states = {
       current: {},
       tags: {
@@ -1592,6 +179,10 @@ window.instafetch = instafetch;
     this.initialize();
   }
 
+  /**
+   * Default options for the carousel.
+   * @public
+   */
   Owl.Defaults = {
     items: 3,
     loop: false,
@@ -1641,19 +232,38 @@ window.instafetch = instafetch;
     grabClass: 'owl-grab'
   };
 
+  /**
+   * Enumeration for width.
+   * @public
+   * @readonly
+   * @enum {String}
+   */
   Owl.Width = {
     Default: 'default',
     Inner: 'inner',
     Outer: 'outer'
   };
 
+  /**
+   * Enumeration for types.
+   * @public
+   * @readonly
+   * @enum {String}
+   */
   Owl.Type = {
     Event: 'event',
     State: 'state'
   };
 
+  /**
+   * Contains all registered plugins.
+   * @public
+   */
   Owl.Plugins = {};
 
+  /**
+   * List of workers involved in the update process.
+   */
   Owl.Workers = [ {
     filter: [ 'width', 'settings' ],
     run: function() {
@@ -1716,6 +326,7 @@ window.instafetch = instafetch;
       var clones = [],
         items = this._items,
         settings = this.settings,
+        // TODO: Should be computed from number of min width items in stage
         view = Math.max(settings.items * 2, 4),
         size = Math.ceil(items.length / 2) * 2,
         repeat = settings.loop && items.length ? settings.rewind ? view : Math.max(view, size) : 0,
@@ -1725,6 +336,7 @@ window.instafetch = instafetch;
       repeat /= 2;
 
       while (repeat--) {
+        // Switch to only using appended clones
         clones.push(this.normalize(clones.length / 2, true));
         append = append + items[clones[clones.length - 1]][0].outerHTML;
         clones.push(this.normalize(items.length - 1 - (clones.length - 1) / 2, true));
@@ -1830,6 +442,10 @@ window.instafetch = instafetch;
     }
   } ];
 
+  /**
+   * Initializes the carousel.
+   * @protected
+   */
   Owl.prototype.initialize = function() {
     this.enter('initializing');
     this.trigger('initialize');
@@ -1849,16 +465,22 @@ window.instafetch = instafetch;
 
     this.$element.addClass(this.options.loadingClass);
 
+    // create stage
     this.$stage = $('<' + this.settings.stageElement + ' class="' + this.settings.stageClass + '"/>')
       .wrap('<div class="' + this.settings.stageOuterClass + '"/>');
 
+    // append stage
     this.$element.append(this.$stage.parent());
 
+    // append content
     this.replace(this.$element.children().not(this.$stage.parent()));
 
+    // check visibility
     if (this.$element.is(':visible')) {
+      // update view
       this.refresh();
     } else {
+      // invalidate width
       this.invalidate('width');
     }
 
@@ -1866,12 +488,19 @@ window.instafetch = instafetch;
       .removeClass(this.options.loadingClass)
       .addClass(this.options.loadedClass);
 
+    // register event handlers
     this.registerEventHandlers();
 
     this.leave('initializing');
     this.trigger('initialized');
   };
 
+  /**
+   * Setups the current settings.
+   * @todo Remove responsive classes. Why should adaptive designs be brought into IE8?
+   * @todo Support for media queries by using `matchMedia` would be nice.
+   * @public
+   */
   Owl.prototype.setup = function() {
     var viewport = this.viewport(),
       overwrites = this.options.responsive,
@@ -1893,6 +522,7 @@ window.instafetch = instafetch;
       }
       delete settings.responsive;
 
+      // responsive class
       if (settings.responsiveClass) {
         this.$element.attr('class',
           this.$element.attr('class').replace(new RegExp('(' + this.options.responsiveClass + '-)\\S+\\s', 'g'), '$1' + match)
@@ -1907,6 +537,10 @@ window.instafetch = instafetch;
     this.trigger('changed', { property: { name: 'settings', value: this.settings } });
   };
 
+  /**
+   * Updates option logic if necessery.
+   * @protected
+   */
   Owl.prototype.optionsLogic = function() {
     if (this.settings.autoWidth) {
       this.settings.stagePadding = false;
@@ -1914,6 +548,12 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Prepares an item before add.
+   * @todo Rename event parameter `content` to `item`.
+   * @protected
+   * @returns {jQuery|HTMLElement} - The item container.
+   */
   Owl.prototype.prepare = function(item) {
     var event = this.trigger('prepare', { content: item });
 
@@ -1927,6 +567,10 @@ window.instafetch = instafetch;
     return event.data;
   };
 
+  /**
+   * Updates the view.
+   * @public
+   */
   Owl.prototype.update = function() {
     var i = 0,
       n = this._pipe.length,
@@ -1945,6 +589,12 @@ window.instafetch = instafetch;
     !this.is('valid') && this.enter('valid');
   };
 
+  /**
+   * Gets the width of the view.
+   * @public
+   * @param {Owl.Width} [dimension=Owl.Width.Default] - The dimension to return.
+   * @returns {Number} - The width of the view in pixel.
+   */
   Owl.prototype.width = function(dimension) {
     dimension = dimension || Owl.Width.Default;
     switch (dimension) {
@@ -1956,6 +606,10 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Refreshes the carousel primarily for adaptive purposes.
+   * @public
+   */
   Owl.prototype.refresh = function() {
     this.enter('refreshing');
     this.trigger('refresh');
@@ -1974,11 +628,19 @@ window.instafetch = instafetch;
     this.trigger('refreshed');
   };
 
+  /**
+   * Checks window `resize` event.
+   * @protected
+   */
   Owl.prototype.onThrottledResize = function() {
     window.clearTimeout(this.resizeTimer);
     this.resizeTimer = window.setTimeout(this._handlers.onResize, this.settings.responsiveRefreshRate);
   };
 
+  /**
+   * Checks window `resize` event.
+   * @protected
+   */
   Owl.prototype.onResize = function() {
     if (!this._items.length) {
       return false;
@@ -2007,6 +669,12 @@ window.instafetch = instafetch;
     this.trigger('resized');
   };
 
+  /**
+   * Registers event handlers.
+   * @todo Check `msPointerEnabled`
+   * @todo #261
+   * @protected
+   */
   Owl.prototype.registerEventHandlers = function() {
     if ($.support.transition) {
       this.$stage.on($.support.transition.end + '.owl.core', $.proxy(this.onTransitionEnd, this));
@@ -2028,6 +696,13 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Handles `touchstart` and `mousedown` events.
+   * @todo Horizontal swipe threshold as option
+   * @todo #261
+   * @protected
+   * @param {Event} event - The event arguments.
+   */
   Owl.prototype.onDragStart = function(event) {
     var stage = null;
 
@@ -2084,6 +759,12 @@ window.instafetch = instafetch;
     }, this));
   };
 
+  /**
+   * Handles the `touchmove` and `mousemove` events.
+   * @todo #261
+   * @protected
+   * @param {Event} event - The event arguments.
+   */
   Owl.prototype.onDragMove = function(event) {
     var minimum = null,
       maximum = null,
@@ -2113,6 +794,13 @@ window.instafetch = instafetch;
     this.animate(stage.x);
   };
 
+  /**
+   * Handles the `touchend` and `mouseup` events.
+   * @todo #261
+   * @todo Threshold for click event
+   * @protected
+   * @param {Event} event - The event arguments.
+   */
   Owl.prototype.onDragEnd = function(event) {
     var delta = this.difference(this._drag.pointer, this.pointer(event)),
       stage = this._drag.stage.current,
@@ -2143,6 +831,14 @@ window.instafetch = instafetch;
     this.trigger('dragged');
   };
 
+  /**
+   * Gets absolute position of the closest item for a coordinate.
+   * @todo Setting `freeDrag` makes `closest` not reusable. See #165.
+   * @protected
+   * @param {Number} coordinate - The coordinate in pixel.
+   * @param {String} direction - The direction to check for the closest item. Ether `left` or `right`.
+   * @return {Number} - The absolute position of the closest item.
+   */
   Owl.prototype.closest = function(coordinate, direction) {
     var position = -1,
       pull = 30,
@@ -2150,9 +846,13 @@ window.instafetch = instafetch;
       coordinates = this.coordinates();
 
     if (!this.settings.freeDrag) {
+      // check closest item
       $.each(coordinates, $.proxy(function(index, value) {
+        // on a left pull, check on current index
         if (direction === 'left' && coordinate > value - pull && coordinate < value + pull) {
           position = index;
+        // on a right pull, check on previous index
+        // to do so, subtract width from value and set position = index + 1
         } else if (direction === 'right' && coordinate > value - width - pull && coordinate < value - width + pull) {
           position = index + 1;
         } else if (this.op(coordinate, '<', value)
@@ -2164,6 +864,7 @@ window.instafetch = instafetch;
     }
 
     if (!this.settings.loop) {
+      // non loop boundries
       if (this.op(coordinate, '>', coordinates[this.minimum()])) {
         position = coordinate = this.minimum();
       } else if (this.op(coordinate, '<', coordinates[this.maximum()])) {
@@ -2174,6 +875,12 @@ window.instafetch = instafetch;
     return position;
   };
 
+  /**
+   * Animates the stage.
+   * @todo #270
+   * @public
+   * @param {Number} coordinate - The coordinate in pixels.
+   */
   Owl.prototype.animate = function(coordinate) {
     var animate = this.speed() > 0;
 
@@ -2200,10 +907,21 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Checks whether the carousel is in a specific state or not.
+   * @param {String} state - The state to check.
+   * @returns {Boolean} - The flag which indicates if the carousel is busy.
+   */
   Owl.prototype.is = function(state) {
     return this._states.current[state] && this._states.current[state] > 0;
   };
 
+  /**
+   * Sets the absolute position of the current item.
+   * @public
+   * @param {Number} [position] - The new absolute position or nothing to leave it unchanged.
+   * @returns {Number} - The absolute position of the current item.
+   */
   Owl.prototype.current = function(position) {
     if (position === undefined) {
       return this._current;
@@ -2232,6 +950,11 @@ window.instafetch = instafetch;
     return this._current;
   };
 
+  /**
+   * Invalidates the given part of the update routine.
+   * @param {String} [part] - The part to invalidate.
+   * @returns {Array.<String>} - The invalidated parts.
+   */
   Owl.prototype.invalidate = function(part) {
     if ($.type(part) === 'string') {
       this._invalidated[part] = true;
@@ -2240,6 +963,11 @@ window.instafetch = instafetch;
     return $.map(this._invalidated, function(v, i) { return i });
   };
 
+  /**
+   * Resets the absolute position of the current item.
+   * @public
+   * @param {Number} position - The absolute position of the new item.
+   */
   Owl.prototype.reset = function(position) {
     position = this.normalize(position);
 
@@ -2257,6 +985,13 @@ window.instafetch = instafetch;
     this.release([ 'translate', 'translated' ]);
   };
 
+  /**
+   * Normalizes an absolute or a relative position of an item.
+   * @public
+   * @param {Number} position - The absolute or relative position to normalize.
+   * @param {Boolean} [relative=false] - Whether the given position is relative or not.
+   * @returns {Number} - The normalized position.
+   */
   Owl.prototype.normalize = function(position, relative) {
     var n = this._items.length,
       m = relative ? 0 : this._clones.length;
@@ -2270,11 +1005,23 @@ window.instafetch = instafetch;
     return position;
   };
 
+  /**
+   * Converts an absolute position of an item into a relative one.
+   * @public
+   * @param {Number} position - The absolute position to convert.
+   * @returns {Number} - The converted position.
+   */
   Owl.prototype.relative = function(position) {
     position -= this._clones.length / 2;
     return this.normalize(position, true);
   };
 
+  /**
+   * Gets the maximum position for the current item.
+   * @public
+   * @param {Boolean} [relative=false] - Whether to return an absolute position or a relative position.
+   * @returns {Number}
+   */
   Owl.prototype.maximum = function(relative) {
     var settings = this.settings,
       maximum = this._coordinates.length,
@@ -2308,10 +1055,22 @@ window.instafetch = instafetch;
     return Math.max(maximum, 0);
   };
 
+  /**
+   * Gets the minimum position for the current item.
+   * @public
+   * @param {Boolean} [relative=false] - Whether to return an absolute position or a relative position.
+   * @returns {Number}
+   */
   Owl.prototype.minimum = function(relative) {
     return relative ? 0 : this._clones.length / 2;
   };
 
+  /**
+   * Gets an item at the specified relative position.
+   * @public
+   * @param {Number} [position] - The relative position of the item.
+   * @return {jQuery|Array.<jQuery>} - The item at the given position or all items if no position was given.
+   */
   Owl.prototype.items = function(position) {
     if (position === undefined) {
       return this._items.slice();
@@ -2321,6 +1080,12 @@ window.instafetch = instafetch;
     return this._items[position];
   };
 
+  /**
+   * Gets an item at the specified relative position.
+   * @public
+   * @param {Number} [position] - The relative position of the item.
+   * @return {jQuery|Array.<jQuery>} - The item at the given position or all items if no position was given.
+   */
   Owl.prototype.mergers = function(position) {
     if (position === undefined) {
       return this._mergers.slice();
@@ -2330,6 +1095,12 @@ window.instafetch = instafetch;
     return this._mergers[position];
   };
 
+  /**
+   * Gets the absolute positions of clones for an item.
+   * @public
+   * @param {Number} [position] - The relative position of the item.
+   * @returns {Array.<Number>} - The absolute positions of clones for the item or all if no position was given.
+   */
   Owl.prototype.clones = function(position) {
     var odd = this._clones.length / 2,
       even = odd + this._items.length,
@@ -2342,6 +1113,12 @@ window.instafetch = instafetch;
     return $.map(this._clones, function(v, i) { return v === position ? map(i) : null });
   };
 
+  /**
+   * Sets the current animation speed.
+   * @public
+   * @param {Number} [speed] - The animation speed in milliseconds or nothing to leave it unchanged.
+   * @returns {Number} - The current animation speed in milliseconds.
+   */
   Owl.prototype.speed = function(speed) {
     if (speed !== undefined) {
       this._speed = speed;
@@ -2350,6 +1127,13 @@ window.instafetch = instafetch;
     return this._speed;
   };
 
+  /**
+   * Gets the coordinate of an item.
+   * @todo The name of this method is missleanding.
+   * @public
+   * @param {Number} position - The absolute position of the item within `minimum()` and `maximum()`.
+   * @returns {Number|Array.<Number>} - The coordinate of the item in pixel or all coordinates.
+   */
   Owl.prototype.coordinates = function(position) {
     var multiplier = 1,
       newPosition = position - 1,
@@ -2378,6 +1162,14 @@ window.instafetch = instafetch;
     return coordinate;
   };
 
+  /**
+   * Calculates the speed for a translation.
+   * @protected
+   * @param {Number} from - The absolute position of the start item.
+   * @param {Number} to - The absolute position of the target item.
+   * @param {Number} [factor=undefined] - The time factor in milliseconds.
+   * @returns {Number} - The time in milliseconds for the translation.
+   */
   Owl.prototype.duration = function(from, to, factor) {
     if (factor === 0) {
       return 0;
@@ -2386,6 +1178,12 @@ window.instafetch = instafetch;
     return Math.min(Math.max(Math.abs(to - from), 1), 6) * Math.abs((factor || this.settings.smartSpeed));
   };
 
+  /**
+   * Slides to the specified item.
+   * @public
+   * @param {Number} position - The position of the item.
+   * @param {Number} [speed] - The time in milliseconds for the transition.
+   */
   Owl.prototype.to = function(position, speed) {
     var current = this.current(),
       revert = null,
@@ -2423,21 +1221,38 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Slides to the next item.
+   * @public
+   * @param {Number} [speed] - The time in milliseconds for the transition.
+   */
   Owl.prototype.next = function(speed) {
     speed = speed || false;
     this.to(this.relative(this.current()) + 1, speed);
   };
 
+  /**
+   * Slides to the previous item.
+   * @public
+   * @param {Number} [speed] - The time in milliseconds for the transition.
+   */
   Owl.prototype.prev = function(speed) {
     speed = speed || false;
     this.to(this.relative(this.current()) - 1, speed);
   };
 
+  /**
+   * Handles the end of an animation.
+   * @protected
+   * @param {Event} event - The event arguments.
+   */
   Owl.prototype.onTransitionEnd = function(event) {
 
+    // if css2 animation then event object is undefined
     if (event !== undefined) {
       event.stopPropagation();
 
+      // Catch only owl-stage transitionEnd event
       if ((event.target || event.srcElement || event.originalTarget) !== this.$stage.get(0)) {
         return false;
       }
@@ -2447,6 +1262,11 @@ window.instafetch = instafetch;
     this.trigger('translated');
   };
 
+  /**
+   * Gets viewport width.
+   * @protected
+   * @return {Number} - The width in pixel.
+   */
   Owl.prototype.viewport = function() {
     var width;
     if (this.options.responsiveBaseElement !== window) {
@@ -2461,6 +1281,11 @@ window.instafetch = instafetch;
     return width;
   };
 
+  /**
+   * Replaces the current content.
+   * @public
+   * @param {HTMLElement|jQuery|String} content - The new content.
+   */
   Owl.prototype.replace = function(content) {
     this.$stage.empty();
     this._items = [];
@@ -2487,6 +1312,13 @@ window.instafetch = instafetch;
     this.invalidate('items');
   };
 
+  /**
+   * Adds an item.
+   * @todo Use `item` instead of `content` for the event arguments.
+   * @public
+   * @param {HTMLElement|jQuery|String} content - The item content to add.
+   * @param {Number} [position] - The relative position at which to insert the item otherwise the item will be added to the end.
+   */
   Owl.prototype.add = function(content, position) {
     var current = this.relative(this._current);
 
@@ -2515,6 +1347,12 @@ window.instafetch = instafetch;
     this.trigger('added', { content: content, position: position });
   };
 
+  /**
+   * Removes an item by its position.
+   * @todo Use `item` instead of `content` for the event arguments.
+   * @public
+   * @param {Number} position - The relative position of the item to remove.
+   */
   Owl.prototype.remove = function(position) {
     position = this.normalize(position, true);
 
@@ -2533,6 +1371,11 @@ window.instafetch = instafetch;
     this.trigger('removed', { content: null, position: position });
   };
 
+  /**
+   * Preloads images with auto width.
+   * @todo Replace by a more generic approach
+   * @protected
+   */
   Owl.prototype.preloadAutoWidthImages = function(images) {
     images.each($.proxy(function(i, element) {
       this.enter('pre-loading');
@@ -2546,6 +1389,10 @@ window.instafetch = instafetch;
     }, this));
   };
 
+  /**
+   * Destroys the carousel.
+   * @public
+   */
   Owl.prototype.destroy = function() {
 
     this.$element.off('.owl.core');
@@ -2578,6 +1425,13 @@ window.instafetch = instafetch;
       .removeData('owl.carousel');
   };
 
+  /**
+   * Operators to calculate right-to-left and left-to-right.
+   * @protected
+   * @param {Number} [a] - The left side operand.
+   * @param {String} [o] - The operator.
+   * @param {Number} [b] - The right side operand.
+   */
   Owl.prototype.op = function(a, o, b) {
     var rtl = this.settings.rtl;
     switch (o) {
@@ -2594,6 +1448,14 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Attaches to an internal event.
+   * @protected
+   * @param {HTMLElement} element - The event source.
+   * @param {String} event - The event name.
+   * @param {Function} listener - The event handler to attach.
+   * @param {Boolean} capture - Wether the event should be handled at the capturing phase or not.
+   */
   Owl.prototype.on = function(element, event, listener, capture) {
     if (element.addEventListener) {
       element.addEventListener(event, listener, capture);
@@ -2602,6 +1464,14 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Detaches from an internal event.
+   * @protected
+   * @param {HTMLElement} element - The event source.
+   * @param {String} event - The event name.
+   * @param {Function} listener - The attached event handler to detach.
+   * @param {Boolean} capture - Wether the attached event handler was registered as a capturing listener or not.
+   */
   Owl.prototype.off = function(element, event, listener, capture) {
     if (element.removeEventListener) {
       element.removeEventListener(event, listener, capture);
@@ -2610,6 +1480,17 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Triggers a public event.
+   * @todo Remove `status`, `relatedTarget` should be used instead.
+   * @protected
+   * @param {String} name - The event name.
+   * @param {*} [data=null] - The event data.
+   * @param {String} [namespace=carousel] - The event namespace.
+   * @param {String} [state] - The state which is associated with the event.
+   * @param {Boolean} [enter=false] - Indicates if the call enters the specified state or not.
+   * @returns {Event} - The event arguments.
+   */
   Owl.prototype.trigger = function(name, data, namespace, state, enter) {
     var status = {
       item: { count: this._items.length, index: this.current() }
@@ -2639,6 +1520,10 @@ window.instafetch = instafetch;
     return event;
   };
 
+  /**
+   * Enters a state.
+   * @param name - The state name.
+   */
   Owl.prototype.enter = function(name) {
     $.each([ name ].concat(this._states.tags[name] || []), $.proxy(function(i, name) {
       if (this._states.current[name] === undefined) {
@@ -2649,12 +1534,21 @@ window.instafetch = instafetch;
     }, this));
   };
 
+  /**
+   * Leaves a state.
+   * @param name - The state name.
+   */
   Owl.prototype.leave = function(name) {
     $.each([ name ].concat(this._states.tags[name] || []), $.proxy(function(i, name) {
       this._states.current[name]--;
     }, this));
   };
 
+  /**
+   * Registers an event or state.
+   * @public
+   * @param {Object} object - The event or state to register.
+   */
   Owl.prototype.register = function(object) {
     if (object.type === Owl.Type.Event) {
       if (!$.event.special[object.name]) {
@@ -2684,18 +1578,35 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Suppresses events.
+   * @protected
+   * @param {Array.<String>} events - The events to suppress.
+   */
   Owl.prototype.suppress = function(events) {
     $.each(events, $.proxy(function(index, event) {
       this._supress[event] = true;
     }, this));
   };
 
+  /**
+   * Releases suppressed events.
+   * @protected
+   * @param {Array.<String>} events - The events to release.
+   */
   Owl.prototype.release = function(events) {
     $.each(events, $.proxy(function(index, event) {
       delete this._supress[event];
     }, this));
   };
 
+  /**
+   * Gets unified pointer coordinates from event.
+   * @todo #261
+   * @protected
+   * @param {Event} - The `mousedown` or `touchstart` event.
+   * @returns {Object} - Contains `x` and `y` coordinates of current pointer position.
+   */
   Owl.prototype.pointer = function(event) {
     var result = { x: null, y: null };
 
@@ -2716,10 +1627,24 @@ window.instafetch = instafetch;
     return result;
   };
 
+  /**
+   * Determines if the input is a Number or something that can be coerced to a Number
+   * @protected
+   * @param {Number|String|Object|Array|Boolean|RegExp|Function|Symbol} - The input to be tested
+   * @returns {Boolean} - An indication if the input is a Number or can be coerced to a Number
+   */
   Owl.prototype.isNumeric = function(number) {
     return !isNaN(parseFloat(number));
   };
 
+  /**
+   * Gets the difference of two vectors.
+   * @todo #261
+   * @protected
+   * @param {Object} - The first vector.
+   * @param {Object} - The second vector.
+   * @returns {Object} - The difference.
+   */
   Owl.prototype.difference = function(first, second) {
     return {
       x: first.x - second.x,
@@ -2727,6 +1652,11 @@ window.instafetch = instafetch;
     };
   };
 
+  /**
+   * The jQuery Plugin for the Owl Carousel
+   * @todo Navigation plugin `next` and `prev`
+   * @public
+   */
   $.fn.owlCarousel = function(option) {
     var args = Array.prototype.slice.call(arguments, 1);
 
@@ -2758,19 +1688,55 @@ window.instafetch = instafetch;
     });
   };
 
+  /**
+   * The constructor for the jQuery Plugin
+   * @public
+   */
   $.fn.owlCarousel.Constructor = Owl;
 
 })(window.Zepto || window.jQuery, window, document);
 
+/**
+ * AutoRefresh Plugin
+ * @version 2.1.0
+ * @author Artus Kolanowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ */
 ;(function($, window, document, undefined) {
 
+  /**
+   * Creates the auto refresh plugin.
+   * @class The Auto Refresh Plugin
+   * @param {Owl} carousel - The Owl Carousel
+   */
   var AutoRefresh = function(carousel) {
+    /**
+     * Reference to the core.
+     * @protected
+     * @type {Owl}
+     */
     this._core = carousel;
 
+    /**
+     * Refresh interval.
+     * @protected
+     * @type {number}
+     */
     this._interval = null;
 
+    /**
+     * Whether the element is currently visible or not.
+     * @protected
+     * @type {Boolean}
+     */
     this._visible = null;
 
+    /**
+     * All event handlers.
+     * @protected
+     * @type {Object}
+     */
     this._handlers = {
       'initialized.owl.carousel': $.proxy(function(e) {
         if (e.namespace && this._core.settings.autoRefresh) {
@@ -2779,16 +1745,25 @@ window.instafetch = instafetch;
       }, this)
     };
 
+    // set default options
     this._core.options = $.extend({}, AutoRefresh.Defaults, this._core.options);
 
+    // register event handlers
     this._core.$element.on(this._handlers);
   };
 
+  /**
+   * Default options.
+   * @public
+   */
   AutoRefresh.Defaults = {
     autoRefresh: true,
     autoRefreshInterval: 500
   };
 
+  /**
+   * Watches the element.
+   */
   AutoRefresh.prototype.watch = function() {
     if (this._interval) {
       return;
@@ -2798,6 +1773,9 @@ window.instafetch = instafetch;
     this._interval = window.setInterval($.proxy(this.refresh, this), this._core.settings.autoRefreshInterval);
   };
 
+  /**
+   * Refreshes the element.
+   */
   AutoRefresh.prototype.refresh = function() {
     if (this._core.$element.is(':visible') === this._visible) {
       return;
@@ -2810,6 +1788,9 @@ window.instafetch = instafetch;
     this._visible && (this._core.invalidate('width') && this._core.refresh());
   };
 
+  /**
+   * Destroys the plugin.
+   */
   AutoRefresh.prototype.destroy = function() {
     var handler, property;
 
@@ -2827,14 +1808,41 @@ window.instafetch = instafetch;
 
 })(window.Zepto || window.jQuery, window, document);
 
+/**
+ * Lazy Plugin
+ * @version 2.1.0
+ * @author Bartosz Wojciechowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ */
 ;(function($, window, document, undefined) {
 
+  /**
+   * Creates the lazy plugin.
+   * @class The Lazy Plugin
+   * @param {Owl} carousel - The Owl Carousel
+   */
   var Lazy = function(carousel) {
 
+    /**
+     * Reference to the core.
+     * @protected
+     * @type {Owl}
+     */
     this._core = carousel;
 
+    /**
+     * Already loaded items.
+     * @protected
+     * @type {Array.<jQuery>}
+     */
     this._loaded = [];
 
+    /**
+     * Event handlers.
+     * @protected
+     * @type {Object}
+     */
     this._handlers = {
       'initialized.owl.carousel change.owl.carousel resized.owl.carousel': $.proxy(function(e) {
         if (!e.namespace) {
@@ -2862,15 +1870,26 @@ window.instafetch = instafetch;
       }, this)
     };
 
+    // set the default options
     this._core.options = $.extend({}, Lazy.Defaults, this._core.options);
 
+    // register event handler
     this._core.$element.on(this._handlers);
   };
 
+  /**
+   * Default options.
+   * @public
+   */
   Lazy.Defaults = {
     lazyLoad: false
   };
 
+  /**
+   * Loads all resources of an item at the specified position.
+   * @param {Number} position - The absolute position of the item.
+   * @protected
+   */
   Lazy.prototype.load = function(position) {
     var $item = this._core.$stage.children().eq(position),
       $elements = $item && $item.find('.owl-lazy');
@@ -2906,6 +1925,10 @@ window.instafetch = instafetch;
     this._loaded.push($item.get(0));
   };
 
+  /**
+   * Destroys the plugin.
+   * @public
+   */
   Lazy.prototype.destroy = function() {
     var handler, property;
 
@@ -2921,11 +1944,33 @@ window.instafetch = instafetch;
 
 })(window.Zepto || window.jQuery, window, document);
 
+/**
+ * AutoHeight Plugin
+ * @version 2.1.0
+ * @author Bartosz Wojciechowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ */
 ;(function($, window, document, undefined) {
 
+  /**
+   * Creates the auto height plugin.
+   * @class The Auto Height Plugin
+   * @param {Owl} carousel - The Owl Carousel
+   */
   var AutoHeight = function(carousel) {
+    /**
+     * Reference to the core.
+     * @protected
+     * @type {Owl}
+     */
     this._core = carousel;
 
+    /**
+     * All event handlers.
+     * @protected
+     * @type {Object}
+     */
     this._handlers = {
       'initialized.owl.carousel refreshed.owl.carousel': $.proxy(function(e) {
         if (e.namespace && this._core.settings.autoHeight) {
@@ -2945,16 +1990,25 @@ window.instafetch = instafetch;
       }, this)
     };
 
+    // set default options
     this._core.options = $.extend({}, AutoHeight.Defaults, this._core.options);
 
+    // register event handlers
     this._core.$element.on(this._handlers);
   };
 
+  /**
+   * Default options.
+   * @public
+   */
   AutoHeight.Defaults = {
     autoHeight: false,
     autoHeightClass: 'owl-height'
   };
 
+  /**
+   * Updates the view.
+   */
   AutoHeight.prototype.update = function() {
     var start = this._core._current,
       end = start + this._core.settings.items,
@@ -2988,15 +2042,48 @@ window.instafetch = instafetch;
 
 })(window.Zepto || window.jQuery, window, document);
 
+/**
+ * Video Plugin
+ * @version 2.1.0
+ * @author Bartosz Wojciechowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ */
 ;(function($, window, document, undefined) {
 
+  /**
+   * Creates the video plugin.
+   * @class The Video Plugin
+   * @param {Owl} carousel - The Owl Carousel
+   */
   var Video = function(carousel) {
+    /**
+     * Reference to the core.
+     * @protected
+     * @type {Owl}
+     */
     this._core = carousel;
 
+    /**
+     * Cache all video URLs.
+     * @protected
+     * @type {Object}
+     */
     this._videos = {};
 
+    /**
+     * Current playing item.
+     * @protected
+     * @type {jQuery}
+     */
     this._playing = null;
 
+    /**
+     * All event handlers.
+     * @todo The cloned content removale is too late
+     * @protected
+     * @type {Object}
+     */
     this._handlers = {
       'initialized.owl.carousel': $.proxy(function(e) {
         if (e.namespace) {
@@ -3032,8 +2119,10 @@ window.instafetch = instafetch;
       }, this)
     };
 
+    // set default options
     this._core.options = $.extend({}, Video.Defaults, this._core.options);
 
+    // register event handlers
     this._core.$element.on(this._handlers);
 
     this._core.$element.on('click.owl.video', '.owl-video-play-icon', $.proxy(function(e) {
@@ -3041,12 +2130,22 @@ window.instafetch = instafetch;
     }, this));
   };
 
+  /**
+   * Default options.
+   * @public
+   */
   Video.Defaults = {
     video: false,
     videoHeight: false,
     videoWidth: false
   };
 
+  /**
+   * Gets the video ID and the type (YouTube/Vimeo/vzaar only).
+   * @protected
+   * @param {jQuery} target - The target containing the video data.
+   * @param {jQuery} item - The item containing the video.
+   */
   Video.prototype.fetch = function(target, item) {
       var type = (function() {
           if (target.attr('data-vimeo-id')) {
@@ -3064,6 +2163,17 @@ window.instafetch = instafetch;
 
     if (url) {
 
+      /*
+          Parses the id's out of the following urls (and probably more):
+          https://www.youtube.com/watch?v=:id
+          https://youtu.be/:id
+          https://vimeo.com/:id
+          https://vimeo.com/channels/:channel/:id
+          https://vimeo.com/groups/:group/videos/:id
+          https://app.vzaar.com/videos/:id
+
+          Visual example: https://regexper.com/#(http%3A%7Chttps%3A%7C)%5C%2F%5C%2F(player.%7Cwww.%7Capp.)%3F(vimeo%5C.com%7Cyoutu(be%5C.com%7C%5C.be%7Cbe%5C.googleapis%5C.com)%7Cvzaar%5C.com)%5C%2F(video%5C%2F%7Cvideos%5C%2F%7Cembed%5C%2F%7Cchannels%5C%2F.%2B%5C%2F%7Cgroups%5C%2F.%2B%5C%2F%7Cwatch%5C%3Fv%3D%7Cv%5C%2F)%3F(%5BA-Za-z0-9._%25-%5D*)(%5C%26%5CS%2B)%3F
+      */
 
       id = url.match(/(http:|https:|)\/\/(player.|www.|app.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com)|vzaar\.com)\/(video\/|videos\/|embed\/|channels\/.+\/|groups\/.+\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(\&\S+)?/);
 
@@ -3093,6 +2203,13 @@ window.instafetch = instafetch;
     this.thumbnail(target, this._videos[url]);
   };
 
+  /**
+   * Creates video thumbnail.
+   * @protected
+   * @param {jQuery} target - The target containing the video data.
+   * @param {Object} info - The video info object.
+   * @see `fetch`
+   */
   Video.prototype.thumbnail = function(target, video) {
     var tnLink,
       icon,
@@ -3114,6 +2231,7 @@ window.instafetch = instafetch;
         target.after(icon);
       };
 
+    // wrap video content into owl-video-wrapper div
     target.wrap('<div class="owl-video-wrapper"' + dimensions + '></div>');
 
     if (this._core.settings.lazyLoad) {
@@ -3121,6 +2239,7 @@ window.instafetch = instafetch;
       lazyClass = 'owl-lazy';
     }
 
+    // custom thumbnail
     if (customTn.length) {
       create(customTn.attr(srcType));
       customTn.remove();
@@ -3155,6 +2274,10 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Stops the current video.
+   * @public
+   */
   Video.prototype.stop = function() {
     this._core.trigger('stop', null, 'video');
     this._playing.find('.owl-video-frame').remove();
@@ -3164,6 +2287,11 @@ window.instafetch = instafetch;
     this._core.trigger('stopped', null, 'video');
   };
 
+  /**
+   * Starts the current video.
+   * @public
+   * @param {Event} event - The event arguments.
+   */
   Video.prototype.play = function(event) {
     var target = $(event.target),
       item = target.closest('.' + this._core.settings.itemClass),
@@ -3201,6 +2329,12 @@ window.instafetch = instafetch;
     this._playing = item.addClass('owl-video-playing');
   };
 
+  /**
+   * Checks whether an video is currently in full screen mode or not.
+   * @todo Bad style because looks like a readonly method but changes members.
+   * @protected
+   * @returns {Boolean}
+   */
   Video.prototype.isInFullScreen = function() {
     var element = document.fullscreenElement || document.mozFullScreenElement ||
         document.webkitFullscreenElement;
@@ -3208,6 +2342,9 @@ window.instafetch = instafetch;
     return element && $(element).parent().hasClass('owl-video-frame');
   };
 
+  /**
+   * Destroys the plugin.
+   */
   Video.prototype.destroy = function() {
     var handler, property;
 
@@ -3225,8 +2362,20 @@ window.instafetch = instafetch;
 
 })(window.Zepto || window.jQuery, window, document);
 
+/**
+ * Animate Plugin
+ * @version 2.1.0
+ * @author Bartosz Wojciechowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ */
 ;(function($, window, document, undefined) {
 
+  /**
+   * Creates the animate plugin.
+   * @class The Navigation Plugin
+   * @param {Owl} scope - The Owl Carousel
+   */
   var Animate = function(scope) {
     this.core = scope;
     this.core.options = $.extend({}, Animate.Defaults, this.core.options);
@@ -3256,11 +2405,20 @@ window.instafetch = instafetch;
     this.core.$element.on(this.handlers);
   };
 
+  /**
+   * Default options.
+   * @public
+   */
   Animate.Defaults = {
     animateOut: false,
     animateIn: false
   };
 
+  /**
+   * Toggles the animation classes whenever an translations starts.
+   * @protected
+   * @returns {Boolean|undefined}
+   */
   Animate.prototype.swap = function() {
 
     if (this.core.settings.items !== 1) {
@@ -3307,6 +2465,10 @@ window.instafetch = instafetch;
     this.core.onTransitionEnd();
   };
 
+  /**
+   * Destroys the plugin.
+   * @public
+   */
   Animate.prototype.destroy = function() {
     var handler, property;
 
@@ -3322,15 +2484,46 @@ window.instafetch = instafetch;
 
 })(window.Zepto || window.jQuery, window, document);
 
+/**
+ * Autoplay Plugin
+ * @version 2.1.0
+ * @author Bartosz Wojciechowski
+ * @author Artus Kolanowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ */
 ;(function($, window, document, undefined) {
 
+  /**
+   * Creates the autoplay plugin.
+   * @class The Autoplay Plugin
+   * @param {Owl} scope - The Owl Carousel
+   */
   var Autoplay = function(carousel) {
+    /**
+     * Reference to the core.
+     * @protected
+     * @type {Owl}
+     */
     this._core = carousel;
 
+    /**
+     * The autoplay timeout.
+     * @type {Timeout}
+     */
     this._timeout = null;
 
+    /**
+     * Indicates whenever the autoplay is paused.
+     * @type {Boolean}
+     */
     this._paused = false;
 
+    /**
+     * All event handlers.
+     * @protected
+     * @type {Object}
+     */
     this._handlers = {
       'changed.owl.carousel': $.proxy(function(e) {
         if (e.namespace && e.property.name === 'settings') {
@@ -3340,6 +2533,7 @@ window.instafetch = instafetch;
             this.stop();
           }
         } else if (e.namespace && e.property.name === 'position') {
+          //console.log('play?', e);
           if (this._core.settings.autoplay) {
             this._setAutoPlayInterval();
           }
@@ -3382,11 +2576,17 @@ window.instafetch = instafetch;
       }, this)
     };
 
+    // register event handlers
     this._core.$element.on(this._handlers);
 
+    // set default options
     this._core.options = $.extend({}, Autoplay.Defaults, this._core.options);
   };
 
+  /**
+   * Default options.
+   * @public
+   */
   Autoplay.Defaults = {
     autoplay: false,
     autoplayTimeout: 5000,
@@ -3394,6 +2594,12 @@ window.instafetch = instafetch;
     autoplaySpeed: false
   };
 
+  /**
+   * Starts the autoplay.
+   * @public
+   * @param {Number} [timeout] - The interval before the next animation starts.
+   * @param {Number} [speed] - The animation speed for the animations.
+   */
   Autoplay.prototype.play = function(timeout, speed) {
     this._paused = false;
 
@@ -3406,6 +2612,13 @@ window.instafetch = instafetch;
     this._setAutoPlayInterval();
   };
 
+  /**
+   * Gets a new timeout
+   * @private
+   * @param {Number} [timeout] - The interval before the next animation starts.
+   * @param {Number} [speed] - The animation speed for the animations.
+   * @return {Timeout}
+   */
   Autoplay.prototype._getNextTimeout = function(timeout, speed) {
     if ( this._timeout ) {
       window.clearTimeout(this._timeout);
@@ -3418,10 +2631,18 @@ window.instafetch = instafetch;
     }, this), timeout || this._core.settings.autoplayTimeout);
   };
 
+  /**
+   * Sets autoplay in motion.
+   * @private
+   */
   Autoplay.prototype._setAutoPlayInterval = function() {
     this._timeout = this._getNextTimeout();
   };
 
+  /**
+   * Stops the autoplay.
+   * @public
+   */
   Autoplay.prototype.stop = function() {
     if (!this._core.is('rotating')) {
       return;
@@ -3431,6 +2652,10 @@ window.instafetch = instafetch;
     this._core.leave('rotating');
   };
 
+  /**
+   * Stops the autoplay.
+   * @public
+   */
   Autoplay.prototype.pause = function() {
     if (!this._core.is('rotating')) {
       return;
@@ -3439,6 +2664,9 @@ window.instafetch = instafetch;
     this._paused = true;
   };
 
+  /**
+   * Destroys the plugin.
+   */
   Autoplay.prototype.destroy = function() {
     var handler, property;
 
@@ -3456,28 +2684,79 @@ window.instafetch = instafetch;
 
 })(window.Zepto || window.jQuery, window, document);
 
+/**
+ * Navigation Plugin
+ * @version 2.1.0
+ * @author Artus Kolanowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ */
 ;(function($, window, document, undefined) {
   'use strict';
 
+  /**
+   * Creates the navigation plugin.
+   * @class The Navigation Plugin
+   * @param {Owl} carousel - The Owl Carousel.
+   */
   var Navigation = function(carousel) {
+    /**
+     * Reference to the core.
+     * @protected
+     * @type {Owl}
+     */
     this._core = carousel;
 
+    /**
+     * Indicates whether the plugin is initialized or not.
+     * @protected
+     * @type {Boolean}
+     */
     this._initialized = false;
 
+    /**
+     * The current paging indexes.
+     * @protected
+     * @type {Array}
+     */
     this._pages = [];
 
+    /**
+     * All DOM elements of the user interface.
+     * @protected
+     * @type {Object}
+     */
     this._controls = {};
 
+    /**
+     * Markup for an indicator.
+     * @protected
+     * @type {Array.<String>}
+     */
     this._templates = [];
 
+    /**
+     * The carousel element.
+     * @type {jQuery}
+     */
     this.$element = this._core.$element;
 
+    /**
+     * Overridden methods of the carousel.
+     * @protected
+     * @type {Object}
+     */
     this._overrides = {
       next: this._core.next,
       prev: this._core.prev,
       to: this._core.to
     };
 
+    /**
+     * All event handlers.
+     * @protected
+     * @type {Object}
+     */
     this._handlers = {
       'prepared.owl.carousel': $.proxy(function(e) {
         if (e.namespace && this._core.settings.dotsData) {
@@ -3520,11 +2799,18 @@ window.instafetch = instafetch;
       }, this)
     };
 
+    // set default options
     this._core.options = $.extend({}, Navigation.Defaults, this._core.options);
 
+    // register event handlers
     this.$element.on(this._handlers);
   };
 
+  /**
+   * Default options.
+   * @public
+   * @todo Rename `slideBy` to `navBy`
+   */
   Navigation.Defaults = {
     nav: false,
     navText: [ 'prev', 'next' ],
@@ -3543,10 +2829,15 @@ window.instafetch = instafetch;
     dotsContainer: false
   };
 
+  /**
+   * Initializes the layout of the plugin and extends the carousel.
+   * @protected
+   */
   Navigation.prototype.initialize = function() {
     var override,
       settings = this._core.settings;
 
+    // create DOM structure for relative navigation
     this._controls.$relative = (settings.navContainer ? $(settings.navContainer)
       : $('<div>').addClass(settings.navContainerClass).appendTo(this.$element)).addClass('disabled');
 
@@ -3565,6 +2856,7 @@ window.instafetch = instafetch;
         this.next(settings.navSpeed);
       }, this));
 
+    // create DOM structure for absolute navigation
     if (!settings.dotsData) {
       this._templates = [ $('<div>')
         .addClass(settings.dotClass)
@@ -3584,11 +2876,16 @@ window.instafetch = instafetch;
       this.to(index, settings.dotsSpeed);
     }, this));
 
+    // override public methods of the carousel
     for (override in this._overrides) {
       this._core[override] = $.proxy(this[override], this);
     }
   };
 
+  /**
+   * Destroys the plugin.
+   * @protected
+   */
   Navigation.prototype.destroy = function() {
     var handler, control, property, override;
 
@@ -3606,6 +2903,10 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Updates the internal state.
+   * @protected
+   */
   Navigation.prototype.update = function() {
     var i, j, k,
       lower = this._core.clones().length / 2,
@@ -3638,6 +2939,11 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Draws the user interface.
+   * @todo The option `dotsData` wont work.
+   * @protected
+   */
   Navigation.prototype.draw = function() {
     var difference,
       settings = this._core.settings,
@@ -3670,6 +2976,11 @@ window.instafetch = instafetch;
     }
   };
 
+  /**
+   * Extends event data.
+   * @protected
+   * @param {Event} event - The event object which gets thrown.
+   */
   Navigation.prototype.onTrigger = function(event) {
     var settings = this._core.settings;
 
@@ -3681,6 +2992,11 @@ window.instafetch = instafetch;
     };
   };
 
+  /**
+   * Gets the current page position of the carousel.
+   * @protected
+   * @returns {Number}
+   */
   Navigation.prototype.current = function() {
     var current = this._core.relative(this._core.current());
     return $.grep(this._pages, $.proxy(function(page, index) {
@@ -3688,6 +3004,11 @@ window.instafetch = instafetch;
     }, this)).pop();
   };
 
+  /**
+   * Gets the current succesor/predecessor position.
+   * @protected
+   * @returns {Number}
+   */
   Navigation.prototype.getPosition = function(successor) {
     var position, length,
       settings = this._core.settings;
@@ -3706,14 +3027,31 @@ window.instafetch = instafetch;
     return position;
   };
 
+  /**
+   * Slides to the next item or page.
+   * @public
+   * @param {Number} [speed=false] - The time in milliseconds for the transition.
+   */
   Navigation.prototype.next = function(speed) {
     $.proxy(this._overrides.to, this._core)(this.getPosition(true), speed);
   };
 
+  /**
+   * Slides to the previous item or page.
+   * @public
+   * @param {Number} [speed=false] - The time in milliseconds for the transition.
+   */
   Navigation.prototype.prev = function(speed) {
     $.proxy(this._overrides.to, this._core)(this.getPosition(false), speed);
   };
 
+  /**
+   * Slides to the specified item or page.
+   * @public
+   * @param {Number} position - The position of the item or page.
+   * @param {Number} [speed] - The time in milliseconds for the transition.
+   * @param {Boolean} [standard=false] - Whether to use the standard behaviour or not.
+   */
   Navigation.prototype.to = function(position, speed, standard) {
     var length;
 
@@ -3729,16 +3067,47 @@ window.instafetch = instafetch;
 
 })(window.Zepto || window.jQuery, window, document);
 
+/**
+ * Hash Plugin
+ * @version 2.1.0
+ * @author Artus Kolanowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ */
 ;(function($, window, document, undefined) {
   'use strict';
 
+  /**
+   * Creates the hash plugin.
+   * @class The Hash Plugin
+   * @param {Owl} carousel - The Owl Carousel
+   */
   var Hash = function(carousel) {
+    /**
+     * Reference to the core.
+     * @protected
+     * @type {Owl}
+     */
     this._core = carousel;
 
+    /**
+     * Hash index for the items.
+     * @protected
+     * @type {Object}
+     */
     this._hashes = {};
 
+    /**
+     * The carousel element.
+     * @type {jQuery}
+     */
     this.$element = this._core.$element;
 
+    /**
+     * All event handlers.
+     * @protected
+     * @type {Object}
+     */
     this._handlers = {
       'initialized.owl.carousel': $.proxy(function(e) {
         if (e.namespace && this._core.settings.startPosition === 'URLHash') {
@@ -3772,10 +3141,13 @@ window.instafetch = instafetch;
       }, this)
     };
 
+    // set default options
     this._core.options = $.extend({}, Hash.Defaults, this._core.options);
 
+    // register the event handlers
     this.$element.on(this._handlers);
 
+    // register event listener for hash navigation
     $(window).on('hashchange.owl.navigation', $.proxy(function(e) {
       var hash = window.location.hash.substring(1),
         items = this._core.$stage.children(),
@@ -3789,10 +3161,18 @@ window.instafetch = instafetch;
     }, this));
   };
 
+  /**
+   * Default options.
+   * @public
+   */
   Hash.Defaults = {
     URLhashListener: false
   };
 
+  /**
+   * Destroys the plugin.
+   * @public
+   */
   Hash.prototype.destroy = function() {
     var handler, property;
 
@@ -3810,6 +3190,15 @@ window.instafetch = instafetch;
 
 })(window.Zepto || window.jQuery, window, document);
 
+/**
+ * Support Plugin
+ *
+ * @version 2.1.0
+ * @author Vivid Planet Software GmbH
+ * @author Artus Kolanowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ */
 ;(function($, window, document, undefined) {
 
   var style = $('<support>').get(0).style,
@@ -3866,77 +3255,21 @@ window.instafetch = instafetch;
   }
 
   if (tests.csstransitions()) {
+    /* jshint -W053 */
     $.support.transition = new String(prefixed('transition'))
     $.support.transition.end = events.transition.end[ $.support.transition ];
   }
 
   if (tests.cssanimations()) {
+    /* jshint -W053 */
     $.support.animation = new String(prefixed('animation'))
     $.support.animation.end = events.animation.end[ $.support.animation ];
   }
 
   if (tests.csstransforms()) {
+    /* jshint -W053 */
     $.support.transform = new String(prefixed('transform'));
     $.support.transform3d = tests.csstransforms3d();
   }
 
 })(window.Zepto || window.jQuery, window, document);
-$(document).ready(function() {
-  $(window).on('scroll', function() {
-    var distance = $(window).scrollTop();
-    if (distance >= 80) {
-      $('.header').addClass('scrollingHeader');
-    } else {
-      $('.header').removeClass('scrollingHeader');
-    }
-  });
-
-  smoothScroll.init();
-
-  $('.container-triple li:nth-child(3n + 1)').each(function() {
-    $(this).find('a').attr('data-wow-delay', '0.1s');
-  });
-  $('.container-triple li:nth-child(3n + 2)').each(function() {
-    $(this).find('a').attr('data-wow-delay', '0.2s');
-  });
-  $('.container-triple li:nth-child(3n)').each(function() {
-    $(this).find('a').attr('data-wow-delay', '0.3s');
-  });
-
-    var wow = new WOW({
-    boxClass: 'wow',
-    animateClass: 'animated', 
-    offset: 0,        
-    mobile: true,      
-    live: true 
-  });
-  wow.init();
-
-  $('.portfolio-carousel').owlCarousel({
-    items: 1,
-    loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    nav: true,
-    navText: ['', ''],
-    autoPlay: true,
-    smartSpeed: 450,
-    animateOut: 'fadeOut'
-  });
-
-  $('.section-header').each(function() {
-    var arr = $(this).html().split('');
-    var newArr = [];
-    arr.forEach(function(letter) {
-      if (letter !== ' ') {
-        newArr.push('<span class="wow fadeInUp">' + letter + '</span>');
-      } else {
-        newArr.push('<span class="wow fadeInUp">&nbsp;</span>');
-      }
-    });
-    newArr = newArr.join('');
-    $(this).html(newArr);
-  });
-});
->>>>>>> master
