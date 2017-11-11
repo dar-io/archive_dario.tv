@@ -48,12 +48,11 @@
 
 .post-content {
 
-  @media (min-width: $mq-md) {
-    margin-right: 8em;
-    margin-left: 8em;
+  h1,h2,h3,h4,h5,h6{
+    @extend %content-width;
   }
-  
   p {
+    @extend %content-width;
 
     &:first-of-type {
       font-size: 1.25em;
@@ -69,8 +68,10 @@
   }
 
   ol, ul {
+    @extend %content-width;
+    padding-left: 16px;
     margin-bottom: 1em;
-    margin-left: 1em;
+
 
     & > li {
       position: relative;
@@ -90,14 +91,19 @@
     list-style-type: none;
     counter-reset: li;
 
-    & > li:before { 
+    & > li:before {
       content: counter(li) ".";
 
       counter-increment: li;
     }
   }
 
+  blockquote{
+    @extend %content-width;
+  }
+
   figure {
+    @extend %content-width;
     margin-top: 2em;
     margin-bottom: 2em;
 
@@ -114,16 +120,22 @@
   }
 
   figcaption {
+    @extend %content-width;
     margin-top: 0.5em;
 
     text-align: center;
   }
 
   & figure.large-img {
-
+    width: auto;
+    max-width: fit-content;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
     @media (min-width: $mq-md) {
-      margin-right: -16em;
-      margin-left: -16em;
+      margin-right: -4em;
+      margin-left: -4em;
+      width: auto;
+      max-width: none;
     }
   }
 

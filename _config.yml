@@ -2,8 +2,8 @@
 baseurl: ""
 
 # Color settings (Hex value without #)
-color_alpha: feeaeb
-color_beta: 05009e
+color_alpha: 607d8b
+color_beta: 222222
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
@@ -13,7 +13,7 @@ instagram_key:
 instagram_caption: true
 
 # SEO settings
-title: Cartwheel
+title: Dario Ramalho
 description:
 url: "http://dario.tv/"
 email:

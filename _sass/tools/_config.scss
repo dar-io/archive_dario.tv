@@ -1,12 +1,14 @@
 /**
  * Base Variables
  */
-$font-header: "Quattrocento", serif;
-$font-body: "Fanwood Text", serif;
+$font-header: "Crete Round", serif;
+$font-body: "Roboto Slab", serif;
 
 $color-black: #494949;
 $color-grey: #f8f8f8;
 $color-white: #fff;
+
+$color-footer: #fff;
 
 $mq-xs: 20em;
 $mq-sm: 30em;
@@ -14,3 +16,11 @@ $mq-md: 54em;
 $mq-lg: 64em;
 $mq-xl: 76.5em;
 $mq-xxl: 114em;
+
+p{
+  font-weight: 300;
+  -webkit-font-smoothing: auto;
+  .post-content &{
+    line-height: 1.65;
+  }
+}

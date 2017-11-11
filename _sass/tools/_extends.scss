@@ -15,9 +15,35 @@
 }
 
 /**
+ * Link Posts
+ */
+%content-width {
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: $mq-sm) {
+    max-width: 680px;
+
+  }
+
+  @media (min-width: $mq-md) {
+    width: 680px;
+
+  }
+  @media (min-width: $mq-lg) {
+    width: 680px;
+  }
+  @media (min-width: $mq-xl) {
+    width: 680px;
+  }
+  @media (min-width: $mq-xxl) {
+    width: 680px;
+  }
+}
+
+/**
  * Card Shadow
  */
-%card-shadow {  
+%card-shadow {
   position: relative;
 
   border: 1px solid transparent;

@@ -44,8 +44,8 @@
       }
 
       a {
-        @include link-underline();
-        
+
+        color: #fff;
         font-family: $font-header;
         font-weight: 700;
       }
@@ -67,5 +67,8 @@
     position: fixed;
 
     background-color: $color-white;
+    a {
+      @include link-underline();
+    }
   }
 }

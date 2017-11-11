@@ -12,8 +12,8 @@
   'use strict';
 
 
-  var smoothScroll = {}; 
-  var supports = 'querySelector' in document && 'addEventListener' in root; 
+  var smoothScroll = {};
+  var supports = 'querySelector' in document && 'addEventListener' in root;
   var settings, anchor, toggle, fixedHeader, headerHeight, eventTimeout, animationInterval;
 
   var defaults = {
@@ -145,19 +145,19 @@
 
   var easingPattern = function ( type, time ) {
     var pattern;
-    if ( type === 'easeInQuad' ) pattern = time * time; 
-    if ( type === 'easeOutQuad' ) pattern = time * (2 - time); 
-    if ( type === 'easeInOutQuad' ) pattern = time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time; 
-    if ( type === 'easeInCubic' ) pattern = time * time * time; 
-    if ( type === 'easeOutCubic' ) pattern = (--time) * time * time + 1; 
-    if ( type === 'easeInOutCubic' ) pattern = time < 0.5 ? 4 * time * time * time : (time - 1) * (2 * time - 2) * (2 * time - 2) + 1; 
-    if ( type === 'easeInQuart' ) pattern = time * time * time * time; 
-    if ( type === 'easeOutQuart' ) pattern = 1 - (--time) * time * time * time; 
-    if ( type === 'easeInOutQuart' ) pattern = time < 0.5 ? 8 * time * time * time * time : 1 - 8 * (--time) * time * time * time; 
-    if ( type === 'easeInQuint' ) pattern = time * time * time * time * time; 
-    if ( type === 'easeOutQuint' ) pattern = 1 + (--time) * time * time * time * time; 
-    if ( type === 'easeInOutQuint' ) pattern = time < 0.5 ? 16 * time * time * time * time * time : 1 + 16 * (--time) * time * time * time * time; 
-    return pattern || time; 
+    if ( type === 'easeInQuad' ) pattern = time * time;
+    if ( type === 'easeOutQuad' ) pattern = time * (2 - time);
+    if ( type === 'easeInOutQuad' ) pattern = time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+    if ( type === 'easeInCubic' ) pattern = time * time * time;
+    if ( type === 'easeOutCubic' ) pattern = (--time) * time * time + 1;
+    if ( type === 'easeInOutCubic' ) pattern = time < 0.5 ? 4 * time * time * time : (time - 1) * (2 * time - 2) * (2 * time - 2) + 1;
+    if ( type === 'easeInQuart' ) pattern = time * time * time * time;
+    if ( type === 'easeOutQuart' ) pattern = 1 - (--time) * time * time * time;
+    if ( type === 'easeInOutQuart' ) pattern = time < 0.5 ? 8 * time * time * time * time : 1 - 8 * (--time) * time * time * time;
+    if ( type === 'easeInQuint' ) pattern = time * time * time * time * time;
+    if ( type === 'easeOutQuint' ) pattern = 1 + (--time) * time * time * time * time;
+    if ( type === 'easeInOutQuint' ) pattern = time < 0.5 ? 16 * time * time * time * time * time : 1 + 16 * (--time) * time * time * time * time;
+    return pattern || time;
   };
 
   var getEndLocation = function ( anchor, headerHeight, offset ) {
@@ -209,20 +209,20 @@
   smoothScroll.animateScroll = function ( anchor, toggle, options ) {
 
     var overrides = getDataOptions( toggle ? toggle.getAttribute('data-options') : null );
-    var animateSettings = extend( settings || defaults, options || {}, overrides ); 
+    var animateSettings = extend( settings || defaults, options || {}, overrides );
 
     var isNum = Object.prototype.toString.call( anchor ) === '[object Number]' ? true : false;
     var anchorElem = isNum || !anchor.tagName ? null : anchor;
     if ( !isNum && !anchorElem ) return;
-    var startLocation = root.pageYOffset; 
+    var startLocation = root.pageYOffset;
     if ( animateSettings.selectorHeader && !fixedHeader ) {
       fixedHeader = document.querySelector( animateSettings.selectorHeader );
     }
     if ( !headerHeight ) {
       headerHeight = getHeaderHeight( fixedHeader );
     }
-    var endLocation = isNum ? anchor : getEndLocation( anchorElem, headerHeight, parseInt(animateSettings.offset, 10) ); 
-    var distance = endLocation - startLocation; 
+    var endLocation = isNum ? anchor : getEndLocation( anchorElem, headerHeight, parseInt(animateSettings.offset, 10) );
+    var distance = endLocation - startLocation;
     var documentHeight = getDocumentHeight();
     var timeLapsed = 0;
     var percentage, position;
@@ -334,8 +334,8 @@
   var resizeThrottler = function (event) {
     if ( !eventTimeout ) {
       eventTimeout = setTimeout((function() {
-        eventTimeout = null; 
-        headerHeight = getHeaderHeight( fixedHeader ); 
+        eventTimeout = null;
+        headerHeight = getHeaderHeight( fixedHeader );
       }), 66);
     }
   };
@@ -362,8 +362,8 @@
 
     smoothScroll.destroy();
 
-    settings = extend( defaults, options || {} ); 
-    fixedHeader = settings.selectorHeader ? document.querySelector( settings.selectorHeader ) : null; 
+    settings = extend( defaults, options || {} );
+    fixedHeader = settings.selectorHeader ? document.querySelector( settings.selectorHeader ) : null;
     headerHeight = getHeaderHeight( fixedHeader );
 
     document.addEventListener( 'click', clickHandler, false );
@@ -1172,7 +1172,7 @@
 
   Promise._unhandledRejectionFn = function _unhandledRejectionFn(err) {
     if (typeof console !== 'undefined' && console) {
-      console.warn('Possible Unhandled Promise Rejection:', err); 
+      console.warn('Possible Unhandled Promise Rejection:', err);
     }
   };
 
@@ -3738,10 +3738,10 @@ $(document).ready(function() {
 
     var wow = new WOW({
     boxClass: 'wow',
-    animateClass: 'animated', 
-    offset: 0,        
-    mobile: true,      
-    live: true 
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
   });
   wow.init();
 
@@ -3758,17 +3758,17 @@ $(document).ready(function() {
     animateOut: 'fadeOut'
   });
 
-  $('.section-header').each(function() {
-    var arr = $(this).html().split('');
-    var newArr = [];
-    arr.forEach(function(letter) {
-      if (letter !== ' ') {
-        newArr.push('<span class="wow fadeInUp">' + letter + '</span>');
-      } else {
-        newArr.push('<span class="wow fadeInUp">&nbsp;</span>');
-      }
-    });
-    newArr = newArr.join('');
-    $(this).html(newArr);
-  });
+  // $('.section-header').each(function() {
+  //   var arr = $(this).html().split('');
+  //   var newArr = [];
+  //   arr.forEach(function(letter) {
+  //     if (letter !== ' ') {
+  //       newArr.push('<span class="wow fadeInUp">' + letter + '</span>');
+  //     } else {
+  //       newArr.push('<span class="wow fadeInUp">&nbsp;</span>');
+  //     }
+  //   });
+  //   newArr = newArr.join('');
+  //   $(this).html(newArr);
+  // });
 });

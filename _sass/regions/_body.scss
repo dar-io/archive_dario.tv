@@ -28,12 +28,12 @@ section {
 }
 
 .section-padding {
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
 
   @media (min-width: $mq-sm) {
-    padding-top: 6em;
-    padding-bottom: 6em;
+    padding-top: 4em;
+    padding-bottom: 3em;
   }
 
   &--half {
@@ -48,21 +48,22 @@ section {
 }
 
 .grid {
-  margin-right: 1em;
-  margin-left: 1em;
+  max-width: 816px;
+  margin-right: 24px;
+  margin-left: 24px;
 
   @media (min-width: $mq-md) {
-    margin-right: 4em;
-    margin-left: 4em;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &--double {
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 24px;
+    margin-left: 24px;
 
     @media (min-width: $mq-md) {
-      margin-right: 8em;
-      margin-left: 8em;
+      margin-right: 4em;
+      margin-left: 4em;
     }
   }
 }
