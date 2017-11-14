@@ -3,8 +3,18 @@
  */
 .post-mast {
   position: relative;
-
   padding-top: 60%;
+
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    top:0;
+
+    }
 
   @media (min-width: $mq-md) {
     height: calc(100vh - 4em);
@@ -17,45 +27,67 @@
 }
 
 .post {
+  margin-top: -20em;
+
+  @media (min-width: $mq-sm) {
+    margin-top: -32em;
+  }
 
   @media (min-width: $mq-md) {
-    margin-top: -6em;
+    margin-top: -90em;
   }
 
   @media (min-width: $mq-xxl) {
-    max-width: $mq-xl;
+
     margin-right: auto;
     margin-left: auto;
   }
 }
 
 .post-header {
-  margin-bottom: 1em;
-
-  text-align: center;
-
-  @media (min-width: $mq-md) {
-    margin-bottom: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: $color-post-content;
+  @media (min-width: $mq-sm) {
+    padding-top: 3em;
   }
+
+ @media (min-width: $mq-sm) {
+   padding-bottom: 3em;
+ }
+
+ @media (min-width: $mq-md) {
+   padding-bottom: 4em;
+ }
 
   &__time {
     display: block;
     margin-top: 0.5em;
-
-    font-size: 1.25em;
+    @extend %content-width;
+    @extend %heading--six;
   }
 }
 
 .post-content {
+  background-color: $color-post-content;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 4em;
+  @media (min-width: $mq-md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   h1,h2,h3,h4,h5,h6{
     @extend %content-width;
   }
   p {
+    @extend %body--text;
+    @extend %body--text__vertical-spacing;
     @extend %content-width;
 
     &:first-of-type {
-      font-size: 1.25em;
+      @extend %body--text__bold;
     }
 
     &:last-child {
@@ -67,22 +99,41 @@
     @include link-posts();
   }
 
+  ul {
+     list-style: none;
+  }
+
+  ul{
+    & > li {
+      &:before {
+        position: absolute;
+        left: -0.97em;
+        content: "•";
+        font-size: 170%;
+      }
+    }
+  }
+
+  ol{
+    & > li {
+      &:before {
+        position: absolute;
+        left: -1.5em;
+
+      }
+    }
+  }
   ol, ul {
     @extend %content-width;
-    padding-left: 16px;
-    margin-bottom: 1em;
-
+    @extend %body--text;
+    padding-left: 30px;
+    margin-bottom: 2em;
 
     & > li {
       position: relative;
 
-      &:before {
-        position: absolute;
-        left: -1em;
-      }
-
       &:not(:last-child) {
-        margin-bottom: 0.25em;
+        margin-bottom: 1em;
       }
     }
   }
@@ -100,6 +151,8 @@
 
   blockquote{
     @extend %content-width;
+    @extend %blockquote--text;
+    color: $color-dark-grey;
   }
 
   figure {
@@ -107,7 +160,7 @@
     margin-top: 2em;
     margin-bottom: 2em;
 
-    background-color: $color-grey;
+    background-color: $color-light-grey;
 
     @media (min-width: $mq-sm) {
       margin-top: 3em;
@@ -121,21 +174,49 @@
 
   figcaption {
     @extend %content-width;
+    font-family: $font-header;
     margin-top: 0.5em;
-
     text-align: center;
+    color: #627381;
+    font-size:13px;
+    line-height:18px;
   }
 
   & figure.large-img {
     width: auto;
     max-width: fit-content;
-    margin-left: -1.5em;
-    margin-right: -1.5em;
+    margin-left: -3.5em;
+    margin-right: -3.5em;
+    @media (min-width: $mq-xs) {
+      margin-right: -3.1em;
+      margin-left: -3.1em;
+    }
     @media (min-width: $mq-md) {
-      margin-right: -4em;
-      margin-left: -4em;
-      width: auto;
-      max-width: none;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+  }
+
+  & figure.section__title {
+    position: relative;
+    &::after{
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      position: absolute;
+      bottom: 32px;
+      z-index: 1;
+      @extend %content-width;
+      margin: 0 auto;
+      left: 24px;
+      right: 24px;
+      color: #fff;
     }
   }
 

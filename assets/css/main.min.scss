@@ -4,7 +4,7 @@
 $color-alpha: #{{ site.color_alpha }};
 $color-beta: #{{ site.color_beta }};
 
-@import 'tools/_config',
+@import 'utils/_calc-elem', 'tools/_config',
   'tools/_mixins',
   'tools/_extends';
 
@@ -18,7 +18,7 @@ $color-beta: #{{ site.color_beta }};
   'regions/_header';
 
 @import 'components/_about',
-  'components/_carousel', 
+  'components/_carousel',
   'components/_instafetch',
   'components/_mast',
   'components/_post',

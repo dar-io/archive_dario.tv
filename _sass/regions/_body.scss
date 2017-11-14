@@ -3,7 +3,6 @@
  */
 body {
   min-height: 100vh;
-
   color: $color-black;
   background-color: $color-white;
 }
@@ -58,12 +57,26 @@ section {
   }
 
   &--double {
-    margin-right: 24px;
-    margin-left: 24px;
 
+    @media (min-width: $mq-sm) {
+      margin-right: 24px;
+      margin-left: 24px;
+    }
     @media (min-width: $mq-md) {
       margin-right: 4em;
       margin-left: 4em;
+    }
+    @media (min-width: $mq-lg) {
+      margin-right: 8em;
+      margin-left: 8em;
+    }
+    @media (min-width: $mq-xl) {
+      margin-right: 16em;
+      margin-left: 16em;
+    }
+    @media (min-width: $mq-xxl) {
+      margin-right: 32em;
+      margin-left: 32em;
     }
   }
 }

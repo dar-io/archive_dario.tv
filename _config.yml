@@ -2,7 +2,7 @@
 baseurl: ""
 
 # Color settings (Hex value without #)
-color_alpha: 607d8b
+color_alpha: ffffff
 color_beta: 222222
 
 # Google Analytics
@@ -35,3 +35,7 @@ sass:
 
 # Gems
 plugins: [jekyll-sitemap, octopress-autoprefixer]
+
+# # Server Config options
+# livereload: true     # You no longer need to include
+# reload_port: 4000    # If you don't want to use the default port

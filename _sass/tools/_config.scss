@@ -1,26 +1,24 @@
 /**
  * Base Variables
  */
-$font-header: "Crete Round", serif;
-$font-body: "Roboto Slab", serif;
+$font-header: "helvetica neue", helvetica, arial, sans-serif;
+$font-body: "Bitter", serif;
 
-$color-black: #494949;
-$color-grey: #f8f8f8;
+
+
+$color-black: #3a4c6a;
+$color-grey: #e8e8e8;
+$color-light-grey: #f0f0f1;
 $color-white: #fff;
+$color-dark-grey: #4d6a7d;
+$color-alpha: #0d1f2f;
+$color-post-content: $color-white;
 
 $color-footer: #fff;
 
 $mq-xs: 20em;
-$mq-sm: 30em;
+$mq-sm: 37.5em;
 $mq-md: 54em;
 $mq-lg: 64em;
 $mq-xl: 76.5em;
 $mq-xxl: 114em;
-
-p{
-  font-weight: 300;
-  -webkit-font-smoothing: auto;
-  .post-content &{
-    line-height: 1.65;
-  }
-}

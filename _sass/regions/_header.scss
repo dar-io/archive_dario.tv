@@ -17,7 +17,7 @@
   padding-right: 1em;
   padding-left: 1em;
 
-  background-color: $color-white;
+  background-color: $color-alpha;
 
   @media (min-width: $mq-md) {
     padding-right: 2em;
@@ -34,7 +34,7 @@
 
   &__list {
     display: flex;
-
+    @extend %body--text;
     list-style-type: none;
 
     & > * {

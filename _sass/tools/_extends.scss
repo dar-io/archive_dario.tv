@@ -21,22 +21,22 @@
   margin-left: auto;
   margin-right: auto;
   @media (min-width: $mq-sm) {
-    max-width: 680px;
+    max-width: 700px;
 
   }
 
   @media (min-width: $mq-md) {
-    width: 680px;
+    width: 700px;
 
   }
   @media (min-width: $mq-lg) {
-    width: 680px;
+    width: 700px;
   }
   @media (min-width: $mq-xl) {
-    width: 680px;
+    width: 700px;
   }
   @media (min-width: $mq-xxl) {
-    width: 680px;
+    width: 700px;
   }
 }
 
@@ -77,3 +77,137 @@
     }
   }
 }
+
+/**
+ * Typography
+ */
+ %heading--one {
+   @include fontSize(38px);
+   @include lineHeight(42px);
+   letter-spacing: -1px;
+
+   @media (min-width: $mq-sm) {
+      @include fontSize(44px);
+      @include lineHeight(48px);
+      letter-spacing: -1px;
+    }
+
+   @media (min-width: $mq-md) {
+      @include fontSize(64px);
+      @include lineHeight(68px);
+      letter-spacing: -1.5px;
+    }
+ }
+ %heading--one__bold {
+   @extend %heading--one;
+   font-weight:900;
+ }
+
+ %heading--two {
+   @include fontSize(34px);
+   @include lineHeight(38px);
+   letter-spacing: -1px;
+
+   @media (min-width: $mq-sm) {
+      @include fontSize(38px);
+      @include lineHeight(42px);
+      letter-spacing: -1px;
+    }
+
+   @media (min-width: $mq-md) {
+      @include fontSize(44px);
+      @include lineHeight(48px);
+      letter-spacing: -1.5px;
+    }
+ }
+ %heading--two__bold {
+   @extend %heading--two;
+   font-weight:700;
+ }
+
+ %heading--three {
+   @include fontSize(32px);
+   @include lineHeight(36px);
+ }
+ %heading--three__bold {
+   @extend %heading--three;
+   font-weight:700;
+   letter-spacing: -1px;
+ }
+
+ %heading--four {
+   @include fontSize(28px);
+   @include lineHeight(32px);
+ }
+ %heading--four__bold {
+   @extend %heading--four;
+   font-weight:700;
+   letter-spacing: -1px;
+ }
+
+ %heading--five {
+   @include fontSize(24px);
+   @include lineHeight(28px);
+ }
+ %heading--five__bold {
+   @extend %heading--five;
+   font-weight:700;
+   letter-spacing: -1px;
+ }
+
+ %body--text {
+   @include fontSize(17px);
+   @include lineHeight(28px);
+
+    @media (min-width: $mq-sm) {
+      @include fontSize(19px);
+      @include lineHeight(30px);
+    }
+ }
+ %body--text__bold {
+   @extend %body--text;
+   font-weight:700;
+ }
+
+ %heading--six {
+   @extend %body--text;
+   font-family:$font-body !important;
+ }
+ %heading--six__bold {
+   @extend %heading--six;
+   font-weight:700;
+ }
+
+ %blockquote--text {
+   @extend %heading--five;
+   font-weight: 400;
+   font-family:$font-body !important;
+ }
+
+
+
+ /**
+  * Article Verticle Spacing
+  */
+
+ %body--text__vertical-spacing {
+      margin-bottom: 1.5rem;
+
+    @media (min-width: $mq-sm) {
+      margin-bottom: 1.7rem;
+    }
+
+    // @media (min-width: $mq-md) {
+    //   margin-bottom: 1.5rem;
+    // }
+
+  //  @media (min-width: $mq-lg) {
+  //    width: 680px;
+  //  }
+  //  @media (min-width: $mq-xl) {
+  //    width: 680px;
+  //  }
+  //  @media (min-width: $mq-xxl) {
+  //    width: 680px;
+  //  }
+ }
