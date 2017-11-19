@@ -17,6 +17,18 @@ layout: default
         </header>
 
         {{ content }}
+
+        {% if page.prototype-link %}
+          <div class="container-btn">
+            <a class="btn" href="{{ page.prototype-link }}">
+              <div>
+                <span>VIEW PROTOTYPE</span>
+                <span>VIEW PROTOTYPE</span>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+
       </div>
       {% if page.tags.size > 0 %}
         <span class="post-content__tags">Tags
@@ -26,14 +38,7 @@ layout: default
         </span>
       {% endif %}
 
-      <div class="container-btn">
-        <a class="btn" href="/archive">
-          <div>
-            <span>Older Posts</span>
-            <span>Older Posts</span>
-          </div>
-        </a>
-      </div>
+      {% include posts.html %}
     </section>
   </div>
 </article>

@@ -17,11 +17,10 @@ layout: default
 
 
 <section id="portfolio" class="section-padding bg-white">
-  <div class="grid">
+  <!-- <div class="grid">
     <h2 class="section-header">Case Studies</h2>
-
     <ul class="container-double" itemscope itemtype="http://schema.org/Blog">
-      {% for post in site.posts limit:6 %}
+      {% for post in site.posts limit:1 %}
         <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
           <a class="preview__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
             <div class="preview__img bg-grey wow slideInUp">
@@ -39,13 +38,7 @@ layout: default
       {% endfor %}
     </ul>
 
-    <div class="container-btn">
-      <a class="btn" href="/archive">
-        <div>
-          <span>Read More</span>
-          <span>Read More</span>
-        </div>
-      </a>
-    </div>
-  </div>
+  </div> -->
+
+  {% include posts.html %}
 </section>

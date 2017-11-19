@@ -3,7 +3,7 @@
  */
 .post-mast {
   position: relative;
-  padding-top: 60%;
+  padding-top: 300px;
 
   &::after{
     content: "";
@@ -16,10 +16,6 @@
 
     }
 
-  @media (min-width: $mq-md) {
-    height: calc(100vh - 4em);
-    padding-top: 0;
-  }
 
   .absolute-bg {
     animation: fadeIn 3s both 0.3s;
@@ -29,13 +25,8 @@
 .post {
   margin-top: -20em;
 
-  @media (min-width: $mq-sm) {
-    margin-top: -32em;
-  }
 
-  @media (min-width: $mq-md) {
-    margin-top: -90em;
-  }
+
 
   @media (min-width: $mq-xxl) {
 
@@ -72,7 +63,7 @@
   background-color: $color-post-content;
   padding-left: 3em;
   padding-right: 3em;
-  padding-bottom: 4em;
+  padding-bottom: 10em;
   @media (min-width: $mq-md) {
     padding-left: 0;
     padding-right: 0;
@@ -155,12 +146,25 @@
     color: $color-dark-grey;
   }
 
+  .videoWrapper {
+  	position: relative;
+  	padding-bottom: 56.25%; /* 16:9 */
+  	padding-top: 25px;
+  	height: 0;
+  }
+  .videoWrapper iframe {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  }
+
+
   figure {
     @extend %content-width;
     margin-top: 2em;
     margin-bottom: 2em;
-
-    background-color: $color-light-grey;
 
     @media (min-width: $mq-sm) {
       margin-top: 3em;
@@ -192,8 +196,8 @@
       margin-left: -3.1em;
     }
     @media (min-width: $mq-md) {
-      margin-right: 0;
-      margin-left: 0;
+      margin-right: auto;
+      margin-left: auto;
     }
 
   }

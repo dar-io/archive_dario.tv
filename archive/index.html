@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Archive
-description: 
+description:
 permalink: /archive/
 ---
 <section id="blog" class="section-padding bg-grey">
@@ -15,7 +15,7 @@ permalink: /archive/
               <figure class="absolute-bg wow fadeIn" data-wow-delay="600ms" style="background-image: url('{{ post.image }}');"></figure>
             </div>
             <div class="preview__container bg-white">
-              <h2 itemprop="name">{{ post.title }}</h2>
+              <h4 itemprop="name">{{ post.title }}</h4>
               <time class="preview__date" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
             </div>
           </a>
