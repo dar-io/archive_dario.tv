@@ -10,13 +10,6 @@ prototype-link: /assets/prototypes/bbc_news_frontpage/03_October_2016/index.html
 
 In 2016, I was tasked to improve the user experience of the BBC News homepage so that it caters for under-served audiences, drives onward journeys, and enables editorial to curate the news agenda with a design that provides flexibility and reflects timeliness.
 
-
-
-{% capture includeGuts %}
-{% include travelnewsprototype.html %}
-{% endcapture %}
-{{ includeGuts | replace: '    ', ''}}
-
 <figure class="section__title large-img">
   <img src="/assets/images/homepage/hp-cover-image-frontpage.png" alt="Live BBC News Homepage Design"/>
 </figure>
