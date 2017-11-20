@@ -10,6 +10,7 @@ prototype-link: /assets/prototypes/bbc_news_frontpage/03_October_2016/index.html
 
 In 2016, I was tasked to improve the user experience of the BBC News homepage so that it caters for under-served audiences, drives onward journeys, and enables editorial to curate the news agenda with a design that provides flexibility and reflects timeliness.
 
+
 <figure class="section__title large-img">
   <img src="/assets/images/homepage/hp-cover-image-frontpage.png" alt="Live BBC News Homepage Design"/>
 </figure>
@@ -29,6 +30,7 @@ The BBC News site is used and loved by millions of loyal users. The homepage rec
   <img src="/assets/images/homepage/BBC_News_Personas.png" alt="BBC Personas: Headlines only, Social Mobile Tweeters, Local Feelgood, Social Connectors and Supervisual Snackers"/>
   <figcaption>Key traits of BBC News personas: Headlines only, Social Mobile Tweeters, Local Feelgood, Social Connectors and Supervisual Snackers</figcaption>
 </figure>
+
 The BBC News attracts audiences with vastly differing characteristics. I have designed the homepage accordingly to five types of personas. These are:  
 
 <ol>

@@ -25,9 +25,6 @@
 .post {
   margin-top: -20em;
 
-
-
-
   @media (min-width: $mq-xxl) {
 
     margin-right: auto;
@@ -69,6 +66,38 @@
     padding-right: 0;
   }
 
+  aside {
+    &.position-right{
+      overflow: hidden;
+      margin-left: -3em;
+      margin-right: -3em;
+      @media (min-width: 600px) {
+        margin-left: 0;
+        margin-right: 0;
+        }
+      .hype__embed{
+        -ms-transform: scale(0.7, 0.7); /* IE 9 */
+        -webkit-transform: scale(0.7, 0.7); /* Safari */
+        transform: scale(0.8, 0.8);
+        display: table;
+        margin: 0 auto 32px -4em;
+
+        @media (min-width: 360px) {
+            margin: 0 auto 32px auto;
+            -ms-transform: scale(1); /* IE 9 */
+            -webkit-transform: scale(1); /* Safari */
+            transform: scale(1);
+        }
+        @media (min-width: 880px) {
+            display: block;
+        }
+      }
+      @media (min-width: $mq-md) {
+        float: right;
+        margin-right: 0;
+      }
+    }
+  }
   h1,h2,h3,h4,h5,h6{
     @extend %content-width;
   }

@@ -57,6 +57,9 @@ section {
   }
 
   &--double {
+    padding-left: 1em;
+    padding-right: 1em;
+
 
     @media (min-width: $mq-sm) {
       margin-right: 24px;
