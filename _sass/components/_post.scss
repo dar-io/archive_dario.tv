@@ -66,6 +66,33 @@
     padding-right: 0;
   }
 
+  .cssgrid{
+    background: #535b65;
+    margin: 0 -3em;
+    padding: 2em 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    @media (min-width: $mq-md) {
+      margin: 0 auto;
+      grid-template-columns: 1fr 1fr;
+    }
+    figcaption{
+      width: auto;
+      color:#ededed;
+    }
+    figure, video{
+      width: 320px;
+      height: auto;
+      @media (min-width: $mq-sm) {
+        width: 360px;
+        margin: 0 auto;
+      }
+
+
+      }
+    }
+
   aside {
     &.position-right{
       overflow: hidden;

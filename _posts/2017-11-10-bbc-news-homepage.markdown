@@ -10,6 +10,15 @@ prototype-link: /assets/prototypes/bbc_news_frontpage/03_October_2016/index.html
 
 In 2016, I was tasked to improve the user experience of the BBC News homepage so that it caters for under-served audiences, drives onward journeys, and enables editorial to curate the news agenda with a design that provides flexibility and reflects timeliness.
 
+<strong>Links to prototypes and for the live BBC News Homepage</strong>
+<ol>
+  <li><a target="blank" href="/assets/prototypes/bbc_news_frontpage/01_2016_BBC_News_1280/01_2016_BBC_News_1280.html" > <strong>BBC News Homepage Low fidelity prototype</strong></a></li>
+  <li><a target="blank" href="/assets/prototypes/bbc_news_frontpage/02_Feb_2016_Frontpage/pages/uk-edition/index.html" > <strong>First BBC News Homepage iteration designed in the browser</strong></a></li>
+
+  <li><a target="blank" href="/assets/prototypes/bbc_news_frontpage/03_October_2016/index.html"><strong>Final version designed in the browser.</strong></a> Engineers used this version as reference to build the BBC News Homepage</li>
+
+  <li><a target="blank" href="http://www.bbc.co.uk/news"><strong>Live BBC News Homepage</strong></a></li>
+</ol>
 
 <figure class="section__title large-img">
   <img src="/assets/images/homepage/hp-cover-image-frontpage.png" alt="Live BBC News Homepage Design"/>
@@ -167,16 +176,6 @@ I worked closely with software engineers to solve design challenges and improve 
   <img src="/assets/images/homepage/01_composition-homepage evolution.jpg" alt="Early homepage sketch"/>
   <figcaption>The evolution of the BBC News Homepage designs. Designs done in collaboration with Neil Bramah. </figcaption>
 </figure>
-
-<strong>Links to prototypes of the BBC News Homepage</strong>
-<ol>
-  <li><a target="blank" href="/assets/prototypes/bbc_news_frontpage/01_2016_BBC_News_1280/01_2016_BBC_News_1280.html" > <strong>BBC News Homepage Low fidelity prototype</strong></a></li>
-  <li><a target="blank" href="/assets/prototypes/bbc_news_frontpage/02_Feb_2016_Frontpage/pages/uk-edition/index.html" > <strong>Prototype of the first iteration of the BBC News Homepage designed in the browser</strong></a></li>
-
-  <li><a target="blank" href="/assets/prototypes/bbc_news_frontpage/03_October_2016/index.html"><strong>Final iteration of the BBC News homepage prototype</strong></a> </li>
-
-  <li><a target="blank" href="http://www.bbc.co.uk/news"><strong>Live BBC News Homepage</strong></a></li>
-</ol>
 
 <strong>User Testing</strong><br />
  Designing in the browser empowered me to frequently carry-out guerrilla testing sessions. We also tested the prototypes in the UK and in Canada.
