@@ -1,6 +1,10 @@
 /**
  * Post
  */
+
+ .text-center{
+   text-align: center;
+ }
 .post-mast {
   position: relative;
   padding-top: 300px;
@@ -33,11 +37,11 @@
 }
 
 .post-header {
-    padding-top: 2em;
+    padding-top: 3em;
     padding-bottom: 2em;
     background-color: $color-post-content;
   @media (min-width: $mq-sm) {
-    padding-top: 3em;
+    padding-top: 5em;
   }
 
  @media (min-width: $mq-sm) {
@@ -45,7 +49,7 @@
  }
 
  @media (min-width: $mq-md) {
-   padding-bottom: 4em;
+   padding-bottom: 3em;
  }
 
   &__time {
@@ -58,6 +62,7 @@
 
 .post-content {
   background-color: $color-post-content;
+  box-shadow: 0 2px 50px rgba(58,76,106,0.08);
   padding-left: 3em;
   padding-right: 3em;
   padding-bottom: 10em;
@@ -82,10 +87,11 @@
       color:#ededed;
     }
     figure, video{
-      width: 320px;
+      width: 280px;
       height: auto;
+      margin: 0 auto;
       @media (min-width: $mq-sm) {
-        width: 360px;
+
         margin: 0 auto;
       }
 
@@ -143,7 +149,7 @@
   }
 
   a {
-    @include link-posts();
+    @include link-posts($color-header);
   }
 
   ul {
@@ -155,6 +161,7 @@
       &:before {
         position: absolute;
         left: -0.97em;
+        top: -12px;
         content: "•";
         font-size: 170%;
       }
@@ -217,6 +224,34 @@
   }
 
 
+  div#Stage{
+    zoom:0.17;
+    @media (min-width: $mq-xs) {
+      zoom:0.23;
+    }
+    @media (min-width: 440px) {
+      zoom:0.28;
+    }
+    @media (min-width: 560px) {
+      zoom:0.375;
+    }
+    @media (min-width: $mq-sm) {
+      zoom:0.368;
+    }
+    @media (min-width: 768px) {
+      zoom:0.5;
+    }
+    @media (min-width: 1024px) {
+      zoom:0.66;
+    }
+    @media (min-width: 1140px) {
+      zoom:0.75;
+    }
+    @media (min-width: 1224px) {
+      zoom:0.915;
+    }
+  }
+
   figure {
     @extend %content-width;
     margin-top: 2em;
@@ -242,20 +277,75 @@
     line-height:18px;
   }
 
-  & figure.large-img {
-    width: auto;
-    max-width: fit-content;
-    margin-left: -3.5em;
-    margin-right: -3.5em;
-    @media (min-width: $mq-xs) {
-      margin-right: -3.1em;
-      margin-left: -3.1em;
+  & figure{
+    &.large-img {
+      width: auto;
+      max-width: fit-content;
+      margin-left: -3.5em;
+      margin-right: -3.5em;
+      .figure-background{
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw );
+        padding-top: 4em;
+          img{
+            &.small{
+              width: 320px;
+            }
+            &.large{
+              width: 100%;
+            }
+            width: 85%;
+            margin: 0 auto;
+          }
+        figcaption {
+          border-top: 2px solid;
+          margin-top: -2px;
+          padding-bottom: 2em;
+          padding-top:1em;
+          z-index: 2;
+          position: relative;
+          max-width: calc(100% - 4em);
+        }
+      }
+      &.adobe-edge{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      video {
+        width: 100%;
+      }
+      @media (min-width: $mq-xs) {
+        margin-right: -3.1em;
+        margin-left: -3.1em;
+      }
+      @media (min-width: $mq-md) {
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
-    @media (min-width: $mq-md) {
-      margin-right: auto;
-      margin-left: auto;
-    }
+    &.center-img{
+      margin: 0 auto;
+      .figure-background{
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw );
+        padding-top: 4em;
 
+        figcaption {
+          border-top: 2px solid;
+          margin-top: -2px;
+          padding-bottom: 2em;
+          padding-top:1em;
+          z-index: 2;
+          position: relative;
+          max-width: calc(100% - 4em);
+        }
+      }
+      img{
+        max-height: 500px;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
   }
 
   & figure.section__title {

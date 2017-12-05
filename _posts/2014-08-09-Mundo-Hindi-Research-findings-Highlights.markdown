@@ -1,14 +1,16 @@
 ---
 layout: post
 title: "BBC Mundo and BBC Hindi User Research"
-date: 2017-11-20
+date: 2014-08-09
 categories:
 description:
-image:
+image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.002.jpeg
+cover-image: /assets/images/Mundo-Hindi-Research-findings-Highlights/mundo-hindi-us.png
 prototype-link: /assets/prototypes/hindi/index.html
 ---
 
 <strong>Links to prototypes and for the live website</strong>
+
 <ol>
   <li><a target="blank" href="/assets/prototypes/hindi/index.html" > <strong>BBC Hindi Prototype</strong></a> Prototype built using HTML/CSS in <a target="blank" href="http://tumult.com/hype/pro/">Hype</a></li>
 
@@ -20,7 +22,9 @@ prototype-link: /assets/prototypes/hindi/index.html
 </ol>
 
 <figure class="large-img">
-  <img src="/assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.002.jpeg" alt=""/>
+  <div class="figure-background bg-color-charcoal">
+    <img class="large" src="/assets/images/Mundo-Hindi-Research-findings-Highlights/mvp-prototype-static.png" alt=""/>
+  </div>
 </figure>
 
 <h3>Research Objectives</h3>

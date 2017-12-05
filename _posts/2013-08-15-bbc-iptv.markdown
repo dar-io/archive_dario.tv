@@ -1,0 +1,58 @@
+---
+layout: post
+title: ""
+date: 2013-08-15
+categories:
+description: ""
+cover-image: /assets/images/iptv/iptv-cover-image.png
+image: /assets/images/iptv/article-background-image.png
+prototype-link:
+---
+
+<figure class="large-img">
+  <video controls autoplay loop name="media">
+    <source src="/assets/images/iptv/Iptv_Sony_W850C.mp4" type="video/mp4">
+    Your browser does not support the HTML5 videos.
+  </video>
+
+</figure>
+
+<figure class="adobe-edge large-img">
+<!--Adobe Edge Runtime-->
+
+    <script type="text/javascript" charset="utf-8" src="/assets/prototypes/iptv/13v_lower3rd_fading_stream/13v_lower_3rd_edgePreload.js"></script>
+    <style>
+        .edgeLoad-lower_third { visibility:hidden; }
+    </style>
+    <div id="Stage" class="lower_third">
+  	</div>
+<script>
+window.onkeydown = function(e) {
+  if (e.keyCode == 32 && e.target == document.body) {
+    e.preventDefault();
+  }
+};
+</script>
+<!--Adobe Edge Runtime End-->
+</figure>
+
+<figure>
+  <img src="/assets/images/iptv/Lower_third_0000_wireframe-tower-focus.png" alt=""/>
+</figure>
+
+
+<figure>
+  <img src="/assets/images/iptv/Lower_third_0000_----368-x-272-&-272x212-Collections----.png" alt=""/>
+</figure>
+
+<figure>
+  <img src="/assets/images/iptv/Lower_third_0002_1.2-LOCKED-FOCUS-Collections-Vertical-Carousel.png" alt=""/>
+</figure>
+
+<figure>
+  <img src="/assets/images/iptv/02_Main_Navigation_Signature_Pattern_150813_v1.jpg" alt=""/>
+</figure>
+
+<figure>
+  <img src="/assets/images/iptv/Main_Navigation_Signature_Pattern_150813_v1.jpg" alt=""/>
+</figure>

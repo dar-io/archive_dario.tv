@@ -53,10 +53,10 @@
   }
 }
 
-#home .header {
+.header {
   position: absolute;
 
-  background-color: transparent;
+  background-color: $color-header;
   box-shadow: none;
 
   &.scrollingHeader {

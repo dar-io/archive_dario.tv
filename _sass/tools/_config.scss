@@ -1,24 +1,85 @@
 /**
  * Base Variables
  */
-$font-header: "helvetica neue", helvetica, arial, sans-serif;
-$font-body: "Bitter", serif;
+$font-header: 'Open Sans', sans-serif;
+$font-body: 'Open Sans', sans-serif;
 
 
 
 $color-black: #3a4c6a;
-$color-grey: #e8e8e8;
 $color-light-grey: #f0f0f1;
-$color-white: #fff;
+$color-white: #ffffff;
+$color-dove: #f0f4f6;
+$color-grey: $color-dove;
 $color-dark-grey: #4d6a7d;
 $color-alpha: #0d1f2f;
 $color-post-content: $color-white;
-
+$hoverColor: red;
 $color-footer: #fff;
-$color-header: #102e4b;
+$color-header: rgba(24, 24, 24, 0.85);
 $mq-xs: 23em;
 $mq-sm: 37.5em;
 $mq-md: 54em;
 $mq-lg: 64em;
 $mq-xl: 76.5em;
 $mq-xxl: 114em;
+
+$color-deep-blue:rgba(#0371bb, 0.8);
+$color-crimson:rgba(209, 0, 0, 0.7);
+$color-orange:rgba(#fe9500, 0.8);
+$color-green:rgba(#1cd529, 0.7);
+$color-smoke:rgba(193, 208, 209, 0.7);
+$color-sky:rgba(19, 215, 255, 0.8);
+$color-charcoal:rgba(0, 0, 0, 0.86);
+
+
+body .text-center{
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.bg-color-deep-blue{
+  background-color:$color-deep-blue;
+    figcaption,.text-center{
+      color: #fff !important;
+    }
+}
+.bg-color-green{
+  background-color:$color-green;
+    figcaption,.text-center{
+      color: #626c63 !important;
+    }
+}
+.bg-color-crimson{
+  background-color:$color-crimson;
+    figcaption,.text-center{
+      color: #fff !important;
+    }
+}
+.bg-color-orange{
+  background-color:$color-orange;
+    figcaption,.text-center{
+      color: #544c44 !important;
+    }
+}
+
+.bg-color-smoke{
+  background-color:$color-smoke;
+    figcaption,.text-center{
+      color: #636b75 !important;
+    }
+  }
+
+.bg-color-sky{
+  background-color:$color-sky;
+    figcaption,.text-center{
+      color: #2c5d8f !important;
+    }
+  }
+
+.bg-color-charcoal{
+  background-color:$color-charcoal;
+    figcaption,.text-center{
+      color: #b9b9b9 !important;
+    }
+  }

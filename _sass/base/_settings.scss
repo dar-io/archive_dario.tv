@@ -21,7 +21,6 @@ $browser-context: 16;
 
 body {
   font-family: $font-body;
-  -webkit-font-smoothing: antialiased;
   font-size: 62.5%;
   line-height: 1;
 }
@@ -38,21 +37,28 @@ h1 {
 
 h2 {
   margin-bottom: 0.5em;
+  margin-top: 1em;
   @extend %heading--two__bold;
 }
 
 h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
   @extend %heading--three__bold;
 }
 
 h4 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
   @extend %heading--four__bold;
 }
 
 h5 {
-  margin-bottom: 0.5rem;
+  .post-content &{
+    margin-top: 1.5em;
+  }
+  margin-bottom: 1em;
+
   @extend %heading--five__bold;
 }
 

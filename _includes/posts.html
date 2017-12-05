@@ -5,10 +5,10 @@
       <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a class="preview__link wow slideInUp" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
           <div class="preview__img bg-alpha">
-            <figure class="absolute-bg wow fadeIn" data-wow-delay="600ms" style="background-image: url('{{ post.image }}');"></figure>
+            <figure class="absolute-bg wow fadeIn" data-wow-delay="600ms" style="background-image: url('{{ post.cover-image: }}');"></figure>
           </div>
           <div class="preview__container bg-white">
-            <h4 itemprop="name">{{ post.title }}</h4>
+            <h5 itemprop="name">{{ post.title }}</h5>
             <time class="preview__date" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
           </div>
         </a>

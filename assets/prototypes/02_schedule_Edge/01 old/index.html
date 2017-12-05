@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Player Vertical Stream</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+	<script src="js/vendor/custom.modernizr.js"></script>
+	<script src="js/docs.js"></script>
+	<script type="text/javascript" charset="utf-8" src="04v%20More%20Episodes%20Collections_edgePreload.js"></script>
+    <style>
+                 .edgeLoad-lower_third { visibility:hidden; }
+
+    </style>
+    
+    <script>
+	
+	
+
+		AdobeEdge.bootstrapCallback(function(compId) {
+
+				(function($, Edge, compId){
+var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonly used Edge classes
+
+   //Edge symbol: 'stage'
+   (function(symbolName) {
+      
+      
+      Symbol.bindTimelineAction(compId, symbolName, "Default Timeline", "complete", function(sym, e) {
+         //edge based complete handler
+		 sym.stop(250);
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
+             sym.stop();
+         $(".edgePlay").click(function() {
+   sym.play();
+});
+        $(".edgeStop").click(function() {
+   sym.stop();
+});
+         sym.stop(0);
+         
+         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         // insert code here
+          sym.stop();
+      });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_RectangleCopy}", "click", function(sym, e) {
+    
+         // insert code for mouse click here
+
+      });
+       
+      //Edge binding end
+
+      
+      //Edge binding end
+
+   })("stage");
+   //Edge symbol end:'stage'
+
+})(jQuery, AdobeEdge, "lower_third");			
+			
+					});
+	</script>
+
+
+
+
+</head>
+<body>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+	<div  class="contain-to-grid">
+		<nav class="top-bar">
+			<ul class="title-area">
+				<!-- Title Area -->
+				<li class="name">
+					<h1 id="numero"><a href="#">Patterns</a></h1>
+				</li>
+				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+			<section class="top-bar-section">   
+				<!-- Left Nav Section -->   
+	    		<ul class="left">
+					<li class="divider"></li>
+					<li class="active"><a href="#">Player Vertical Stream</a></li>
+					<li class="divider"></li>
+					
+				</ul>
+			</section>
+		</nav>
+	</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->	
+
+				
+<div class="row">
+	<div class="large-3 columns">
+			<div class="versions-box">
+				<h4>Top Bar Title</h4>	
+				<ul class="side-nav">
+					<li class="active">Link 1</li>
+					<li><a href="#">Link 2</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li>
+				</ul>
+		 	</div>
+		</div>
+	
+<!---------------------------------------------------------------------------------------------------------------------------------------------->	
+<div class="large-9 columns">
+	<div class="stagewrap">
+		<div id="Stage" class="lower_third">
+	</div>
+	</div><!-- Close stagewrap -->
+	
+	</div>
+		<div class="large-9 columns">
+			
+				
+								
+					<h2>Player - Vertical Stream</h2>
+						<h4 class="subheader">The player component is an integral part of the One Service IPTV suite of patterns.
+As standard it offers the basic affordances of video playback and displays associated information effectively.
+</h4>
+
+							<p>Beyond these standard requirements the player is also capable
+of accommodating more product-specific features and functionality.</p>
+	        <hr>								
+		</div>	
+		</div>
+		
+		 <ol class="joyride-list" data-joyride>
+  <li data-class="stagewrap" data-options="nubPosition: none; tipLocation: bottom"   class="start" data-text="Start Pattern Tour"  >
+    <h4>Vertical stream</h4>
+    <p>Whilst using the player component it is possible to navigate left and access further, contextually relevant content.</p>
+  </li>
+  <li class="edgePlay" data-id="Stage_Group3"  data-options="nubPosition: bottom; tipLocation: top" data-text="Next">
+    <h4>Player maximised</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </li>
+  <li class="edgePlay" data-id="Stage_target_1"  data-options="nubPosition: left; tipLocation: bottom" data-text="Next">
+    <h4>Carousel Item 1 Focus State</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </li>
+  <li class="edgePlay" data-id="Stage_target_2" data-options="nubPosition: left; tipLocation: bottom" data-button="Next">
+    <h4>Locked Focus Position</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </li>
+  <li class="edgePlay"  data-id="Stage_target_3" data-options="nubPosition: left; tipLocation: bottom" data-button="Next">
+    <h4>Now Playing Block</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </li>
+  <li class="edgePlay"  data-id="Stage_single-height_02Copy2" data-options="nubPosition: top; tipLocation: top" data-button="Next">
+    <h4>Collections Title 2 lines</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </li>
+  <li  data-id="Stage_target_2" data-options="nubPosition: left; tipLocation: bottom" data-button="Next">
+    <h4>Un-focus State</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </li>
+   <li class="edgePlay start"  data-id="Stage_box-delay_05Copy4" data-options="nubPosition: left; tipLocation: top" data-button="Next">
+    <h4>Last Item Locked Positions</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </li>
+  <li   class="start edgePlay" data-id="Stage" data-options="nubPosition: none; tipLocation: top;"  data-button="Close">
+    <h4>End of Demo</h4>
+    <p>Use Arrow Keys to Explore Pattern</p>
+  </li>
+</0l>
+		
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->	
+	
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.joyride.js"></script> 
+      <script src="js/foundation/foundation.cookie.js"></script>
+ <!--
+
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.interchange.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.alerts.js"></script>
+  
+  <script src="js/foundation/foundation.magellan.js"></script>
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.tooltips.js"></script>
+  
+  <script src="js/foundation/foundation.clearing.js"></script>
+  
+
+  
+ 
+  
+  <script src="js/foundation/foundation.orbit.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  <script src="js/foundation/foundation.topbar.js"></script>
+  
+  -->
+  
+  <script>
+
+  $(document).foundation('joyride', 'start');
+
+
+  
+  </script>
+  
+ 
+</body>
+</html>
+</div>

@@ -4,11 +4,18 @@ title: "Designing the BBC News Responsive Homepage"
 date: 2017-11-10
 categories:
 description: "In 2016, I was tasked to improve the user experience of the BBC News homepage so that it caters for under-served audiences, drives onward journeys, and enables editorial to curate the news agenda with a design that provides flexibility and reflects timeliness."
-image:
+image: /assets/images/homepage/homepage-background-image.png
+cover-image: /assets/images/homepage/homepage-cover-image.png
 prototype-link: /assets/prototypes/bbc_news_frontpage/03_October_2016/index.html
 ---
 
 In 2016, I was tasked to improve the user experience of the BBC News homepage so that it caters for under-served audiences, drives onward journeys, and enables editorial to curate the news agenda with a design that provides flexibility and reflects timeliness.
+
+
+
+<figure class="section__title large-img">
+  <img src="/assets/images/homepage/hp-cover-image-frontpage.png" alt="Live BBC News Homepage Design"/>
+</figure>
 
 <strong>Links to prototypes and for the live BBC News Homepage</strong>
 <ol>
@@ -20,9 +27,6 @@ In 2016, I was tasked to improve the user experience of the BBC News homepage so
   <li><a target="blank" href="http://www.bbc.co.uk/news"><strong>Live BBC News Homepage</strong></a></li>
 </ol>
 
-<figure class="section__title large-img">
-  <img src="/assets/images/homepage/hp-cover-image-frontpage.png" alt="Live BBC News Homepage Design"/>
-</figure>
 <h3>Why redesign the News homepage?</h3>
 The BBC News site is used and loved by millions of loyal users. The homepage receives well over of 100 million page views from about 18 million browsers each week. It is the most popular page across BBC digital products. However, despite such success, the page presented a few problems:
 
@@ -74,7 +78,7 @@ I partnered with the product owner and project manager for the BBC News responsi
 <strong>Editorial Team & Senior Stakeholders</strong><br />
 To help define the content strategy for the BBC News homepage and to manage expectations, I ran workshops with Editorial and Senior Stakeholders. I've also presented works to share the vision and gain buy‐in.
 
-The BBC News homepage contains adverts for international audiences. I collaborated with stakeholders from Global News Limited (the commercial arm of BBC News), to ensure that the homepage supports commercial content.
+I collaborated with stakeholders from Global News Limited (the commercial arm of BBC News), to ensure that the homepage supports commercial content for international audiences.
 
 <strong>Design Execution</strong><br />
 I designed in the browser and created responsive prototypes in HTML/CSS/Javascript to share the vision, design principles and content strategy. This helped to galvanise the team around a common goal and drive the decision making.
@@ -91,7 +95,7 @@ I cooperated with the BBC News World Service design team to ensure that the News
 I worked with the research team to help define research goals. I went to usability research sessions in London and Toronto with the research team to gather feedback and validate design concepts.
 
 <h2>Design Process</h2>
-My design process varies project to project. I prefer a short and sweet process loop: Observe » Evaluate » Build » Repeat. This is the core steps of my design process.
+Observe. Think. Make. Test. Repeat. These are the core steps of my design process.
 <figure class="section__title large-img">
   <img src="/assets/images/homepage/homepage_sketch-wide.jpg" alt=""/>
   <figcaption>Early sketch of the News homepage focused on targeting underserved audiences and exploring the question: How Might We effectively showcase Features, Live, Video and Visual Journalism to surface the depth and breadth of content from across BBC News output?</figcaption>
@@ -102,7 +106,7 @@ My design process varies project to project. I prefer a short and sweet process 
 
 During the discovery phase, I started gathering requirements from stakeholders and also learning who are the decision makers. For an organisation the size of the BBC, the decision-making process can be complex.
 
-<figure>
+<figure class="large-img">
   <img src="/assets/images/homepage/sections_with_most_clicks.png" alt=""/>
   <figcaption>Previous BBC News homepage showing the most popular sections users click on mobile, tablet and desktop. Data shows that top stories performs better that any other section. Sections below the fold, don't perform very well.</figcaption>
 </figure>
