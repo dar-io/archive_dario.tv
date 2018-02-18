@@ -1,16 +1,18 @@
 ---
 layout: default
 ---
-<article class="bg-grey" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-mast bg-alpha">
+   <header class="post-mast bg-alpha">
     <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
   </header>
 
-  <div class="grid--double">
-    <section class="post bg-grey" itemprop="articleBody">
 
-      <div class="post-content">
+  <div class="grid--double">
+    <section class="post" itemprop="articleBody">
+
+        <div class="post-content">
+
         <header class="post-header">
           <h1 itemprop="name headline">{{ page.title }}</h1>
           <time class="post-header__time" itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>

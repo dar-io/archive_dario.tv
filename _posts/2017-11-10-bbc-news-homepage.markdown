@@ -14,7 +14,7 @@ In 2016, I was tasked to improve the user experience of the BBC News homepage so
 
 
 <figure class="section__title large-img">
-  <img src="/assets/images/homepage/hp-cover-image-frontpage.png" alt="Live BBC News Homepage Design"/>
+  <img src="/assets/images/homepage/homepage-background-image-v2.png" alt="Live BBC News Homepage Design"/>
 </figure>
 
 <strong>Links to prototypes and for the live BBC News Homepage</strong>

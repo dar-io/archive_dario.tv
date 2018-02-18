@@ -1,14 +1,27 @@
-<header class="header">
-  <a href="/">
-    <figure class="header__img">
-      <img src="/assets/images/logo.png" alt="Cartwheel Logo"/>
-    </figure>
-  </a>
-  <nav>
-    <ul class="header__list">
-      <li><a data-scroll href="/#about">About</a></li>
-      <li><a data-scroll href="/#portfolio">Portfolio</a></li>
-      <li><a data-scroll href="/#blog">Blog</a></li>
-    </ul>
-  </nav>
-</header>
+<nav class="header sticky-top navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+
+    <a class="navbar-brand" href="/">
+      <img src="/assets/images/logo.png" width="30" height="30" alt="">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="d-flex justify-content-md-end navbar-nav mr-auto w-100">
+        <li class="nav-item active">
+          <a data-scroll class="nav-link" href="/#about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a data-scroll class="nav-link" href="/#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a data-scroll class="nav-link" href="/#blog">Blog</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

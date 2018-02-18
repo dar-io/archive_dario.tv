@@ -4,20 +4,10 @@
 body {
   min-height: 100vh;
   color: #3b3b3b;
-  background-color: $color-dove;
+
 }
 
-/**
- * Main
- */
-main {
-  flex-grow: 1;
-  padding-top: 4em;
 
-  #home & {
-    padding-top: 0;
-  }
-}
 
 /**
  * Sections

@@ -1,0 +1,75 @@
+---
+layout: default
+---
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+   <!-- <header class="post-mast bg-alpha">
+    <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
+  </header> -->
+
+
+  <section class="opener block bg-color-smoke">
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <h1 class="h3">{{ page.title }}</h1>
+          <p>{{ page.description }}</p>
+        </div>
+        <div class="col-4">
+          <h5>Role</h5>
+          <p>Product Designer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  {% for item in page.content-block %}
+    <section class="opener block bg-color-smoke {{item.Classes}}">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-md-10 col-lg-8 mb-4">
+            <h2 class="mb-4 font-weight-bold">{{item.Heading}}</h2>
+
+            {% for entry in item.Description %}
+              <p>{{entry.Paragraph | textilize}}</p>
+            {% endfor %}
+
+            {% if entry.Bullet == nil %}
+            {% else %}
+              <ul>
+                {% for entry in item.List-items %}
+                  <li>{{entry.Bullet}}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          {% for entry in item.Media %}
+
+            {% if entry.Image == nil %}
+            {% else %}
+                <div class="{{ entry.Classes }}">
+                  <img class="figure-img img-fluid mx-auto w-100" src="{{ site.baseurl }}{{ entry.Image }}" alt="{{ entry.Figcaption }}">
+                  <figcaption class="figure-caption">{{ entry.Figcaption }}</figcaption>
+                </div>
+            {% endif %}
+
+            {% if entry.Video == nil %}
+            {% else %}
+                <div class="{{ entry.Classes }}">
+                  <div class="videoWrapper">
+                    {{ entry.Video }}
+                  </div>
+                  <figcaption class="figure-caption">{{ entry.Figcaption }}</figcaption>
+                </div>
+            {% endif %}
+
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endfor %}
+</article>

@@ -26,20 +26,27 @@
   }
 }
 
+.post--project-role{
+  background-color: $color-post-content;
+  box-shadow: 0 2px 50px rgba(58,76,106,0.15);
+  border-radius: 10px;
+  padding: 32px;
+}
 .post {
-  margin-top: -20em;
 
   @media (min-width: $mq-xxl) {
-
     margin-right: auto;
     margin-left: auto;
+  }
+
+  h1 {
+    @extend %heading--one;
   }
 }
 
 .post-header {
-    padding-top: 3em;
+    padding-top: 5em;
     padding-bottom: 2em;
-    background-color: $color-post-content;
   @media (min-width: $mq-sm) {
     padding-top: 5em;
   }
@@ -62,10 +69,12 @@
 
 .post-content {
   background-color: $color-post-content;
-  box-shadow: 0 2px 50px rgba(58,76,106,0.08);
+  box-shadow: 0 2px 50px rgba(58,76,106,0.15);
   padding-left: 3em;
   padding-right: 3em;
   padding-bottom: 10em;
+  margin-top: 56px;
+  border-radius: 10px;
   @media (min-width: $mq-md) {
     padding-left: 0;
     padding-right: 0;
@@ -140,12 +149,16 @@
     @extend %content-width;
 
     &:first-of-type {
-      @extend %body--text__bold;
+      @extend %body--text;
     }
 
     &:last-child {
       margin-bottom: 0;
     }
+
+  }
+  strong {
+    font-weight: 600;
   }
 
   a {

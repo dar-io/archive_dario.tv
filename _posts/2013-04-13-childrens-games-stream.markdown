@@ -20,7 +20,6 @@ image:
 </figure>
 
 
-
 <figure class="large-img">
   <img src="/assets/images/childrens/GEL_games_styleguide_v1.1.jpg" alt=""/>
   <figcaption>Gentrify cray pug authentic, cliche listicle actually subway tile woke semiotics af.</figcaption>

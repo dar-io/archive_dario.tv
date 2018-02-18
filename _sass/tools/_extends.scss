@@ -11,7 +11,7 @@
  * Box Shadow
  */
 %box-shadow {
-  box-shadow: 0 1px 1px rgba($color-black, 0.1);
+  box-shadow: 0 1px 20px 5px rgba(58,76,106,0.1);
 }
 
 /**
@@ -45,8 +45,6 @@
  */
 %card-shadow {
   position: relative;
-
-  border: 1px solid transparent;
   background-clip: padding-box;
   transform: translate3d(0, 0, 0);
   transition: all 0.2s ease;
@@ -62,14 +60,14 @@
     box-shadow: 0 2px 50px rgba($color-black, 0.25);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    border-radius: 8px;
   }
 
   &:hover {
-    border: 1px solid rgba($color-black, 0.1);
     box-shadow: 0px 0px 47px rgba($color-black, 0.1);
     transform: translate3d(0, -0.5em, 0);
     transition: all 0.3s ease;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 8px;
     &:after {
       opacity: 1;
     }
@@ -82,26 +80,26 @@
  %heading--one {
    @include fontSize(31px);
    line-height: 1.125;
-   letter-spacing: -1px;
-
+   letter-spacing: 0.5px;
+   font-weight:400;
    @media (min-width: $mq-sm) {
-      @include fontSize(44px);
+      @include fontSize(40px);
     }
  }
  %heading--one__bold {
    @extend %heading--one;
-   font-weight:900;
+   font-weight:700;
  }
 
  %heading--two {
    @include fontSize(34px);
    @include lineHeight(38px);
-   letter-spacing: -1px;
-
+   letter-spacing: -0.5px;
+   font-weight:400;
    @media (min-width: $mq-sm) {
       @include fontSize(38px);
       @include lineHeight(42px);
-      letter-spacing: -1px;
+      letter-spacing: -0.5px;
     }
 
    @media (min-width: $mq-md) {
@@ -112,17 +110,17 @@
  }
  %heading--two__bold {
    @extend %heading--two;
-   font-weight:700;
+   font-weight:400;
  }
 
  %heading--three {
    @include fontSize(32px);
    @include lineHeight(36px);
+   font-weight:400;
  }
  %heading--three__bold {
    @extend %heading--three;
-   font-weight:700;
-   letter-spacing: -1px;
+   letter-spacing: -0.5px;
  }
 
  %heading--four {
@@ -142,7 +140,7 @@
  %heading--five__bold {
    @extend %heading--five;
    font-weight:700;
-   letter-spacing: -1px;
+   letter-spacing: -0.5px;
  }
 
  %body--text {
@@ -150,8 +148,8 @@
    @include lineHeight(28px);
 
     @media (min-width: $mq-sm) {
-      @include fontSize(20px);
-      line-height: 1.5;
+      @include fontSize(17px);
+      line-height: 1.6;
     }
  }
  %body--text__bold {
@@ -174,7 +172,11 @@
    font-family:$font-body !important;
  }
 
-
+ %card--title{
+   @include fontSize(20px);
+   @include lineHeight(24px);
+   font-weight: 600;
+ }
 
  /**
   * Article Verticle Spacing
