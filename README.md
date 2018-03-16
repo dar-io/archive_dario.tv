@@ -4,6 +4,52 @@ Cartwheel is a blog theme for Jekyll built using HTML, Sass, and jQuery. Externa
 ## Installation
 All dependencies are saved in the ````Gemfile````. Run ````bundle install```` (Install [Bundler](http://bundler.io/) if it is not already).
 
+https://stackoverflow.com/questions/17550903/why-do-i-get-a-permission-denied-error-while-installing-a-gem
+
+I wanted to share the steps that I followed that fixed this issue for me in the hopes that it can help someone else (and also as a reminder for me in case something like this happens again)
+
+The issues I'd been having (which were the same as OP's) may have to do with using homebrew to install Ruby.
+
+To fix this, first I updated homebrew:
+
+brew update && brew upgrade
+brew doctor
+(If brew doctor comes up with any issues, fix them first.) Then I uninstalled ruby
+
+brew uninstall ruby
+If rbenv is NOT installed at this point, then
+
+brew install rbenv
+brew install ruby-build
+echo 'export RBENV_ROOT=/usr/local/var/rbenv' >> ~/.bash_profile
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+Then I used rbenv to install ruby. First, find the desired version:
+
+rbenv install -l
+Install that version (e.g. 2.4.3)
+
+rbenv install 2.4.3
+Then set the global version to the desired ruby version:
+
+rbenv global 2.4.3
+At this point you should see the desired version set for the following commands:
+
+rbenv versions
+and
+
+ruby --version
+Now you should be able to install bundler:
+
+gem install bundler
+And once in the desired project folder, you can install all the required gems:
+
+bundle
+bundle install
+
+---------------------------------------------------
+
+Start jekyll: bundle exec jekyll serve
+
 ## Edit Theme
 I made everything as easy as possible to edit. Most things can be found in the ````_config.yml````, but if more editing is required digging through the code will be required. The ````head.html```` file is in the ````_includes```` folder and the Sass variables are found in the ````_base.scss```` file in the ````_sass```` folder.
 
