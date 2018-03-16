@@ -3,73 +3,136 @@ layout: default
 ---
 <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 
-   <!-- <header class="post-mast bg-alpha">
-    <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
-  </header> -->
-
-
-  <section class="opener block bg-color-smoke">
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <h1 class="h3">{{ page.title }}</h1>
-          <p>{{ page.description }}</p>
-        </div>
-        <div class="col-4">
-          <h5>Role</h5>
-          <p>Product Designer</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
   {% for item in page.content-block %}
-    <section class="opener block bg-color-smoke {{item.Classes}}">
+    <section class="position-relative opener {{item.Theme-Classes}}" style="background-image: url('{{ item.Pattern-Image }}');">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-sm-12 col-md-10 col-lg-8 mb-4">
-            <h2 class="mb-4 font-weight-bold">{{item.Heading}}</h2>
+        <div class="row ">
+          {% if item.Left-Side-Column == nil %}
+          {% else %}
+            <div class="h6 offset-lg-0 col-12 col-lg-2">
+              <div class="row">
+
+                {% for entry in item.Left-Side-Column %}
+                  <div class="{{ entry.Classes }}">
+                    {% if entry.Heading == nil %}
+                    {% else %}
+                      <h6 class="mb-1">{{ entry.Heading }}</h6>
+                    {% endif %}
+                    <span class="type-size-15 font-weight-normal">{{ entry.Item }}</span>
+                  </div>
+                {% endfor %}
+
+              </div>
+            </div>
+          {% endif %}
+
+          <div class="{{item.Layout-Classes}}">
+
+
+
+
+
+            {% if item.H1-Heading and item.Subheading == nil %}
+              <h1 class="mb-5 font-weight-bold">{{item.H1-Heading}}</h1>
+            {% elsif item.H2-Heading and item.Subheading == nil %}
+              <h2 class="h1 mb-5 font-weight-bold">{{item.H2-Heading}}</h2>
+            {% elsif item.Subheading and item.H2-Heading == nil %}
+              <h5 class="mb-5 font-weight-medium text-secondary">{{item.Subheading}}</h5>
+            {% elsif item.H2-Heading and item.Subheading %}
+              <h2 class="h1 mb-2 font-weight-bold">{{item.H2-Heading}}</h2>
+              <h5 class="mb-5 font-weight-normal text-secondary">{{item.Subheading}}</h5>
+            {% endif %}
+
+
 
             {% for entry in item.Description %}
-              <p>{{entry.Paragraph | textilize}}</p>
+              {% if entry.H3-Heading %}
+                <h4 class="font-weight-medium mb-3">{{entry.H3-Heading}}</h4>
+              {% endif %}
+              {% if entry.Heading %}
+                <h6 class="font-weight-medium">{{entry.Heading}}</h6>
+              {% endif %}
+              {% if entry.Paragraph %}
+                <p class="font-weight-normal">{{entry.Paragraph | textilize}}</p>
+              {% endif %}
             {% endfor %}
 
-            {% if entry.Bullet == nil %}
+            {% if item.List-items == nil %}
             {% else %}
-              <ul>
+              <ul class="type-size-18">
                 {% for entry in item.List-items %}
-                  <li>{{entry.Bullet}}</li>
+                  {% if entry.Bullet == nil %}
+                  {% else %}
+                    <li class="font-weight-normal mb-2">{{ entry.Bullet }}</li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             {% endif %}
           </div>
-        </div>
-        <div class="row justify-content-center">
+
+          {% if item.Right-Side-Column == nil %}
+          {% else %}
+            <div class="h6 offset-md-1 offset-lg-0 col-12 col-lg-2">
+              <div class="row">
+
+                {% for entry in item.Right-Side-Column %}
+                  <div class="{{ entry.Classes }}">
+                    <h6 class="mb-1">{{ entry.Heading }}</h6>
+                    <span class="type-size-15 font-weight-normal">{{ entry.Item }}</span>
+                  </div>
+                {% endfor %}
+
+              </div>
+            </div>
+          {% endif %}
+
           {% for entry in item.Media %}
 
             {% if entry.Image == nil %}
             {% else %}
-                <div class="{{ entry.Classes }}">
-                  <img class="figure-img img-fluid mx-auto w-100" src="{{ site.baseurl }}{{ entry.Image }}" alt="{{ entry.Figcaption }}">
-                  <figcaption class="figure-caption">{{ entry.Figcaption }}</figcaption>
+                <div class="{{ entry.Layout-Classes }}">
+                  <img class="img-fluid mx-auto w-100" src="{{ site.baseurl }}{{ entry.Image }}" alt="{{ entry.Figcaption }}">
+                  <figcaption class="figure-caption"><small>{{ entry.Figcaption }}</small></figcaption>
                 </div>
             {% endif %}
 
             {% if entry.Video == nil %}
             {% else %}
-                <div class="{{ entry.Classes }}">
-                  <div class="videoWrapper">
-                    {{ entry.Video }}
+                <div class="{{ entry.Layout-Classes }}">
+                  <div class="{{ entry.Video-Classes }}">
+                      <iframe class="embed-responsive-item" src="{{ entry.Video }}" allowfullscreen></iframe>
                   </div>
-                  <figcaption class="figure-caption">{{ entry.Figcaption }}</figcaption>
+                  <figcaption class="figure-caption"><small>{{ entry.Figcaption }}</small></figcaption>
                 </div>
             {% endif %}
 
           {% endfor %}
+
+
         </div>
+
       </div>
+      {% for entry in item.Media %}
+
+        {% if entry.Full-width-image == nil %}
+        {% else %}
+            <div class="{{ entry.Layout-Classes }}">
+              <img class="img-fluid mx-auto w-100" src="{{ site.baseurl }}{{ entry.Full-width-image }}" alt="{{ entry.Figcaption }}">
+            </div>
+        {% endif %}
+      {% endfor %}
     </section>
   {% endfor %}
+
+<!-- FOOTER -->
+  {% if page.tags.size > 0 %}
+    <span class="post-content__tags">Tags
+      {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/tag/{{ tag | downcase | slugify }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}
+      {% endfor %}
+    </span>
+  {% endif %}
+
+  {% include posts.html %}
+
 </article>

@@ -4,10 +4,11 @@
 $color-alpha: #{{ site.color_alpha }};
 $color-beta: #{{ site.color_beta }};
 
-@import "base/variables";
+
 
 @import "bootstrap/functions";
 @import "bootstrap/variables";
+@import "base/variables";
 @import "bootstrap/mixins";
 @import "bootstrap/root";
 @import "bootstrap/reboot";
