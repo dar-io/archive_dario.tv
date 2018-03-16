@@ -1,6 +1,7 @@
 // Colours
 
 $color-smoke:#fafafa;
+$color-carbon:#111111;
 $color-skyblue:rgba(19,215,255,0.8);
 
 
@@ -12,22 +13,25 @@ $color-skyblue:rgba(19,215,255,0.8);
 
 .bg-color-skyblue{
   background-color: $color-skyblue;
+  z-index: 1;
 }
 
-.block{
-  padding-top: 80px;
+.bg-color-carbon{
+  background-color: $color-carbon;
+}
+.block-mt{
+  padding-top: 100px;
+}
+
+
+.block-mb{
   padding-bottom: 80px;
 }
 
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
+.block-mb-20{
+  padding-bottom: 20px;
 }
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+
+.align-content-center{
+  margin: 0 auto;
 }
