@@ -47,7 +47,7 @@ layout: default
 
             {% for entry in item.Description %}
               {% if entry.H3-Heading %}
-                <h4 class="font-weight-medium mb-3">{{entry.H3-Heading}}</h4>
+                <h4 class="font-weight-medium mb-2">{{entry.H3-Heading}}</h4>
               {% endif %}
               {% if entry.Heading %}
                 <h6 class="font-weight-medium">{{entry.Heading}}</h6>
@@ -57,16 +57,27 @@ layout: default
               {% endif %}
             {% endfor %}
 
-            {% if item.List-items == nil %}
+            {% if item.U-List == nil %}
             {% else %}
               <ul class="type-size-18">
-                {% for entry in item.List-items %}
+                {% for entry in item.U-List %}
                   {% if entry.Bullet == nil %}
                   {% else %}
-                    <li class="font-weight-normal mb-2">{{ entry.Bullet }}</li>
+                    <li class="font-weight-normal mb-4">{{ entry.Bullet }}</li>
                   {% endif %}
                 {% endfor %}
               </ul>
+            {% endif %}
+            {% if item.O-List == nil %}
+            {% else %}
+              <ol class="type-size-18">
+                {% for entry in item.O-List %}
+                  {% if entry.Bullet == nil %}
+                  {% else %}
+                    <li class="font-weight-normal mb-4">{{ entry.Bullet }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ol>
             {% endif %}
           </div>
 
@@ -91,8 +102,13 @@ layout: default
             {% if entry.Image == nil %}
             {% else %}
                 <div class="{{ entry.Layout-Classes }}">
+                  {% if entry.Figcaption-top %}
+                  <figcaption class="figure-caption"><small>{{ entry.Figcaption-top }}</small></figcaption>
+                  {% endif %}
                   <img class="img-fluid mx-auto w-100" src="{{ site.baseurl }}{{ entry.Image }}" alt="{{ entry.Figcaption }}">
+                  {% if entry.Figcaption %}
                   <figcaption class="figure-caption"><small>{{ entry.Figcaption }}</small></figcaption>
+                  {% endif %}
                 </div>
             {% endif %}
 

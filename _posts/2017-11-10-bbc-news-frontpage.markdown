@@ -48,7 +48,7 @@ content-block:
     Description:
       - Heading:
       - Paragraph: "Redesign the BBC News front page from the ground up with the following objectives: "
-    List-items:
+    U-List:
       - Bullet: Cater for wide ranging of underserved audiences — younger demographic and women.   
       - Bullet: Provide flexibility for editorial to curate the changing news agenda focusing on a particular theme or topic.  
       - Bullet: Make it easy to access the range and breadth of news content on any device.
@@ -101,7 +101,7 @@ content-block:
     Description:
       - H3-Heading: Make sense of the findings
       - Paragraph: "At this stage, I synthesise the unstructured data and started grouping the findings into themes. Themes are then converted into HMW questions (“How Might We...”):"
-    List-items:
+    U-List:
       - Bullet: How Might We achieve optimal content density?
       - Bullet: How Might We create better content groupings?
       - Bullet: How Might We entice people to scroll further down the page?
