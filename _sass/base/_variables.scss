@@ -128,9 +128,14 @@ p{
 }
 .figure-caption{
   line-height: $headings-line-height !important;
+
 }
 
 .type-size-15{
   font-size: 0.938em;
   line-height: $headings-line-height;
+}
+
+body .border-w-2{
+  border-width: 2px !important;
 }
