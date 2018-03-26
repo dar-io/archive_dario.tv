@@ -12,16 +12,14 @@ content-block:
   - Theme-Classes: block-mt bg-red text-snow
     Pattern-Image:
     Layout-Classes: block-mb-20 offset-md-0 offset-lg-0 col-sm-12 col-md-10 col-lg-8 mb-4 mb-md-0
-    Subheading: Overview
+    Subheading:
     H1-Heading: "BBC News App: Videos of the Day Promo"
-    H2-Heading:
+    H2-Heading: Overview
     Description:
 
-      - Paragraph: "Since October 2016, I've been one of three UX designers working on the BBC News app (iOS & Android). The News App reaches over 7 Million weekly users worldwide. This is the story on how I improved one of it's features."
+      - Paragraph: "Since October 2016, I've been one of three UX designers working on the BBC News app (iOS & Android). The News App reaches over 7 Million weekly users worldwide. This is the story on how I improved Videos of the Day and BBC Stories daily video plays by designing a better promo."
 
-      - Paragraph:  I was the design lead tasked to improve the promo engagement and increase video plays."
-
-      - Paragraph: "Videos of the Day (VotD) formerly known has Ten to Watch, was created to be a finite package of succinct, sharply edited and visually-enticing videos, made to be viewed vertically in full screen and designed to encourage habitual usage."
+      - Paragraph: "Videos of the Day and BBC Stories were created to be a finite package of succinct, sharply edited and visually-enticing videos, made to be viewed vertically in full screen and designed to encourage habitual usage."
 
       - Paragraph: "The package of vertical video is accessed by a single entry point into a linear experience from the News app Top Stories."
 
@@ -100,6 +98,7 @@ content-block:
       - Layout-Classes: align-content-center col-sm-12
         Image-Classes:
         Image: /assets/images/news-stream-promo/07_post-its_News_stream.png
+        Figcaption: Videos of the Day was formerly known has Ten to Watch. 
 
 
   - Theme-Classes: block-mt bg-gray-100
