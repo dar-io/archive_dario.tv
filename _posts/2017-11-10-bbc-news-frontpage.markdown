@@ -13,7 +13,7 @@ content-block:
     Pattern-Image:
     Layout-Classes: block-mb-20 offset-md-0 offset-lg-0 col-sm-12 col-md-10 col-lg-8 mb-4 mb-md-0
     Subheading:
-    H1-Heading: Designing the BBC News Responsive Homepage
+    H1-Heading: Designing the BBC News Responsive Front Page
     H2-Heading:
     Description:
       - Paragraph:
@@ -28,7 +28,7 @@ content-block:
       - Full-width-image: /assets/images/homepage/cover-image-frontpage.png
 
 
-  - Theme-Classes: block-mb block-mt bg-snow
+  - Theme-Classes: block-mt bg-snow
     Pattern-Image:
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
     Subheading:
@@ -38,7 +38,7 @@ content-block:
 
       - Paragraph: "The front page lacked the flexibility for editorial to curate and present news content around a particular theme or topic — the content was too focused in heavy news."
 
-      - Paragraph: "The first BBC News responsive site was designed in a first instance only for mobile. When the layout was scaled to desktop, the result was content hierarchy disparity between mobile and desktop; and the real-estate on larger screens not being used effectively."
+      - Paragraph: "The first BBC News responsive site was designed in first instance only for mobile. When the layout was scaled to desktop, the result was disparity of content hierarchy  between mobile and desktop. Also, the real-estate on larger screens wasn't being used effectively."
 
   - Theme-Classes: block-mb block-mt bg-gray-100
     Pattern-Image:
@@ -53,10 +53,12 @@ content-block:
       - Bullet: Provide flexibility for editorial to curate the changing news agenda focusing on a particular theme or topic.  
       - Bullet: Make it easy to access the range and breadth of news content on any device.
       - Bullet: Drive onward journeys.
-      - Bullet: Integrate and present effective advertising and sponsorship solutions
+      - Bullet: Integrate and present effective advertising and sponsorship solutions.
       - Bullet: Use the front page real-estate effectively and increase the maximum breakpoint width from 1008 to 1280 pixels wide.  
 
-  - Theme-Classes: block-mb block-mt bg-snow
+
+
+  - Theme-Classes: block-mt bg-snow
     Pattern-Image:
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
     H2-Heading: My Role
@@ -81,18 +83,28 @@ content-block:
       - Paragraph: |
           <strong>Usability Research</strong> <br />I worked with the research team to help define research goals. I went to usability research sessions in London and Toronto with the research team to validate design concepts using the prototypes I built for the front page.
 
-  - Theme-Classes: block-mb block-mt bg-gray-100
+    Media:
+      - Full-width-image: /assets/images/homepage/homepage_sketch-wide.jpg
+        Figcaption: "Early sketch of the News homepage focused on targeting underserved audiences and exploring the question: How Might We effectively showcase Features, Live, Video and Visual Journalism to surface the depth and breadth of content from across BBC News output?"
+
+
+  - Theme-Classes: block-mt bg-gray-100
     Pattern-Image:
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
     Subheading: Observe. Think. Make. Test. Repeat.
     H2-Heading: Design Process
     Description:
-      - H3-Heading: Talk to people. Observe. Get inspired.
+      - H3-Heading: Observe. Get inspired.
       - Paragraph: "Talk to people, analyse data, gather requirements, observe, throw away any preconceived assumptions. Inspire new thinking by observing problems from different angles. Then, get a good night sleep."
 
       - Paragraph: "During the discovery phase, I started gathering requirements from stakeholders and also learning who are the decision makers. I carried out audience and competitor analysis to gather data and insights into user behaviours."
 
-      - Paragraph: "I shadowed senior homepage editors and journalists to understand their workflow when curating stories to be featured on the news front page. I talked to engineers. I questioned everything and challenged any preconceived assumptions."
+      - Paragraph: "I shadowed senior front page editors and journalists to understand their workflow when curating stories to be featured on the news front page. I talked to engineers. I questioned everything and challenged any preconceived assumptions."
+
+    Media:
+      - Full-width-image: /assets/images/homepage/01-sketch-top-stories.jpg
+        Layout-Classes: align-content-center
+        Figcaption: "Early exploration of the Top stories slice with a variety of content types. The goal was to showcase depth and breath of news stories."
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
@@ -107,43 +119,82 @@ content-block:
       - Bullet: How Might We entice people to scroll further down the page?
       - Bullet: How Might We create a design that caters for underserved audiences?
 
-  - Theme-Classes: block-mb block-mt bg-gray-100
+
+  - Theme-Classes: block-mt bg-gray-100
     Pattern-Image:
     Subheading: DESIGN PROCESS
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
     Description:
       - H3-Heading: Don't get attached to ideas
-      - Paragraph: "I start sketching on paper and presenting ideas during the design critique team meetings. I don’t get attached to any idea. This is a collective process of throwing away ideas. By eliminating ideas only the good ones persist or at least the ones that are technically feasible."
+      - Paragraph: "I start sketching on paper and presenting ideas during the design critique team meetings. At this point, this is a collective process of throwing away ideas. By eliminating ideas only the good ones persist or at least the ones that are technically feasible."
 
       - Paragraph: "One of the outcomes of these sessions was the introduction of “Slices”. Slices run horizontally across the full width of the screen. They are easy to reorder, the content hierarchy is consistent across all the breakpoints. It also provides more flexibility for editorial to reorder content depending on the news agenda."
+
+    Media:
+      - Full-width-image: /assets/images/homepage/wall-with-sketches.jpg
+        Layout-Classes: align-content-center
+        Figcaption: "During our weekly design critique team meetings, we've encouraged designers to explore ideas on how they would see the BBC News homepage evolve."
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-8 col-lg-6
     Description:
       - H3-Heading: Editorial and product workshop
       - Paragraph: "The goal of the Editorial and Product workshop was to prune, group, reorder content, and to move away from the traditional sectioned content."
 
       - Paragraph: "Three groups of mixed people representing product and editorial were created. I moderated a group of very challenging stakeholders."
 
-      - Paragraph: "The outcome was positive. The information for each section on the homepage was organised into themes. It was time to use this information in the designs and prototypes."
+      - Paragraph: "The outcome was positive. The information for each section on the front page was organised into themes. It was time to use this information in the designs and prototypes."
 
-  - Theme-Classes: block-mb block-mt bg-gray-100
+    Media:
+      - Layout-Classes: align-content-center col-8 col-sm-8 col-md-4 col-lg-4
+        Image: /assets/images/homepage/editorial-workshop_v1.jpeg
+        Figcaption: "Pruning, Grouping and Ordering content workshop with Editorial and Product stakeholders to define the content strategy for the BBC News homepage"
+
+  - Theme-Classes: block-mb block-mt bg-f8f8f8
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Subheading: DESIGN PROCESS
+    H2-Heading:
+    Description:
+      - H3-Heading: Target Audience
+      - Paragraph: "The BBC News attracts audiences with vastly differing characteristics. I used the BBC News personas constantly throughout the project to guide design decisions and priorities."
+
+      - Paragraph: "The BBC News personas consists of five different archetypes. These are:"
+
+    Media:
+      - Full-width-image: /assets/images/homepage/BBC_News_Personas.png
+        Figcaption-Full-width: "Key traits of BBC News personas: Headlines only, Social Mobile Tweeters, Local Feelgood, Social Connectors and Supervisual Snackers"
+
+
+  - Theme-Classes: block-mt bg-snow
     Pattern-Image:
     Subheading: DESIGN PROCESS
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
     Description:
       - H3-Heading: Designing in the Browser
-      - Paragraph: "The design process started in the paper, then I moved into Sketch App to design high fidelity mockups. This proved to be challenging to solve problems when reflowing content across breakpoints. I wanted to come up with a solid solution that engineers could use to build the BBC News Homepage."
+    Media:
+      - Layout-Classes: align-content-center col-12 col-sm-12 col-lg-8 mb-4 mt-3
+        Image: /assets/images/homepage/start-collider.gif
 
-      - Paragraph: "To solve problems before they appear before the build, I designed most of the BBC News homepage in HTML/CSS/JS. This was done to facilitate the communication with the engineering team, stakeholders and to drive the decision-making process."
+
+  - Theme-Classes:  bg-snow
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Description:
+      - Paragraph: "After exploring designs in paper, I moved into Sketch to design high fidelity mockups. This proved to be challenging to solve problems when reflowing content across breakpoints. I wanted to come up with a solid solution that engineers could use to build the BBC News Front Page."
+
+      - Paragraph: "To solve problems before they appear before the build, I designed most of the BBC News front page in HTML/CSS/JS. This was done to facilitate the communication with the engineering team, stakeholders and to drive the decision-making process."
 
       - Paragraph: "In my experience, designing a responsive site in Sketch, Illustrator or Photoshop makes it harder to have a discussion with software engineers and to get the buy-in from stakeholders. Designing in HTML/CSS was a way to solve frontend problems before they happen during the build."
 
       - Paragraph: "Designing in the browser helped positively to influence the product direction."
+    Media:
+        - Full-width-image: /assets/images/homepage/design-prototype.jpg
 
-  - Theme-Classes: block-mb block-mt bg-snow
+
+  - Theme-Classes: block-mb block-mt bg-gray-100
     Pattern-Image:
     Subheading: DESIGN PROCESS
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
@@ -151,23 +202,49 @@ content-block:
       - H3-Heading: Usability Research
       - Paragraph: "I worked closely with design researchers to help define the goals for testing sessions and build prototypes to be used in UK and Canada research. I also build prototypes to be used in rapid testing sessions."
 
-  - Theme-Classes: block-mb block-mt bg-gray-100
+  - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
     Subheading:
     H2-Heading: Outcome
     Description:
-      - Paragraph: "The front page is now better at getting people to content: bounce rate (the proportion of visits that result in a user leaving the BBC News site without visiting any other News page) is down 2% and overall 26% of all article views in News are now driven by the front page, up from 22% on the old page."
+      - Paragraph: "The front page is now better at getting people to content. The bounce rate (the proportion of visits that result in a user leaving the BBC News site without visiting any other News page) is down 2% and overall 26% of all article views in News are now driven by the front page, up from 22% on the old page."
 
-      - Paragraph: "The page also does a much better job of getting people to video content, with 32% of video page views coming from the front page versus 10% previously. It is also making people come back more often: front page users now come back on average 9% more often during a week than they did with the old page design."
+      - Paragraph: "The page also does a much better job of getting people to video content, with 32% of video page views coming from the front page versus 10% previously. It is also making people come back more often. The front page users now come back on average 9% more often during a week than they did with the old page design."
 
-      - H3-Heading: What I learned?
-      - Paragraph: "Using the same materials and language of the Web to created designs that look and feel like the real thing, helped to influence the outcome of the project. It made it easy to get the buy-in of most people, and easier to share the work with stakeholders."
+    Media:
+      - Full-width-image: /assets/images/homepage/homepage-stats.png
 
-      - Paragraph: "The engineers were incredibly busy moving the front page to the Cloud to ensure scalability and to reduce our reliance on ageing in-house server. This is where designing in the browser also helped reduce some of the overhead when a designer creates unbuildable designs. Engineers, could just use the browser inspector tools look into my prototype to help solve some of their frontend problems."
+  - Theme-Classes: block-mb block-mt bg-gray-100
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Subheading:
+    H2-Heading: What I learned?
+    Description:
+      - Paragraph: "Using the same materials and language of the Web to create designs that look and feel like the real thing, helped to influence the outcome of the project. It made it easy to get the buy-in of most people, and easier to share the work with stakeholders."
+
+      - Paragraph: "The engineers were incredibly busy moving the front page to the Cloud to ensure scalability and to reduce our reliance on in-house ageing servers. This is where designing in the browser also helped reduce some of the overhead when a designer creates unbuildable designs. Engineers, could just use the browser inspector tools look into my prototype to help solve some of their frontend problems."
 
       - H3-Heading: Cons
       - Paragraph: "Designing in browser requires time to prepare the structure of what you want to achieve. But once it's all set up, designing components in HTML/CSS, can be as fast as designing in a design tool."
 
       - Paragraph: "Be prepared for a designer to ask you for the latest Sketch designs of what you are doing. Most of the time I forward the the URL for the prototype, other times at the end of the day, I had to translate what I did in browser to Sketch. It's best to let your team know upfront that your designs will only be available in HTML/CSS to avoid disappointment."
+
+  - Theme-Classes: block-mt bg-snow
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Subheading: LINKS TO PROTOTYPES & LIVE BBC NEWS HOMEPAGE
+    H2-Heading: Front page Design evolution
+    O-List:
+      - Bullet: <a target="blank" href="/assets/prototypes/bbc_news_frontpage/01_2016_BBC_News_1280/01_2016_BBC_News_1280.html" > <strong>BBC News Homepage Low fidelity prototype</strong></a>
+
+      - Bullet: <a target="blank" href="/assets/prototypes/bbc_news_frontpage/02_Feb_2016_Frontpage/pages/uk-edition/index.html" > <strong>First BBC News Homepage iteration designed in the browser</strong></a>
+
+      - Bullet: <a target="blank" href="/assets/prototypes/bbc_news_frontpage/03_October_2016/index.html"><strong>Final version designed in the browser.</strong></a> Engineers used this version as reference to build the BBC News Homepage
+
+      - Bullet: <a target="blank" href="http://www.bbc.co.uk/news"><strong>Live BBC News Homepage</strong></a>
+
+    Media:
+      - Full-width-image: /assets/images/homepage/01_composition-homepage_evolution.jpg
+
 ---

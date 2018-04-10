@@ -4,7 +4,9 @@ layout: default
 <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 
   {% for item in page.content-block %}
-    <section class="position-relative opener {{item.Theme-Classes}}" style="background-image: url('{{ item.Pattern-Image }}');">
+    <section class="position-relative opener {{item.Theme-Classes}}" style="background-size: cover; background-image: url('{{ item.Pattern-Image }}');">
+
+
       <div class="container">
         <div class="row ">
           {% if item.Left-Side-Column == nil %}
@@ -25,18 +27,46 @@ layout: default
               </div>
             </div>
           {% endif %}
+          {% for entry in item.Media-Top %}
+
+            {% if entry.Image == nil %}
+            <div class="{{ entry.Layout-Classes }}">
+               <figcaption class="figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+            </div>
+            {% else %}
+                <div class="{{ entry.Layout-Classes }}">
+                  {% if entry.Figcaption-top %}
+                  <figcaption class="figure-caption text-center"><small>{{ entry.Figcaption-top }}</small></figcaption>
+                  {% endif %}
+                  <img class="img-fluid mx-auto w-100 {{ entry.Image-Classes }}" src="{{ site.baseurl }}{{ entry.Image }}" alt="{{ entry.Figcaption }}">
+                  {% if entry.Figcaption %}
+                  <figcaption class="figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+                  {% endif %}
+                </div>
+            {% endif %}
+
+          {% endfor %}
 
           <div class="{{item.Layout-Classes}}">
 
-            {% if item.H1-Heading and item.Subheading == nil %}
+            {% if item.H1-Heading and item.Subheading == nil and item.H2-Heading == nil %}
               <h1 class="mb-5 font-weight-bold">{{item.H1-Heading}}</h1>
-            {% elsif item.H2-Heading and item.Subheading == nil %}
+            {% endif %}
+
+            {% if item.H2-Heading and item.H1-Heading == nil and item.Subheading== nil %}
               <h2 class="h1 mb-5 font-weight-bold">{{item.H2-Heading}}</h2>
-            {% elsif item.Subheading and item.H2-Heading == nil %}
-              <h5 class="mb-5 font-weight-medium text-secondary">{{item.Subheading}}</h5>
-            {% elsif item.H2-Heading and item.Subheading %}
+            {% endif %}
+
+            {% if item.Subheading and item.H2-Heading == nil and item.H1-Heading == nil  %}
+              <h6 class="mb-4 font-weight-medium text-secondary">{{item.Subheading}}</h6>
+            {% endif %}
+            {% if item.H2-Heading and item.Subheading and item.H1-Heading == nil %}
               <h2 class="h1 mb-2 font-weight-bold">{{item.H2-Heading}}</h2>
               <h5 class="mb-5 font-weight-normal text-secondary">{{item.Subheading}}</h5>
+            {% endif %}
+            {% if item.H1-Heading and item.H2-Heading and item.Subheading == nil %}
+                <h1 class="mb-5 font-weight-bold">{{item.H1-Heading}}</h1>
+                <h2 class="h1 mb-2 font-weight-bold">{{item.H2-Heading}}</h2>
             {% endif %}
 
             {% for entry in item.Description %}
@@ -73,6 +103,18 @@ layout: default
                 {% endfor %}
               </ol>
             {% endif %}
+
+            {% for entry in item.Description-post-bullet %}
+              {% if entry.H3-Heading %}
+                <h4 class="font-weight-medium mb-2">{{entry.H3-Heading}}</h4>
+              {% endif %}
+              {% if entry.Heading %}
+                <h6 class="font-weight-medium">{{entry.Heading}}</h6>
+              {% endif %}
+              {% if entry.Paragraph %}
+                <p class="font-weight-normal">{{entry.Paragraph | textilize}}</p>
+              {% endif %}
+            {% endfor %}
           </div>
 
           {% if item.Right-Side-Column == nil %}
@@ -94,6 +136,9 @@ layout: default
           {% for entry in item.Media %}
 
             {% if entry.Image == nil %}
+            <div class="{{ entry.Layout-Classes }}">
+               <figcaption class="figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+            </div>
             {% else %}
                 <div class="{{ entry.Layout-Classes }}">
                   {% if entry.Figcaption-top %}
@@ -130,12 +175,17 @@ layout: default
         </div>
 
       </div>
+
+
       {% for entry in item.Media %}
 
         {% if entry.Full-width-image == nil %}
         {% else %}
             <div class="{{ entry.Layout-Classes }}">
-              <img class="img-fluid mx-auto w-100" src="{{ site.baseurl }}{{ entry.Full-width-image }}" alt="{{ entry.Figcaption }}">
+              <img class="img-fluid mx-auto w-100" src="{{ site.baseurl }}{{ entry.Full-width-image }}" alt="{{ entry.Figcaption-Full-width }}">
+              {% if entry.Figcaption-Full-width %}
+              <figcaption class="figure-caption text-center mt-1"><small>{{ entry.Figcaption-Full-width }}</small></figcaption>
+              {% endif %}
             </div>
         {% endif %}
       {% endfor %}
