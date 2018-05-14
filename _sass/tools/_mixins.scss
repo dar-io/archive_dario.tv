@@ -100,11 +100,8 @@
 @mixin btn-slide($color: $color-black, $hoverColor: $color-alpha) {
   position: relative;
   z-index: 1;
-
+  font-weight: 600;
   display: inline-block;
-  @extend %body--text;
-  font-family: $font-header;
-  font-weight: 700;
   color: $color;
 
   // &:after {
@@ -125,19 +122,20 @@
   &:hover,
   &:active,
   &:focus {
-
+    cursor: pointer;
     & > * {
 
       & > * {
         transform: translate3d(0, -100%, 0);
+
       }
     }
   }
 
   & > * {
     position: relative;
-
-    border: 2px solid $color;
+    border-radius: 32px;
+    border: 2px solid #f44336;
     overflow: hidden;
 
     & > * {
@@ -148,9 +146,9 @@
 
       &:last-child {
         position: absolute;
-
+        width: 100%;
         color: #ffffff;
-        background-color: $hoverColor;
+        background-color: #f44336;
       }
     }
   }

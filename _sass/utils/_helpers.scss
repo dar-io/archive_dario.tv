@@ -82,8 +82,13 @@
 /**
  * Buttons
  */
-.btn {
+.btn-slide{
   @include btn-slide();
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 100%;
+  border-radius: 32px;
 }
 
 /**

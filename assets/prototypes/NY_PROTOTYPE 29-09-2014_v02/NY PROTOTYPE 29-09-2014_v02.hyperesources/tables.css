@@ -1,0 +1,82 @@
+.responsive-table-container {
+-webkit-overflow-scrolling: touch;
+overflow-x: scroll;
+}
+
+.story-body .story-table td {
+font-size: 14px;
+line-height: 18px;
+}
+
+.story-body .story-table {
+width: 100%;
+}
+
+
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+.story-body .story-table th {
+padding: 8px;
+text-align: left;
+border-right: 8px solid #FFF;
+}
+
+.story-body .story-table th:last-child{
+border-right: 0px;	
+} 
+
+.story-body .story-table__heading {
+border-bottom: 8px solid #FFF;
+letter-spacing: -0.0425em;
+font-weight: 700;
+padding-top: 4px;
+padding-top: 0.4rem;
+padding-bottom: 4px;
+padding-bottom: 0.4rem;
+background: #505050;
+color: #FFF;
+}
+
+.story-body .story-table__heading__col {
+background: #f2f1f1;
+color: #414141;
+font-weight: 700;
+vertical-align: top;
+}
+
+.story-body .story-table td {
+padding: 9px 8px 7px 8px;
+border-right: 16px solid #FFF;
+}
+
+.story-body .story-table td:last-child {
+border-right: 0px;
+}
+
+.story-body .story-table__row__even td {
+
+}
+
+.story-body tr td {
+border-bottom: 1px solid #dddddd;
+}
+
+tr td:first-child {
+color: #414141;
+font-weight: bold;
+}
+
+.HYPE_scene table.story-table  {
+display: table;
+border-collapse: separate;
+border-spacing: 0px;
+border-color: #808080;
+margin-left: 0;
+}
+
+.responsive-table-container {
+margin-bottom: 24px;
+}

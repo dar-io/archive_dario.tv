@@ -64,7 +64,8 @@ $color-beta: #{{ site.color_beta }};
   'components/_mast',
   'components/_post',
   'components/_post-article',
-  'components/_preview';
+  'components/_preview',
+  'components/_project-detail-card';
 
 @import 'utils/_animations',
   'utils/_helpers';

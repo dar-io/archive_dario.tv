@@ -11,26 +11,35 @@ cover-image: /assets/images/homepage/homepage-cover-image.png
 content-block:
   - Theme-Classes: block-mt bg-red text-snow
     Pattern-Image:
-    Layout-Classes: block-mb-20 offset-md-0 offset-lg-0 col-sm-12 col-md-10 col-lg-8 mb-4 mb-md-0
+    Layout-Classes: block-mb offset-md-0 offset-lg-2 col-sm-12 col-md-9 col-lg-7 col-xl-6 mb-md-0
     Subheading:
     H1-Heading: Designing the BBC News Responsive Front Page
     H2-Heading:
     Description:
-      - Paragraph:
-        - "In 2016, I was tasked to improve the user experience of the BBC News front page so that it caters for under-served audiences, drives onward journeys, and enables editorial to curate the news agenda with a design that provides flexibility and reflects timeliness."
+      - Paragraph: "In 2016, I was tasked to improve the user experience of the BBC News front page so that it caters for under-served audiences, drives onward journeys, and enables editorial to curate the news agenda with a design that provides flexibility and reflects timeliness."
 
-    Left-Side-Column:
-      - Classes: mt-0 mb-3 mt-lg-0 col-3 col-sm-3 col-md-2 col-lg-12
-        Heading:
-        Item: |
-          <img src="/assets/svg/BBC_News.svg"  alt="">
+    Right-Side-Column:
+      - When: "2015 - 2016"
+        Product: |
+          <span class="client-logo">BBC News Frontpage</span>
+        Platform: |
+          Web: <a class="text-white anchor-underline-dark" href="http://www.bbc.co.uk/news">bbc.co.uk/news</a>
+        Roles:
+          - Role: "UX Lead"
+          - Role: "Ideation"
+          - Role: "Wireframing"
+          - Role: "Visual design"
+          - Role: "Prototyping"
+          - Role: "UX research"
+          - Role: "Interactive Design"
+
     Media:
       - Full-width-image: /assets/images/homepage/cover-image-frontpage.png
 
 
-  - Theme-Classes: block-mt bg-snow
+  - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading:
     H2-Heading: The Problem
     Description:
@@ -42,7 +51,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading:
     H2-Heading: The Challenge
     Description:
@@ -60,7 +69,7 @@ content-block:
 
   - Theme-Classes: block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     H2-Heading: My Role
     Subheading: I worked across all stages of the development cycle, from conception through to delivery.
     Description:
@@ -90,7 +99,7 @@ content-block:
 
   - Theme-Classes: block-mt bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading: Observe. Think. Make. Test. Repeat.
     H2-Heading: Design Process
     Description:
@@ -109,7 +118,7 @@ content-block:
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Description:
       - H3-Heading: Make sense of the findings
       - Paragraph: "At this stage, I synthesise the unstructured data and started grouping the findings into themes. Themes are then converted into HMW questions (“How Might We...”):"
@@ -123,7 +132,7 @@ content-block:
   - Theme-Classes: block-mt bg-gray-100
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Description:
       - H3-Heading: Don't get attached to ideas
       - Paragraph: "I start sketching on paper and presenting ideas during the design critique team meetings. At this point, this is a collective process of throwing away ideas. By eliminating ideas only the good ones persist or at least the ones that are technically feasible."
@@ -138,7 +147,7 @@ content-block:
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-8 col-lg-6
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-8 col-lg-7 col-xl-7
     Description:
       - H3-Heading: Editorial and product workshop
       - Paragraph: "The goal of the Editorial and Product workshop was to prune, group, reorder content, and to move away from the traditional sectioned content."
@@ -148,13 +157,13 @@ content-block:
       - Paragraph: "The outcome was positive. The information for each section on the front page was organised into themes. It was time to use this information in the designs and prototypes."
 
     Media:
-      - Layout-Classes: align-content-center col-8 col-sm-8 col-md-4 col-lg-4
+      - Layout-Classes: align-content-center col-8 col-sm-8 col-md-3
         Image: /assets/images/homepage/editorial-workshop_v1.jpeg
         Figcaption: "Pruning, Grouping and Ordering content workshop with Editorial and Product stakeholders to define the content strategy for the BBC News homepage"
 
   - Theme-Classes: block-mb block-mt bg-f8f8f8
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading: DESIGN PROCESS
     H2-Heading:
     Description:
@@ -171,7 +180,7 @@ content-block:
   - Theme-Classes: block-mt bg-snow
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Description:
       - H3-Heading: Designing in the Browser
     Media:
@@ -181,7 +190,7 @@ content-block:
 
   - Theme-Classes:  bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Description:
       - Paragraph: "After exploring designs in paper, I moved into Sketch to design high fidelity mockups. This proved to be challenging to solve problems when reflowing content across breakpoints. I wanted to come up with a solid solution that engineers could use to build the BBC News Front Page."
 
@@ -197,14 +206,14 @@ content-block:
   - Theme-Classes: block-mb block-mt bg-gray-100
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Description:
       - H3-Heading: Usability Research
       - Paragraph: "I worked closely with design researchers to help define the goals for testing sessions and build prototypes to be used in UK and Canada research. I also build prototypes to be used in rapid testing sessions."
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading:
     H2-Heading: Outcome
     Description:
@@ -217,7 +226,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading:
     H2-Heading: What I learned?
     Description:
@@ -232,7 +241,7 @@ content-block:
 
   - Theme-Classes: block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading: LINKS TO PROTOTYPES & LIVE BBC NEWS HOMEPAGE
     H2-Heading: Front page Design evolution
     O-List:

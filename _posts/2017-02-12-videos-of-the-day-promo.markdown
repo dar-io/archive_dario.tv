@@ -11,7 +11,7 @@ cover-image: /assets/images/news-stream-promo/promo-videos-of-the-day.gif
 content-block:
   - Theme-Classes: block-mt bg-red text-snow
     Pattern-Image:
-    Layout-Classes: block-mb-20 offset-md-0 offset-lg-0 col-sm-12 col-md-10 col-lg-8 mb-4 mb-md-0
+    Layout-Classes: block-mb-20 offset-md-1 offset-lg-0 col-sm-12 col-md-10 col-lg-8 col-xl-7 mb-4 mb-md-0
     Subheading:
     H1-Heading: "BBC News App: Videos of the Day Promo"
     H2-Heading:
@@ -24,14 +24,41 @@ content-block:
     Left-Side-Column:
       - Classes: mt-0 mb-3 mt-lg-0 col-3 col-sm-3 col-md-2 col-lg-12
         Heading:
+        Item:
+
+    Right-Side-Column:
+      - Classes: mt-0 mb-3 mt-lg-0 col-4 col-xl-12
+        Heading-Classes: text-secondary
+        Heading: "When"
+        Item: "2014"
+      - Classes: mt-0 mb-3 mt-lg-0 col-4 col-xl-12
+        Heading-Classes: text-secondary
+        Heading: "Client"
         Item: |
-          <img src="/assets/svg/BBC_News.svg"  alt="">
+          <span class="client-logo">BBC News</span>
+
+      - Classes: mt-0 mb-3 mt-lg-0 col-4 col-xl-12
+        Heading-Classes: text-secondary
+        Heading: "Platform"
+        Item: "Web"
+      - Classes: mt-0 mb-3 mt-lg-0 col-12 col-xl-12
+        Heading-Classes: text-secondary
+        Heading: "Hats Worn"
+        Item: |
+          <div class="row">
+          <div class="col-4 mb-2 col-xl-6">UX Lead</div>
+          <div class="col-4 mb-2 col-xl-6">Concepting</div>
+          <div class="col-4 mb-2 col-xl-6">Wireframing</div>
+          <div class="col-4 mb-2 col-xl-6">Visual design</div>
+          <div class="col-4 mb-2 col-xl-6">Prototyping</div>
+          <div class="col-4 mb-2 col-xl-6">UX research</div>
+          </div>
     Media:
       - Full-width-image: /assets/images/news-stream-promo/videos-of-the-day.png
 
   - Theme-Classes: block-mt bg-red text-snow
     Pattern-Image:
-    Layout-Classes: block-mb offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: block-mb offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading:
     H2-Heading: "Overview"
     Description:
@@ -42,7 +69,7 @@ content-block:
 
   - Theme-Classes: block-mt bg-snow pb-4
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     H2-Heading: My Role
     Subheading:
     Description:
@@ -64,7 +91,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-color-carbon text-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading:
     H2-Heading: The Problem
     Description:
@@ -81,7 +108,7 @@ content-block:
 
   - Theme-Classes: pb-4 block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading:
     H2-Heading: The Challenge
     Description:
@@ -116,7 +143,7 @@ content-block:
 
   - Theme-Classes: block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     H2-Heading: The Approach
     Subheading:
     Description:
@@ -159,7 +186,7 @@ content-block:
 
   - Theme-Classes: block-mt block-mb bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading: THE APPROACH
     H2-Heading:
     Description:
@@ -208,7 +235,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading: THE APPROACH
     H2-Heading:
     Description:
@@ -218,7 +245,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading: THE APPROACH
     H2-Heading:
     Description:
@@ -246,7 +273,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading:
     H2-Heading: Outcome
     Description:
@@ -281,7 +308,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Subheading:
     H2-Heading:
     Description:

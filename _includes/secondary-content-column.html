@@ -1,0 +1,62 @@
+{% if item.Secondary-Column == nil %}
+{% else %}
+  {% for entry in item.Secondary-Column %}
+
+  <div class="{{entry.Secondary-Column-Classes}}">
+    {% if entry.H1-Heading and entry.Subheading == nil and entry.H2-Heading == nil %}
+      <h1 class="display-4 mb-5 font-weight-bold">{{entry.H1-Heading}}</h1>
+    {% endif %}
+
+    {% if entry.H2-Heading and entry.H1-Heading == nil and entry.Subheading== nil %}
+      <h2 class="h1 mb-5 font-weight-bold">{{entry.H2-Heading}}</h2>
+    {% endif %}
+
+    {% if entry.Subheading and entry.H2-Heading == nil and entry.H1-Heading == nil  %}
+      <h6 class="mb-4 font-weight-medium text-secondary">{{entry.Subheading}}</h6>
+    {% endif %}
+    {% if entry.H2-Heading and entry.Subheading and entry.H1-Heading == nil %}
+      <h2 class="h1 mb-2 font-weight-bold">{{entry.H2-Heading}}</h2>
+      <h5 class="mb-5 font-weight-normal text-secondary">{{entry.Subheading}}</h5>
+    {% endif %}
+    {% if entry.H1-Heading and entry.H2-Heading and entry.Subheading == nil %}
+        <h1 class="mb-5 font-weight-bold">{{entry.H1-Heading}}</h1>
+        <h2 class="h1 mb-2 font-weight-bold">{{entry.H2-Heading}}</h2>
+    {% endif %}
+    {% for roles in entry.Description %}
+      {% if roles.H3-Heading %}
+        <h4 class="font-weight-medium mb-2">{{roles.H3-Heading}}</h4>
+      {% endif %}
+      {% if roles.Heading %}
+        <h6 class="font-weight-medium">{{roles.Heading}}</h6>
+      {% endif %}
+      {% if roles.Paragraph %}
+        <p class="font-weight-normal">{{roles.Paragraph | textilize}}</p>
+      {% endif %}
+    {% endfor %}
+
+    {% if entry.U-List == nil %}
+    {% else %}
+      <ul class="type-size-16">
+        {% for roles in entry.U-List %}
+          {% if roles.Bullet == nil %}
+          {% else %}
+            <li class="font-weight-normal mb-2">{{ roles.Bullet }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if entry.O-List == nil %}
+    {% else %}
+      <ol class="type-size-16">
+        {% for roles in entry.O-List %}
+          {% if entry.Bullet == nil %}
+          {% else %}
+            <li class="font-weight-normal mb-2">{{ entry.Bullet }}</li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    {% endif %}
+  </div>
+
+  {% endfor %}
+{% endif %}
