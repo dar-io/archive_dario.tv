@@ -36,22 +36,22 @@
 
     {% if entry.U-List == nil %}
     {% else %}
-      <ul class="type-size-16">
+      <ul class="type-size-16 Bullet">
         {% for roles in entry.U-List %}
           {% if roles.Bullet == nil %}
           {% else %}
-            <li class="font-weight-normal mb-2">{{ roles.Bullet }}</li>
+            <li class="font-weight-normal mb-4">{{ roles.Bullet }}</li>
           {% endif %}
         {% endfor %}
       </ul>
     {% endif %}
     {% if entry.O-List == nil %}
     {% else %}
-      <ol class="type-size-16">
+      <ol class="type-size-16 Bullet">
         {% for roles in entry.O-List %}
           {% if entry.Bullet == nil %}
           {% else %}
-            <li class="font-weight-normal mb-2">{{ entry.Bullet }}</li>
+            <li class="font-weight-normal mb-4">{{ entry.Bullet }}</li>
           {% endif %}
         {% endfor %}
       </ol>

@@ -18,28 +18,28 @@ layout: default
 
 
 <section id="portfolio" class="section-padding">
-  <!-- <div class="grid">
-    <h2 class="section-header">Case Studies</h2>
-    <ul class="container-double" itemscope itemtype="http://schema.org/Blog">
-      {% for post in site.posts limit:1 %}
-        <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-          <a class="preview__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
-            <div class="preview__img bg-grey wow slideInUp">
-              <figure class="absolute-bg wow fadeIn" data-wow-delay="900ms" style="background-image: url('{{ post.image }}');"></figure>
-            </div>
-            <div class="preview__container bg-white">
-              <div>
-                <h2 class="wow fadeInUp" data-wow-delay="150ms" itemprop="name">{{ post.title }}</h2>
-                <p class="preview__excerpt wow fadeInUp" data-wow-delay="300ms" itemprop="description">{{ post.content | strip_html | truncatewords: 30 }}</p>
-              </div>
-              <time class="preview__date wow fadeInUp" data-wow-delay="450ms" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-            </div>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-
-  </div> -->
+  <section id="portfolio" class="section-padding bg-alpha">
+    <div class="grid--double">
+      <h1 class="section-header">Portfolio</h1>
+      <div class="portfolio-carousel owl-carousel wow fadeIn">
+        <div>
+          <figure>
+            <img src="/assets/images/portfolio-1.png" alt="Portfolio Item"/>
+          </figure>
+        </div>
+        <div>
+          <figure>
+            <img src="/assets/images/portfolio-2.png" alt="Portfolio Item"/>
+          </figure>
+        </div>
+        <div>
+          <figure>
+            <img src="/assets/images/portfolio-3.png" alt="Portfolio Item"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
 
   {% include posts.html %}
 </section>

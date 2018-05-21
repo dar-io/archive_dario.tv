@@ -22,13 +22,13 @@ $(document).ready(function() {
   $('.container-triple li:nth-child(3n)').each(function() {
     $(this).find('a').attr('data-wow-delay', '0.3s');
   });
-  
+
   var wow = new WOW({
     boxClass: 'wow',
-    animateClass: 'animated', 
-    offset: 0,        
-    mobile: true,      
-    live: true 
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
   });
   wow.init();
 

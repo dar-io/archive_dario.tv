@@ -97,8 +97,8 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
-$carbon:        $gray-900;
+$dark:          $black !default;
+$carbon:        $gray-900  ;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
@@ -168,7 +168,7 @@ ol.Bullet{
 }
 
 
-.Bullet{
+ol.Bullet{
 
   li {counter-increment: li}
   li::before {
@@ -218,10 +218,25 @@ body .border-w-2{
 }
 
 .client-logo{
-
-  background-image: url('/assets/svg/BBC_News.svg');
   background-repeat: no-repeat;
-  padding-left: 22px;  /* width of the image plus a little extra padding */
+  padding-left: 32px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  &.bbc-news{
+    background-image: url('/assets/svg/BBC_News.svg');
+  }
+  &.bbc{
+    background-image: url('/assets/svg/BBC.svg');
+  }
+  &.childrens{
+    background-image: url('/assets/svg/CBBC-Cbeebies.svg');
+    height: 32px;
+    width: 80px;
+  }
+}
+
+.shadow{
+  box-shadow: 0 6px 16px #0000005c;
 }
 
 .anchor-underline-dark{
@@ -268,12 +283,17 @@ figcaption {
 }
 
 .paragraph-decor{
+  p{
+    margin-bottom: 4rem !important;
+  }
   p:before{
     content: "";
     position: relative;
     display: block;
-    border-top: 2px solid #f44336;
-    width: 3em;
+    width: 6em;
+    height: 4px;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 20%, rgba(255,250,0,1) 20%, rgba(255,250,0,1) 40%, rgba(5,231,10,1) 40%, rgba(5,231,10,1) 60%, rgba(0,179,255,1) 60%, rgba(0,179,255,1) 80%, rgba(218,12,208,1) 80%);
   }
 }
 // h1{
@@ -284,3 +304,39 @@ figcaption {
 //   background-clip: text !important;
 //   color: transparent !important;
 // }
+
+
+div#Stage{
+  transform: scale(0.17) !important;
+  transform-origin: left top;
+  width: 80em !important;
+  height: 46em !important;
+  @include media-breakpoint-up(xs) { transform: scale(0.26) !important;}
+  @include media-breakpoint-up(sm) { transform: scale(0.398) !important;}
+  @include media-breakpoint-up(md) { transform: scale(0.53) !important; }
+  @include media-breakpoint-up(lg) { transform: scale(0.7) !important; }
+  @include media-breakpoint-up(xl) { transform: scale(0.8) !important; }
+
+}
+
+#Stage_video_Rectangle5{
+  background-color: transparent !important;
+}
+.edge-prototype{
+  @include media-breakpoint-up(xs) { height: 13.5em !important;}
+  @include media-breakpoint-up(sm) { height:19.5em !important;}
+  @include media-breakpoint-up(md) { height: 25.6em !important; }
+  @include media-breakpoint-up(lg) { height: 34em !important; }
+  @include media-breakpoint-up(xl) { height: 38em !important; }
+}
+.product-name{
+  max-width: 100%;
+}
+
+.overflow-hidden{
+  overflow:hidden;
+}
+
+#series-stack{
+
+}

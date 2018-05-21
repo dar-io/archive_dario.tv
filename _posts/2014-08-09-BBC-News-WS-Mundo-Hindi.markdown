@@ -33,7 +33,7 @@ content-block:
     Right-Side-Column:
       - When: "2013 - 2015"
         Product: |
-          <span class="client-logo">BBC News</span>
+          <span class="client-logo bbc-news">BBC News</span>
         Platform: |
           Web: <a class="anchor-underline-light" href="http://www.bbc.co.uk/news">bbc.co.uk/news</a>
         Roles:
@@ -168,9 +168,9 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
 
 
-  - Theme-Classes: pb-6 block-mt bg-snow
+  - Theme-Classes: block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
     Subheading: DESIGN PROCESS
     H2-Heading:
     Description:
@@ -183,8 +183,16 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
       - Paragraph: "The outcome of this research, informed our design decisions that lead to the public release of the first BBC News Responsive sites."
 
+    Media:
+      - Layout-Classes: align-content-center col-sm-12 col-lg-6 col-xl-6 mt-3  mt-lg-5
+        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.005.png
+        Figcaption: "From left to right, MVP, Prototype and Legacy BBC News Site. The majority of the participants in this experiment preferred the prototype. The legacy BBC News site was the last of the choices, even when compared with the MVP."
+
+  - Theme-Classes: bg-snow
+    Layout-Classes: col-12
+    Description:
       - Paragraph: |
-          <div class="container-btn" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapse_1 multiCollapse_2 multiCollapse_3 multiCollapse_4 multiCollapse_5 multiCollapse_6 multiCollapse_7 multiCollapse_8 multiCollapse_9 multiCollapse_10 multiCollapse_11 multiCollapse_12 multiCollapse_13 multiCollapse_14 multiCollapse_15 multiCollapse_16 multiCollapse_17 multiCollapse_18 multiCollapse_19 multiCollapse_20 multiCollapse_21 multiCollapse_22 multiCollapse_23 multiCollapse_24">
+          <div class="container-btn noSelect" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapse_1 multiCollapse_2 multiCollapse_3 multiCollapse_4 multiCollapse_5 multiCollapse_6 multiCollapse_7 multiCollapse_8 multiCollapse_9 multiCollapse_10 multiCollapse_11 multiCollapse_12 multiCollapse_13 multiCollapse_14 multiCollapse_15 multiCollapse_16 multiCollapse_17 multiCollapse_18 multiCollapse_19 multiCollapse_20 multiCollapse_21 multiCollapse_22 multiCollapse_23 multiCollapse_24">
             <button type="button" data-toggle="button" aria-pressed="false" class="btn-slide">
               <div>
                 <span>Read more about this research</span>
@@ -192,23 +200,31 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
               </div>
             </button>
           </div>
-      
 
-
-  - Theme-Classes: block-mt bg-navy-deep text-snow collapse multi-collapse
+  - Theme-Classes: pb-4 block-mt bg-navy-deep text-snow collapse multi-collapse
     id: multiCollapse_1
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
+    Layout-Classes: offset-md-0 offset-lg-2 col-xl-8
     Subheading: |
         The following research findings for BBC Mundo & BBC Hindi, was presented by myself during the BBC News monthly UX team meeting. The information is based on my own findings and the research done by <a class="anchor-underline-light text-secondary" href='http://www.foolproof.co.uk/'>Foolproof</a>.
+
+  - Theme-Classes: bg-navy-deep text-snow collapse multi-collapse
+    id: multiCollapse_1
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
     H2-Heading: BBC Mundo & BBC Hindi Research
     Description:
-      - H3-Heading: Research Objectives
-      - Paragraph: "This research proposed to assess the overall proposition in terms of: (1) layout & hierarchy, (2) page length, (3) content density, (4) reading experience, (5) line length & inline modules, (6) navigation discoverability, (7) onward journeys, and (8) assess the new responsive MVP against competitor desktop sites."
-
       - H3-Heading: Methodology
       - Paragraph: "21 one-to-one interviews were conducted with approximately 90 min each. 10 in Mexico City & 11 in Delhi (2 days in each country). Each of the interviews were moderated by a native speaker with direct translation in english."
       - Paragraph: "At the end of each exploration activity respondents were given a set of cards with adjectives, each with a single word written on it. They would them be asked to select the cards that best describe the site."
+
+    Secondary-Column:
+      - Secondary-Column-Classes: mt-lg-7 offset-md-0 col-sm-12 col-md-10 col-lg-4 col-xl-4
+        Subheading:
+        Description:
+          - H3-Heading: Research Objectives
+          - Paragraph: "This research proposed to assess the overall proposition in terms of: (1) layout & hierarchy, (2) page length, (3) content density, (4) reading experience, (5) line length & inline modules, (6) navigation discoverability, (7) onward journeys, and (8) assess the new responsive MVP against competitor desktop sites."
+
 
     Media:
       - Full-width-image: /assets/images/Mundo-Hindi-Research-findings-Highlights/mvp-prototype-static.png
@@ -570,7 +586,19 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
         Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.033.png
 
 
+  - Theme-Classes: block-mt block-mb
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
+    Subheading:
+    H2-Heading: Takeaways
+    Description:
+      - Paragraph: "The usability research was fundamental to shape the BBC News responsive site in the right direction. The research findings prompted key stakeholders to take action in addressing UX concerns."
+      - Paragraph: "One of the most important finding from this research was about content density. Users wanted to have more stories above the fold and wanted to scroll less."
+      - Paragraph: "Testing HTML prototypes that look and behave like the end-product, helped the participants to act in their natural behaviour when using the site. This was important because it allowed us to capture genuine insights into users' behaviour."
+      - Paragraph: "The final solution for the BBC News responsive website was an evolution of the existing version of the 'static' website rather than a radical re-design. The aim was to provide a much cleaner and clearer layout across all devices."
 
-
+    Media:
+      - Layout-Classes: align-content-center col-sm-12
+        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/final-version-bbc-news-responsive-v1.jpg
 
 ---

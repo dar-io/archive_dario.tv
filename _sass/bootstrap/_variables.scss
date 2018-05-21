@@ -124,7 +124,8 @@ $spacers: map-merge((
   3: $spacer,
   4: ($spacer * 1.5),
   5: ($spacer * 2.75),
-  6: ($spacer * 5.85)
+  6: ($spacer * 5.85),
+  7: ($spacer * 9)
 ), $spacers);
 
 // This variable affects the `.h-*` and `.w-*` classes.

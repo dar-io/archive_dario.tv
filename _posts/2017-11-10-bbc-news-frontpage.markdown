@@ -21,7 +21,7 @@ content-block:
     Right-Side-Column:
       - When: "2015 - 2016"
         Product: |
-          <span class="client-logo">BBC News Frontpage</span>
+          <span class="client-logo bbc-news">BBC News Frontpage</span>
         Platform: |
           Web: <a class="text-white anchor-underline-dark" href="http://www.bbc.co.uk/news">bbc.co.uk/news</a>
         Roles:
@@ -39,7 +39,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Subheading:
     H2-Heading: The Problem
     Description:
@@ -49,31 +49,46 @@ content-block:
 
       - Paragraph: "The first BBC News responsive site was designed in first instance only for mobile. When the layout was scaled to desktop, the result was disparity of content hierarchy  between mobile and desktop. Also, the real-estate on larger screens wasn't being used effectively."
 
-  - Theme-Classes: block-mb block-mt bg-gray-100
+
+  - Theme-Classes:  block-mt bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: pb-4 offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8
     Subheading:
     H2-Heading: The Challenge
     Description:
-      - Heading:
-      - Paragraph: "Redesign the BBC News front page from the ground up with the following objectives: "
+      - H3-Heading: "Redesign the BBC News front page from the ground up with the following objectives: "
+
+  - Theme-Classes:  block-mb bg-gray-100
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
+    Description:
+
     U-List:
       - Bullet: Cater for wide ranging of underserved audiences — younger demographic and women.   
-      - Bullet: Provide flexibility for editorial to curate the changing news agenda focusing on a particular theme or topic.  
-      - Bullet: Make it easy to access the range and breadth of news content on any device.
+      - Bullet: Provide flexibility for editorial to curate the changing news agenda focusing on a particular theme or topic.
       - Bullet: Drive onward journeys.
-      - Bullet: Integrate and present effective advertising and sponsorship solutions.
-      - Bullet: Use the front page real-estate effectively and increase the maximum breakpoint width from 1008 to 1280 pixels wide.  
 
+    Secondary-Column:
+      - Secondary-Column-Classes: offset-md-0 col-sm-12 col-md-10 col-lg-4 col-xl-4 paragraph-decor
+        Subheading:
+        Description:
+
+        U-List:
+          - Bullet: Use the front page real-estate effectively and increase the maximum breakpoint width from 1008 to 1280 pixels wide.
+          - Bullet: Integrate and present effective advertising and sponsorship solutions.
+          - Bullet: Make it easy to access the range and breadth of news content on any device.
 
 
   - Theme-Classes: block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
     H2-Heading: My Role
     Subheading: I worked across all stages of the development cycle, from conception through to delivery.
-    Description:
 
+  - Theme-Classes: bg-snow paragraph-decor
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
+    Description:
       - Paragraph: |
           <strong>Audience Insights & Ideation </strong> <br />I led the discovery phase. I performed competitor analysis across a myriad of news providers, uncovered audience insights from data, shadowed front page editors and I sketched a lot of ideas on paper.
 
@@ -83,23 +98,33 @@ content-block:
       - Paragraph: |
           <strong>Editorial Team & Senior Stakeholders</strong> <br />To help define the content strategy for the BBC News front page and to manage expectations, I ran workshops with editorial and senior stakeholders, and presented the rational behind the designs to get their buy-in.
 
-      - Paragraph: |
-          <strong>Cross-product Collaboration</strong> <br />I worked with other products across the BBC to define and improve design patterns. I improved the BBC GEL (Global Experience Language) foundation patterns, such as the responsive <a href="http://www.bbc.co.uk/gel/guidelines/grid">Grid</a> and <a href="http://www.bbc.co.uk/gel/guidelines/typography">Typography</a>.
 
-      - Paragraph: |
-          <strong>Design Execution</strong> <br />I designed in the browser to create responsive prototypes in HTML/CSS/JS. That included visual and interactive design work. The prototypes were my designs. This helped to solve design problems that would otherwise occur during the build phase, and also helped to galvanise the team around a common goal and drive the decision making.
+    Secondary-Column:
+      - Secondary-Column-Classes: offset-md-0 col-sm-12 col-md-10 col-lg-4 col-xl-4 paragraph-decor
+        Subheading:
+        Description:
 
-      - Paragraph: |
-          <strong>Usability Research</strong> <br />I worked with the research team to help define research goals. I went to usability research sessions in London and Toronto with the research team to validate design concepts using the prototypes I built for the front page.
+          - Paragraph: |
+              <strong>Cross-product Collaboration</strong> <br />I worked with other products across the BBC to define and improve design patterns. I improved the BBC GEL (Global Experience Language) foundation patterns, such as the responsive <a href="http://www.bbc.co.uk/gel/guidelines/grid">Grid</a> and <a href="http://www.bbc.co.uk/gel/guidelines/typography">Typography</a>.
+          - Paragraph: |
+              <strong>Design Execution</strong> <br />I have mostly designed in the browser to create responsive and interactive prototypes in HTML/CSS/JS. This approach, helped to solve design problems that would otherwise occur during the build phase, and also helped to galvanise the team around a common goal and drive the decision making.
+
+          - Paragraph: |
+              <strong>Usability Research</strong> <br />I worked with the research team to help define research goals. I went to usability research sessions in London and Toronto with the research team to validate design concepts using the prototypes I built for the front page.
+
+  - Theme-Classes: pt-2 bg-snow
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
 
     Media:
       - Full-width-image: /assets/images/homepage/homepage_sketch-wide.jpg
+        Layout-Classes: align-content-center
         Figcaption: "Early sketch of the News homepage focused on targeting underserved audiences and exploring the question: How Might We effectively showcase Features, Live, Video and Visual Journalism to surface the depth and breadth of content from across BBC News output?"
 
 
   - Theme-Classes: block-mt bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Subheading: Observe. Think. Make. Test. Repeat.
     H2-Heading: Design Process
     Description:
@@ -118,10 +143,10 @@ content-block:
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Description:
       - H3-Heading: Make sense of the findings
-      - Paragraph: "At this stage, I synthesise the unstructured data and started grouping the findings into themes. Themes are then converted into HMW questions (“How Might We...”):"
+      - Paragraph: "At this stage, I synthesise the unstructured data and start grouping the findings into themes. Themes are then converted into HMW questions (“How Might We...”):"
     U-List:
       - Bullet: How Might We achieve optimal content density?
       - Bullet: How Might We create better content groupings?
@@ -132,7 +157,7 @@ content-block:
   - Theme-Classes: block-mt bg-gray-100
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: pb-5 offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Description:
       - H3-Heading: Don't get attached to ideas
       - Paragraph: "I start sketching on paper and presenting ideas during the design critique team meetings. At this point, this is a collective process of throwing away ideas. By eliminating ideas only the good ones persist or at least the ones that are technically feasible."
@@ -147,7 +172,7 @@ content-block:
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-8 col-lg-7 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Description:
       - H3-Heading: Editorial and product workshop
       - Paragraph: "The goal of the Editorial and Product workshop was to prune, group, reorder content, and to move away from the traditional sectioned content."
@@ -163,7 +188,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-f8f8f8
     Pattern-Image:
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Subheading: DESIGN PROCESS
     H2-Heading:
     Description:
@@ -173,24 +198,26 @@ content-block:
       - Paragraph: "The BBC News personas consists of five different archetypes. These are:"
 
     Media:
-      - Full-width-image: /assets/images/homepage/BBC_News_Personas.png
+      - Layout-Classes: align-content-center col-12
+        Image: /assets/images/homepage/BBC_News_Personas.png
         Figcaption-Full-width: "Key traits of BBC News personas: Headlines only, Social Mobile Tweeters, Local Feelgood, Social Connectors and Supervisual Snackers"
 
 
   - Theme-Classes: block-mt bg-snow
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Description:
       - H3-Heading: Designing in the Browser
     Media:
       - Layout-Classes: align-content-center col-12 col-sm-12 col-lg-8 mb-4 mt-3
         Image: /assets/images/homepage/start-collider.gif
+        Figcaption: "I've built the BBC News frontpage using the BBC GEL SCSS Framework using a tool created by UX Designer Simon Sinclair known as Collider (<a href='http://atomicdesign.bradfrost.com/'>Based on Atomic Design</a>). "
 
 
   - Theme-Classes:  bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: mb-5 offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-6 col-xl-6
     Description:
       - Paragraph: "After exploring designs in paper, I moved into Sketch to design high fidelity mockups. This proved to be challenging to solve problems when reflowing content across breakpoints. I wanted to come up with a solid solution that engineers could use to build the BBC News Front Page."
 
@@ -199,17 +226,49 @@ content-block:
       - Paragraph: "In my experience, designing a responsive site in Sketch, Illustrator or Photoshop makes it harder to have a discussion with software engineers and to get the buy-in from stakeholders. Designing in HTML/CSS was a way to solve frontend problems before they happen during the build."
 
       - Paragraph: "Designing in the browser helped positively to influence the product direction."
+
+    Secondary-Column:
+      - Secondary-Column-Classes: mb-5 mt-lg-5 offset-md-0 col-sm-12 col-md-10 col-lg-4 col-xl-4
+        Subheading:
+        Description:
+          - Paragraph: "<strong>Check the prototypes below:</strong>"
+          - Paragraph: |
+              <a target="blank" class="chip" href='/assets/prototypes/bbc_news_frontpage/01_2016_BBC_News_1280/01_2016_BBC_News_1280.html'>1) Low fidelity prototype (static designs)</a>
+              <br /> <a target="blank" class="chip" href='/assets/prototypes/bbc_news_frontpage/02_Feb_2016_Frontpage/pages/uk-edition/index.html'>2) First iteration designed in the browser (HTML)</a>
+              <br /> <a target="blank" class="chip" href='/assets/prototypes/bbc_news_frontpage/03_October_2016/index.html'>3) Final version designed in the browser (HTML)</a>
+
+
+
     Media:
-        - Full-width-image: /assets/images/homepage/design-prototype.jpg
+        - Layout-Classes:  align-content-center
+          Full-width-image: /assets/images/homepage/design-prototype.jpg
 
 
-  - Theme-Classes: block-mb block-mt bg-gray-100
+  - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
     Subheading: DESIGN PROCESS
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Description:
       - H3-Heading: Usability Research
       - Paragraph: "I worked closely with design researchers to help define the goals for testing sessions and build prototypes to be used in UK and Canada research. I also build prototypes to be used in rapid testing sessions."
+
+
+  - Theme-Classes: block-mt
+    Pattern-Image:
+    Layout-Classes: pb-5 offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
+    Subheading: Links to prototypes and the live BBC News frontpage
+    H2-Heading: Frontpage design evolution
+    Description:
+      - Paragraph: |
+          <a target="blank" class="chip" href='/assets/prototypes/bbc_news_frontpage/01_2016_BBC_News_1280/01_2016_BBC_News_1280.html'>1) Front page Low fidelity prototype (static designs)</a>
+          <br /> <a target="blank" class="chip" href='/assets/prototypes/bbc_news_frontpage/02_Feb_2016_Frontpage/pages/uk-edition/index.html'>2) First iteration designed in the browser (HTML)</a>
+          <br /> <a target="blank" class="chip" href='/assets/prototypes/bbc_news_frontpage/03_October_2016/index.html'>3) Final version designed in the browser (HTML)</a>
+          <br /> <a target="blank" class="chip" href="http://www.bbc.co.uk/news">2) Live BBC News Homepage</a>
+
+    Media:
+      - Image: /assets/images/homepage/01_composition-homepage_evolution.jpg
+
+
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
@@ -222,11 +281,11 @@ content-block:
       - Paragraph: "The page also does a much better job of getting people to video content, with 32% of video page views coming from the front page versus 10% previously. It is also making people come back more often. The front page users now come back on average 9% more often during a week than they did with the old page design."
 
     Media:
-      - Full-width-image: /assets/images/homepage/homepage-stats.png
+      - Image: /assets/images/homepage/homepage-stats.png
 
   - Theme-Classes: block-mb block-mt bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Subheading:
     H2-Heading: What I learned?
     Description:
@@ -239,21 +298,6 @@ content-block:
 
       - Paragraph: "Be prepared for a designer to ask you for the latest Sketch designs of what you are doing. Most of the time I forward the the URL for the prototype, other times at the end of the day, I had to translate what I did in browser to Sketch. It's best to let your team know upfront that your designs will only be available in HTML/CSS to avoid disappointment."
 
-  - Theme-Classes: block-mt bg-snow
-    Pattern-Image:
-    Layout-Classes: offset-md-1 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
-    Subheading: LINKS TO PROTOTYPES & LIVE BBC NEWS HOMEPAGE
-    H2-Heading: Front page Design evolution
-    O-List:
-      - Bullet: <a target="blank" href="/assets/prototypes/bbc_news_frontpage/01_2016_BBC_News_1280/01_2016_BBC_News_1280.html" > <strong>BBC News Homepage Low fidelity prototype</strong></a>
 
-      - Bullet: <a target="blank" href="/assets/prototypes/bbc_news_frontpage/02_Feb_2016_Frontpage/pages/uk-edition/index.html" > <strong>First BBC News Homepage iteration designed in the browser</strong></a>
-
-      - Bullet: <a target="blank" href="/assets/prototypes/bbc_news_frontpage/03_October_2016/index.html"><strong>Final version designed in the browser.</strong></a> Engineers used this version as reference to build the BBC News Homepage
-
-      - Bullet: <a target="blank" href="http://www.bbc.co.uk/news"><strong>Live BBC News Homepage</strong></a>
-
-    Media:
-      - Full-width-image: /assets/images/homepage/01_composition-homepage_evolution.jpg
 
 ---

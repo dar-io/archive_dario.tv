@@ -11,7 +11,7 @@ cover-image: /assets/images/news-stream-promo/promo-videos-of-the-day.gif
 content-block:
   - Theme-Classes: block-mt bg-red text-snow
     Pattern-Image:
-    Layout-Classes: block-mb-20 offset-md-1 offset-lg-0 col-sm-12 col-md-10 col-lg-8 col-xl-7 mb-4 mb-md-0
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-9 col-lg-7 col-xl-6 mb-md-0 mb-lg-5
     Subheading:
     H1-Heading: "BBC News App: Videos of the Day Promo"
     H2-Heading:
@@ -21,44 +21,27 @@ content-block:
 
       - Paragraph: "I helped improve and deliver several features across the News app. But, this is the story on how I, as a design lead, improved Videos of the Day and BBC Stories daily video plays by designing a better entry point."
 
-    Left-Side-Column:
-      - Classes: mt-0 mb-3 mt-lg-0 col-3 col-sm-3 col-md-2 col-lg-12
-        Heading:
-        Item:
 
     Right-Side-Column:
-      - Classes: mt-0 mb-3 mt-lg-0 col-4 col-xl-12
-        Heading-Classes: text-secondary
-        Heading: "When"
-        Item: "2014"
-      - Classes: mt-0 mb-3 mt-lg-0 col-4 col-xl-12
-        Heading-Classes: text-secondary
-        Heading: "Client"
-        Item: |
-          <span class="client-logo">BBC News</span>
+      - When: "Apr - Jun 2017"
+        Product: |
+          <span class="client-logo bbc-news">BBC News</span>
+        Platform: |
+          iOS/Android: <a class="text-white anchor-underline-dark" href="http://www.bbc.co.uk/news/10628994"><BBC>News App</BBC></a>
+        Roles:
+          - Role: "UX Lead"
+          - Role: "Ideation"
+          - Role: "Wireframing"
+          - Role: "Visual design"
+          - Role: "Prototyping"
+          - Role: "UX research"
 
-      - Classes: mt-0 mb-3 mt-lg-0 col-4 col-xl-12
-        Heading-Classes: text-secondary
-        Heading: "Platform"
-        Item: "Web"
-      - Classes: mt-0 mb-3 mt-lg-0 col-12 col-xl-12
-        Heading-Classes: text-secondary
-        Heading: "Hats Worn"
-        Item: |
-          <div class="row">
-          <div class="col-4 mb-2 col-xl-6">UX Lead</div>
-          <div class="col-4 mb-2 col-xl-6">Concepting</div>
-          <div class="col-4 mb-2 col-xl-6">Wireframing</div>
-          <div class="col-4 mb-2 col-xl-6">Visual design</div>
-          <div class="col-4 mb-2 col-xl-6">Prototyping</div>
-          <div class="col-4 mb-2 col-xl-6">UX research</div>
-          </div>
     Media:
       - Full-width-image: /assets/images/news-stream-promo/videos-of-the-day.png
 
-  - Theme-Classes: block-mt bg-red text-snow
+  - Theme-Classes: block-mb block-mt bg-red text-snow
     Pattern-Image:
-    Layout-Classes: block-mb offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Subheading:
     H2-Heading: "Overview"
     Description:
@@ -67,21 +50,33 @@ content-block:
       - Paragraph: "The package of vertical video is accessed by a promo with single entry point into a linear experience from the News app Top Stories."
 
 
-  - Theme-Classes: block-mt bg-snow pb-4
+  - Theme-Classes: block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
     H2-Heading: My Role
-    Subheading:
+
+  - Theme-Classes: bg-snow paragraph-decor
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
     Description:
 
       - Paragraph: "Throughout the project, I was the design lead collaborating with a Business Analyst, iOS and Android engineers."
 
       - Paragraph: "I created the visual and interaction designs. Built prototypes, conducted guerrilla testing and presented the findings back to the product and editorial teams."
 
-      - Paragraph: "I was responsible for the design output. Working with engineers, I ensured that the interaction models were solid and easy to implement."
+    Secondary-Column:
+      - Secondary-Column-Classes: offset-md-0 col-sm-12 col-md-10 col-lg-4 col-xl-4 paragraph-decor
+        Subheading:
+        Description:
 
-      - Paragraph: "I create a set of image styles and Photoshop templates for the cover of BBC Stories videos and trained video editors how to use Photoshop."
+          - Paragraph: "I was responsible for the design output. Working with engineers, I ensured that the interaction models were solid and easy to implement."
 
+          - Paragraph: "I create a set of image styles and Photoshop templates for the cover of BBC Stories videos and trained video editors how to use Photoshop."
+
+
+  - Theme-Classes: block-mb bg-snow
+    Pattern-Image:
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
     Media:
       - Layout-Classes: align-content-center col-sm-12
         Image-Classes:
@@ -91,7 +86,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-color-carbon text-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Subheading:
     H2-Heading: The Problem
     Description:
@@ -108,7 +103,7 @@ content-block:
 
   - Theme-Classes: pb-4 block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Subheading:
     H2-Heading: The Challenge
     Description:
@@ -126,7 +121,7 @@ content-block:
 
   - Theme-Classes: block-mt bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-6 col-lg-6
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Subheading:
     H2-Heading: Goals
     Description:
@@ -143,7 +138,7 @@ content-block:
 
   - Theme-Classes: block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6 col-xl-6 mb-4 mr-xl-5
     H2-Heading: The Approach
     Subheading:
     Description:
@@ -160,7 +155,7 @@ content-block:
       - Bullet: <strong><i>If</i></strong> users have the option to preview the package of videos by using a carousel instead of a single promo, <strong><i>then</i></strong> users can pick the video that most interests them from the carousel. This could result in an increase of video views, <strong> <i>because</i> </strong> we will be providing multiple access points in to VotD in a non-linear fashion.
 
     Media:
-      - Layout-Classes: align-content-center col-sm-8 col-md-4 col-lg-4  mb-4
+      - Layout-Classes: align-content-center col-sm-8 col-md-4 col-lg-4 mb-4
         Image-Classes: border-bottom border-secondary border-w-2
         Image: /assets/images/news-stream-promo/05_NewStoriesPromo_Final_version.gif
         Figcaption-top: Hypothesis 1
@@ -186,13 +181,13 @@ content-block:
 
   - Theme-Classes: block-mt block-mb bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6 col-xl-6 mb-4 mr-xl-5
     Subheading: THE APPROACH
     H2-Heading:
     Description:
 
       - H3-Heading: Bringing designs to life
-      - Paragraph: "Designing only static designs is no longer an option. As a visual and interactive designer, my goal is to put my designs as much as possible in context they to real world experiences. Such as demoing the interaction in native devices."
+      - Paragraph: "Static designs are no longer an option. As a visual and interactive designer, my goal is to bring designs to life and insert them in context with real world experiences. Such as demoing the interaction in native devices."
 
       - Paragraph: "I follow three rules in picking the best tools to prototype my designs. These are:"
 
@@ -205,7 +200,7 @@ content-block:
 
     Description-post-bullet:
       - Paragraph: |
-            For this project, I started building the prototypes using <a href="https://tumult.com/hype/">Tumult Hype</a>. The prototype was mostly built in HTML/CSS.<a href="/assets/prototypes/NewsStreamPromo/00_NewStoriesPromo_first_versions.html" target="_blank"> Click here </a> to view several exploration prototypes built using Hype.
+            For this project, I started building the prototypes using <a href="https://tumult.com/hype/">Tumult Hype</a>. The prototype was mostly built in HTML/CSS. <a href="/assets/prototypes/NewsStreamPromo/00_NewStoriesPromo_first_versions.html" target="_blank"> Click here </a> to view several exploration prototypes built using Hype.
 
       - Paragraph: |
             To explore other types of interactions, I started using <a href="http://principleformac.com/">Principle</a> to create high fidelity prototypes with animations that feel fast and responsive.
@@ -235,7 +230,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6 mb-4 mr-xl-5
     Subheading: THE APPROACH
     H2-Heading:
     Description:
@@ -245,7 +240,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-gray-100
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6 mb-4 mr-xl-5
     Subheading: THE APPROACH
     H2-Heading:
     Description:
@@ -273,7 +268,7 @@ content-block:
 
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6 mb-4 mr-xl-5
     Subheading:
     H2-Heading: Outcome
     Description:
@@ -284,7 +279,7 @@ content-block:
 
   - Theme-Classes: block-mt bg-stories-green text-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-6 col-lg-6
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     Subheading:
     H2-Heading: BBC Stories cover images' visual style
     Description:
@@ -303,18 +298,11 @@ content-block:
         Figcaption:
 
 
-
-
-
   - Theme-Classes: block-mb block-mt bg-snow
     Pattern-Image:
-    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-8 col-xl-7
-    Subheading:
-    H2-Heading:
+    Subheading: "I created a set of Photoshop actions and templates that enables video editors to quickly pick an image visual style that works better with their story."
+    Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6 mb-4 mr-xl-5
     Description:
-
-      - H3-Heading:
-      - Paragraph: "I created a set of Photoshop actions and templates that enables video editors to quickly choose the image visual style that works better with their story."
 
       - Paragraph: "The imagery visual style would also needed to enhance images' quality that often was poor."
 

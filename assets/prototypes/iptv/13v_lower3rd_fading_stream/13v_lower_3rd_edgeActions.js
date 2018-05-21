@@ -1,7 +1,7 @@
 
 (function($,Edge,compId){var Composition=Edge.Composition,Symbol=Edge.Symbol;
 //Edge symbol: 'stage'
-(function(symbolName){Symbol.bindElementAction(compId,symbolName,"document","compositionReady",function(sym,e){$(this.lookupSelector("stage")).css({"margin-left":"auto","margin-top":"20px","margin-right":"auto"});$("body").css("background-color","#cccccc");var vid=$("<video width='1280' height='720' autoplay='autoplay'>"+"<source src='/assets/prototypes/iptv/13v_lower3rd_fading_stream/video/doctorwho.mp4' type='video/mp4' />"+"This browser is not compatible with HTML 5"+"</video>");sym.$("video").append(vid);});
+(function(symbolName){Symbol.bindElementAction(compId,symbolName,"document","compositionReady",function(sym,e){$(this.lookupSelector("stage")).css({"margin-left":"auto","margin-top":"20px","margin-right":"auto"});$("body").css("background-color","#cccccc");var vid=$("<img width='1280' height='720' src='/assets/images/iptv/doctorwho.jpg'>");sym.$("video").append(vid);});
 //Edge binding end
 Symbol.bindSymbolAction(compId,symbolName,"creationComplete",function(sym,e){var UP=38;var DOWN=40;var LEFT=37;var RIGHT=39;var SPACE=32;var BACK=66;var RED=82;$(document).keydown(function(e)
 {console.log(RightKey);if(e.which==UP)

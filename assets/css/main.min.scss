@@ -7,9 +7,10 @@ $color-beta: #{{ site.color_beta }};
 
 
 @import "bootstrap/functions";
+@import "bootstrap/mixins";
 @import "bootstrap/variables";
 @import "base/variables";
-@import "bootstrap/mixins";
+
 @import "bootstrap/root";
 @import "bootstrap/reboot";
 @import "bootstrap/type";
