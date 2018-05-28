@@ -32,6 +32,19 @@
       {% if roles.Paragraph %}
         <p class="font-weight-normal">{{roles.Paragraph | textilize}}</p>
       {% endif %}
+      {% for roles in item.Media %}
+          {% if item.Image %}
+              <div class="{{ entry.Layout-Classes }}">
+                {% if item.Figcaption-top %}
+                <figcaption class="figure-caption text-center"><small>{{ item.Figcaption-top }}</small></figcaption>
+                {% endif %}
+                <img class="rounded img-fluid mx-auto w-100 {{ item.Image-Classes }}"  src="{{ site.baseurl }}{{ item.Image }}" alt="{{ item.Figcaption }}">
+                {% if item.Figcaption %}
+                <figcaption class="figure-caption text-center mt-1"><small>{{item.Figcaption }}</small></figcaption>
+                {% endif %}
+              </div>
+          {% endif %}
+      {% endfor %}
     {% endfor %}
 
     {% if entry.U-List == nil %}

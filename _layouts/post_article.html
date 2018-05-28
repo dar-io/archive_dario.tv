@@ -33,7 +33,9 @@ layout: default
             <div class="{{ entry.Layout-Classes }}">
                <figcaption class="figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
             </div>
-            {% else %}
+            {% endif %}
+
+            {% if entry.Image %}
                 <div class="{{ entry.Layout-Classes }}">
                   {% if entry.Figcaption-top %}
                   <figcaption class="figure-caption text-center"><small>{{ entry.Figcaption-top }}</small></figcaption>
@@ -49,8 +51,13 @@ layout: default
 
           <div class="{{item.Layout-Classes}}">
 
+            {% if item.H1-Heading and item.Subheading %}
+              <h5 class="mb-5 font-weight-normal text-secondary">{{item.Subheading | textilize}}</h5>
+              <h1 class="display-4 mb-5 font-weight-bold">{{item.H1-Heading }}</h1>
+            {% endif %}
+
             {% if item.H1-Heading and item.Subheading == nil and item.H2-Heading == nil %}
-              <h1 class="display-4 mb-5 font-weight-bold">{{item.H1-Heading}}</h1>
+              <h1 class="display-4 mb-5 font-weight-bold">{{item.H1-Heading }}</h1>
             {% endif %}
 
             {% if item.H2-Heading and item.H1-Heading == nil and item.Subheading== nil %}
@@ -58,10 +65,10 @@ layout: default
             {% endif %}
 
             {% if item.Subheading and item.H2-Heading == nil and item.H1-Heading == nil  %}
-              <h6 class="mb-4 font-weight-medium text-secondary">{{item.Subheading}}</h6>
+              <h6 class="mb-4 font-weight-medium text-secondary">{{item.Subheading | textilize}}</h6>
             {% endif %}
             {% if item.H2-Heading and item.Subheading and item.H1-Heading == nil %}
-              <h5 class="mb-5 font-weight-normal text-secondary">{{item.Subheading}}</h5>
+              <h5 class="mb-5 font-weight-normal text-secondary">{{item.Subheading | textilize}}</h5>
               <h2 class="mb-5 h1 font-weight-bold">{{item.H2-Heading}}</h2>
 
             {% endif %}
@@ -126,11 +133,12 @@ layout: default
           {% for entry in item.Media %}
 
             {% if entry.Image == nil %}
-            <div class="{{ entry.Layout-Classes }}">
-               <figcaption class="align-content-center figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
-            </div>
             {% else %}
                 <div class="{{ entry.Layout-Classes }}">
+
+                  {% if entry.H3-Heading %}
+                    <h4 class="font-weight-medium mb-2">{{entry.H3-Heading}}</h4>
+                  {% endif %}
                   {% if entry.Figcaption-top %}
                   <figcaption class="align-content-center figure-caption text-center"><small>{{ entry.Figcaption-top }}</small></figcaption>
                   {% endif %}
@@ -145,20 +153,27 @@ layout: default
             {% else %}
                 <div class="{{ entry.Layout-Classes }}">
                   <div class="{{ entry.Video-Classes }}">
-                      <iframe class="embed-responsive-item" src="{{ entry.Video-social }}" allowfullscreen></iframe>
+                      <iframe class="embed-responsive-item" src="{{ entry.Video-social }}" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
                   </div>
-                  <figcaption class="figure-caption"><small>{{ entry.Figcaption }}</small></figcaption>
+                  {% if entry.Figcaption %}
+                  <figcaption class="align-content-center figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+                  {% endif %}
                 </div>
             {% endif %}
 
             {% if entry.Video == nil %}
             {% else %}
                 <div class="d-block {{ entry.Layout-Classes }}">
-                  <video class="rounded pl-0 pr-0 img-fluid mx-auto w-100 {{ entry.Video-Classes }}" muted autoplay loop preload="auto" name="media" poster="{{ entry.Video-Poster }}">
+                  {% if entry.Figcaption-top %}
+                  <figcaption class="align-content-center figure-caption text-center mb-1"><small>{{ entry.Figcaption-top }}</small></figcaption>
+                  {% endif %}
+                  <video class="rounded img-fluid mx-auto w-100 {{ entry.Video-Classes }}" controls muted autoplay loop preload="auto" name="media" poster="{{ entry.Video-Poster }}">
                     <source src="{{ entry.Video }}" type="video/mp4">
                     Your browser does not support the HTML5 videos.
                   </video>
-                  <figcaption class="figure-caption"><small>{{ entry.Figcaption-Video }}</small></figcaption>
+                  {% if entry.Figcaption %}
+                  <figcaption class="align-content-center figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+                  {% endif %}
                 </div>
 
 
@@ -167,10 +182,12 @@ layout: default
           {% endfor %}
 
           {% for entry in item.Description-Post-Media %}
-            <div class="{{entry.Layout-Classes}}">
-
+            <div class="text-center {{entry.Layout-Classes}}">
+                {% if entry.Figcaption %}
+                  <figcaption class="figure-caption w-100 align-content-center text-center mt-1"><small>{{ entry.Figcaption | textilize }}</small></figcaption>
+                {% endif %}
                 {% if entry.Paragraph %}
-                  <p class="h5 font-weight-normal text-secondary"><small>{{entry.Paragraph | textilize}}</small></p>
+                  <p class="font-weight-normal"><small>{{entry.Paragraph | textilize}}</small></p>
                 {% endif %}
 
             </div>
@@ -188,7 +205,10 @@ layout: default
 
         {% if entry.Full-width-image == nil %}
         {% else %}
-            <div class="{{ entry.Layout-Classes }}">
+            <div class="{{ entry.Full-width-Classes }}">
+              {% if entry.Figcaption-top %}
+              <figcaption class="figure-caption w-100 align-content-center text-center"><small>{{ entry.Figcaption-top }}</small></figcaption>
+              {% endif %}
               <img  class="img-fluid mx-auto w-100" src="{{ site.baseurl }}{{ entry.Full-width-image }}" alt="{{ entry.Figcaption-Full-width }}">
               {% if entry.Figcaption-Full-width %}
               <figcaption class="figure-caption w-100 align-content-center text-center"><small>{{ entry.Figcaption-Full-width }}</small></figcaption>
@@ -200,13 +220,26 @@ layout: default
   {% endfor %}
 
 <!-- FOOTER -->
-  {% if page.tags.size > 0 %}
-    <span class="post-content__tags">Tags
-      {% for tag in page.tags %}
-        <a href="{{ site.baseurl }}/tag/{{ tag | downcase | slugify }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}
-      {% endfor %}
-    </span>
-  {% endif %}
+{% if page.tags.size > 0 %}
+<section class="bg-white border-top border-bottom border-light pb-3 pt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        Tags:
+          {% for tag in page.tags %}
+            <a class="type-size-13 p-2 btn-sm btn-light" href="{{ site.baseurl }}/tag/{{ tag | downcase | slugify }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}
+          {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+
+
+
 
   {% include posts.html %}
 
