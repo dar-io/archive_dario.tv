@@ -1,11 +1,145 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<h4>blog</h4>
-{% for post in site.posts %}
-		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-{% endfor %}
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <title>Dario Ramalho</title>
+  <meta name="author" content="">
+  <meta name="description" content="Dario is a Digital Product Designer at the BBC, and he is driven to make digital experiences inclusive and functional. His practice extends towards interactive and visual design">
+  <meta property="og:title" content="Dario Ramalho">
+  <meta property="og:url" content="http://dario.tv//blog/">
+  <meta property="og:site_name" content="Dario Ramalho">
+  <meta property="og:description" content="Dario is a Digital Product Designer at the BBC, and he is driven to make digital experiences inclusive and functional. His practice extends towards interactive and visual design">
+  <meta property="og:image" content="">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="Dario is a Digital Product Designer at the BBC, and he is driven to make digital experiences inclusive and functional. His practice extends towards interactive and visual design">
+  <meta name="twitter:title" content="Dario Ramalho">
+  <meta name="twitter:url" content="http://dario.tv//blog/">
+  <meta name="twitter:site" content="Dario Ramalho">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="http://dario.tv/">
+  <meta property="twitter:image" content="">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="http://dario.tv//assets/img/logo/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="http://dario.tv//assets/img/logo/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="http://dario.tv//assets/img/logo/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="http://dario.tv//assets/img/logo/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="http://dario.tv//assets/img/logo/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="http://dario.tv//assets/img/logo/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="http://dario.tv//assets/img/logo/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="http://dario.tv//assets/img/logo/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://dario.tv//assets/img/logo/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="http://dario.tv//assets/img/logo/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://dario.tv//assets/img/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="http://dario.tv//assets/img/logo/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://dario.tv//assets/img/logo/favicon-16x16.png">
+
+  <link rel="stylesheet" href="/assets/styles/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Dario Ramalho" href="http://dario.tv//feed.xml">
+
+  <link rel="canonical" href="http://dario.tv//blog/">
+
+  
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA—XXXXXXXX-X', 'auto');
+      ga('send', 'pageview');
+    </script>
+  
+</head>
+
+
+  <body id="home" class="🍕 animated fadeIn">
+
+    <nav class="header navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+
+    <a class="navbar-brand" aria-label="Home" href="/">
+     <!-- <div id="lottie"></div> -->
+      <img src="/assets/img/logo.png" width="30" height="30" alt="">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="d-flex justify-content-md-end navbar-nav mr-auto w-100">
+        <!-- <li class="nav-item active">
+          <a data-scroll class="nav-link" href="/#about">About <span class="sr-only">(current)</span></a>
+        </li> -->
+        <li class="nav-item">
+          <a data-scroll class="nav-link font-weight-bold" href="/#portfolio">Portfolio</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a data-scroll class="nav-link" href="/#blog">Blog</a>
+        </li> -->
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+    <main role="main">
+      <h4>blog</h4>
+
+		<time>Jun 10, 2017</time>
+		<h3><a href="/2017/06/10/videos-of-the-day-promo/">BBC News App - Videos Of the Day Promo</a></h3>
+
+		<time>Feb 14, 2017</time>
+		<h3><a href="/2017/02/14/bbc-news-frontpage/">Designing the BBC News Front Page</a></h3>
+
+		<time>Mar 23, 2015</time>
+		<h3><a href="/2015/03/23/BBC-News-Responsive-Redesign/">BBC News Responsive Redesign</a></h3>
+
+		<time>Sep 22, 2013</time>
+		<h3><a href="/2013/09/22/bbc-iptv/">BBC IPTV One Service Design</a></h3>
+
+		<time>Jan 10, 2011</time>
+		<h3><a href="/2011/01/10/childrens/">CBBC and CBeebies Work</a></h3>
+
+		<time>Nov 1, 2009</time>
+		<h3><a href="/2009/11/01/bbc-wales-online/">BBC Wales New Media</a></h3>
+
+
+<p>subscribe <a href="/feed.xml">via RSS</a></p>
+    </main>
+
+    <footer class="footer section-padding--half bg-white">
+  <div class="footer__container grid">
+    <p>&copy;2018 Dario Ramalho.</p>
+    
+      <!-- <ul class="footer__social">
+        
+          <li><a class="fa fa-lg fa-envelope-o" href="mailto:darioramalho@gmail.com"></a></li>
+        
+        
+          <li><a class="fa fa-lg fa-twitter" href="" target="_blank"></a></li>
+        
+      </ul> -->
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/assets/js/scripts.min.js"></script>
+
+
+
+  </body>
+
+</html>
