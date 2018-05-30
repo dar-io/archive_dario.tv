@@ -1,0 +1,318 @@
+
+        .main{
+	        display: none !important;
+        }
+      
+
+          .primaryCol {
+width: 100%;
+}
+           .primaryCol .group {
+                width: 50%;
+                float: left;
+                }
+
+.primaryCol .primary span {
+    display: inline-block;
+}
+
+.primaryCol .image-responsive {
+width: 100%;
+display: block;
+padding: 0 8px;
+box-sizing: border-box;
+}
+.ad-container.primaryCol{
+    background-color: transparent ;
+}
+.vertical.primaryCol .image-responsive{
+    display: block;
+}
+.vertical.primaryCol .topical__headline-link-list{
+    border-top: none;
+    padding-top: 0px
+}
+
+.primaryCol .clear {
+clear: both;
+border-bottom: 0px solid #D8D8D8;
+margin: 16px;
+}
+
+.primaryCol .text {
+padding: 6px 8px 8px 8px;
+}
+
+.primaryCol .programmes-icon {
+background: #fff;
+}
+
+
+body {font-family: helvetica !important;}
+
+
+ .programmes-icon .programme-title{
+	font-size: 18px;
+}
+
+.HYPE_scene .icon, .HYPE_scene .icon-play, .HYPE_scene .icon-sound{
+	position: relative;
+}
+
+ 
+ 
+.HYPE_scene .icon, .HYPE_scene .icon-play{
+	 font-size: 20px;
+	 bottom: -4px;
+	 padding-right: 2px;
+	 padding-left: 3px;
+	 line-height: 12px;
+	 
+ }
+
+.special-event-promotion-best.primaryCol  .sponsor {
+margin: 18px 24px 18px 8px ;
+}
+
+ .elsewhere .image-responsive {
+width: 100%;
+padding: 0 24px;
+box-sizing: border-box;
+}
+ 
+ .ad-container{background-color:#EDEDED;display:inline-block; padding-bottom:24px;margin-top: 0px;}
+
+
+.topical__headline-link-list .programmes-icon {
+position: relative;
+}
+ 
+.HYPE_scene .icon-sound{
+	 font-size: 22px;
+	 vertical-align: middle;
+	 padding-right: 2px;
+	 line-height: 12px;
+ }
+ 
+ .HYPE_scene .outbrain .more-index-unit__image .programmes-icon, .HYPE_scene .outbrain .more-index-unit__image .programmes-icon{
+	 background: #fff;
+ }
+.HYPE_scene .examiner .more-index-unit__image .programmes-icon{
+ 	background: #ededed;
+}
+.HYPE_scene .more-index-unit__image .programmes-icon, .HYPE_scene .img-label-wrapper .programmes-icon, .HYPE_scene .group:first-child .programmes-icon{
+ 	position: absolute;
+ 	bottom: 0px;
+ 	display: block;
+ 	padding: 2px 12px 2px 0px;
+ 	line-height: 1;
+ 	
+}
+
+.HYPE_scene .img-label-wrapper .programmes-icon, .HYPE_scene .more-index-unit__image .programmes-icon,.HYPE_scene .outbrain .more-index-unit__image .programmes-icon{
+	bottom: 0px;
+	vertical-align: baseline;
+	background-color: #fff;
+}
+
+.HYPE_scene .programmes-icon{
+ 	position: relative;
+ 	display: block;
+ 	background: transparent;
+ 	padding: 0px 12px 2px 0px;
+ 	line-height: 1.5;
+ 	
+}
+.programmes-icon{
+	font-size: 24px;
+}
+    .sponsor{ margin:14px 24px 10px 24px;}
+    
+    .special-event-promotion-best .sponsor{ margin:16px 24px 18px 0px;}
+
+    
+     .ad-container{
+        
+        }
+     .double-pica{
+	     font-size:24px; 
+        line-height:24px; 
+     } 
+        
+    .bold-pica{
+        font-size:18px; 
+        line-height:22px; 
+        font-weight:bold; 
+        display:block; 
+        padding:0px 0px 3px 0px;
+        }
+    .long-primer{
+        font-size:16px; 
+        line-height:22px; 
+        color:#606060;
+        }
+    a.long-primer{
+        font-size:16px; 
+        line-height:22px; 
+        color:#000;
+        }
+        
+    .regular-pica{ 
+        font-size:16px; 
+        line-height:22px; 
+        }
+
+    .clear{
+        clear:both;
+        }
+    .image-responsive{ 
+        width:100%;
+        }
+     .vertical .image-responsive{ 
+        width:100%;
+        display: none;
+        }
+      .HYPE_scene .group:first-child .image-responsive{ 
+        width:100%;
+        display: block;
+        }
+     
+     .HYPE_scene .programmes .group:first-child .image-responsive {
+width: 100%;
+display: block;
+padding: 0;
+box-sizing: border-box;
+	}
+    .text{
+        padding:6px 24px 8px 24px;
+        }
+    .topical__headline-link-list {
+		margin-top: 16px;
+
+	}
+	.vertical .topical__headline-link-list {
+		margin-top: 16px;
+        border-top: 1px solid #DCDCDC;
+        padding-top: 4px;
+
+	}
+    
+
+
+
+
+
+        
+
+
+
+
+
+
+
+.u-responsive-ratio img{
+width: 100%;
+height: 100%;
+position: relative;
+top: 0;
+left: 0;
+}
+
+.u-responsive-ratio {
+width: 100%;
+padding-bottom: 60%;
+position: relative;
+overflow: hidden;
+}
+.sponsor{ float:right; display:block;}
+.sponsor img{width:88px;height:31px;}
+.special-event-promotion-best .sponsor img{width:100%;height:100%; }
+.special-event-promotion-best .sponsor {float: left; }
+
+
+p.advertisement{position:relative; bottom:4px; margin:0px;width:150px;display:inline-block;font-size:10px; line-height:14px; text-transform:uppercase;color:#505050; text-align:right!important;}
+
+
+
+.topical__headline-link {
+
+vertical-align: top;
+width: 100%;
+}
+
+.topical__headline-link {
+padding-top: 4px;
+}
+
+a.topical__headline-link  {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+a:hover  {
+color: #1167A8;
+text-decoration: none;
+cursor: pointer;
+}
+
+
+
+.topical__headline-link {
+display: block;
+}
+
+.topical__headline-link+.topical__headline-link:first {
+border-top: 1px solid #DDD;
+}
+
+.HYPE_scene span.responsive-image__label-text, .HYPE_scene .programme-duration{
+color: #767676
+}
+
+.ad-container.grey-bg{
+    background: #EDEDED;
+}
+.elsewhere .clear{
+clear: both;
+border-bottom: none;
+margin: 9px 16px 0px 16px;
+}
+
+.HYPE_scene span.icon.video.icon--dark {
+line-height: 15px;
+}
+
+.vertical.bbc-capital .topical__headline-link-list{
+	padding-top: 12px;
+}
+
+.bbc-capital > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)
+{
+	padding-top: 8px;
+}
+
+.HYPE_scene .outbrain .js-more-index__placeholder.row-2 {
+margin-top: 24px;
+}
+
+.HYPE_scene .special-event-promotion-best.vertical.programmes {
+padding: 0px 24px 24px 24px;
+background: #EDEDED;
+margin-bottom: 24px;
+}
+
+.HYPE_scene .special-event-promotion-best.vertical.programmes .group:first-child .programmes-icon{
+	padding: 3px 12px 5px 0px;
+	background: #EDEDED;
+}
+
+.HYPE_scene .programmes-icon span.icon-podcast {
+font-size: 21px;
+bottom: -4px;
+}
+
+.HYPE_scene .top-stories .programmes-icon{
+background: #FFF;
+position: absolute;
+bottom: 0px;
+}

@@ -5,7 +5,7 @@ date: 2009-11-01
 categories:
 description:
 image:
-cover-image: /assets/images/BBC-Wales-Online/cover-image.png
+cover-image: /assets/img/BBC-Wales-Online/cover-image.png
 prototype-link:
 
 content-block:
@@ -47,21 +47,21 @@ content-block:
     Media:
       - Layout-Classes: pt-3 pl-3 pr-3 p-sm-1 align-content-center col-sm-12
         Video-Classes:
-        Video: /assets/images/BBC-Wales-Online/doctor-who-series-3.mp4
-        Video-Poster: /assets/images/BBC-Wales-Online/doctor-who-series-guide.png
+        Video: /assets/img/BBC-Wales-Online/doctor-who-series-3.mp4
+        Video-Poster: /assets/img/BBC-Wales-Online/doctor-who-series-guide.png
 
       - Layout-Classes: pt-3 pl-3 pr-3 p-sm-1 align-content-center col-sm-12
         Video-Classes:
-        Video: /assets/images/BBC-Wales-Online/monster_files_ood.mp4
-        Video-Poster: /assets/images/BBC-Wales-Online/ood.jpg
+        Video: /assets/img/BBC-Wales-Online/monster_files_ood.mp4
+        Video-Poster: /assets/img/BBC-Wales-Online/ood.jpg
 
       - Layout-Classes: p-3 p-sm-1 align-content-center col-12
-        Image: /assets/images/BBC-Wales-Online/Doctor-who-red-site.png
+        Image: /assets/img/BBC-Wales-Online/Doctor-who-red-site.png
 
       - Layout-Classes: pl-3 pr-2 p-sm-1 align-content-center col-6
-        Image: /assets/images/BBC-Wales-Online/k9-promo.png
+        Image: /assets/img/BBC-Wales-Online/k9-promo.png
       - Layout-Classes: pr-3 pl-2 p-sm-1 align-content-center col-6
-        Image: /assets/images/BBC-Wales-Online/cyber-assault-promo.png
+        Image: /assets/img/BBC-Wales-Online/cyber-assault-promo.png
 
     Description-Post-Media:
       - Layout-Classes: col-12
@@ -78,14 +78,14 @@ content-block:
     Media:
       - Layout-Classes: p-3 p-sm-1 align-content-center col-sm-12
         Video-Classes:
-        Video: /assets/images/BBC-Wales-Online/doctor-who-return-of-the-rutans.mp4
-        Video-Poster: /assets/images/BBC-Wales-Online/rutan.jpg
+        Video: /assets/img/BBC-Wales-Online/doctor-who-return-of-the-rutans.mp4
+        Video-Poster: /assets/img/BBC-Wales-Online/rutan.jpg
 
       - Layout-Classes: pl-3 pr-2 p-sm-1 align-content-center col-6
-        Image: /assets/images/BBC-Wales-Online/doctorwho-dw.png
+        Image: /assets/img/BBC-Wales-Online/doctorwho-dw.png
 
       - Layout-Classes: pr-3 pl-2 p-sm-1 align-content-center col-6
-        Image: /assets/images/BBC-Wales-Online/doctorwho-daleks.png
+        Image: /assets/img/BBC-Wales-Online/doctorwho-daleks.png
     Description-Post-Media:
       - Layout-Classes: col-12
         Figcaption: |
@@ -99,10 +99,10 @@ content-block:
     Media:
       - Layout-Classes: pb-6 p-3 p-sm-1 align-content-center col-12 col-sm-6
         H3-Heading: Sarah Jane Adventures
-        Image: /assets/images/BBC-Wales-Online/sja.png
+        Image: /assets/img/BBC-Wales-Online/sja.png
       - Layout-Classes: p-3 p-sm-1 align-content-center col-12 col-sm-6
         H3-Heading: Merlin
-        Image: /assets/images/BBC-Wales-Online/merlin.png
+        Image: /assets/img/BBC-Wales-Online/merlin.png
 
 
   - Theme-Classes: block-mb bg-snow
@@ -111,11 +111,11 @@ content-block:
     Media:
       - Layout-Classes: pb-6 p-3 p-sm-1 align-content-center col-12 col-sm-6
         H3-Heading: Last Chance To See
-        Image: /assets/images/BBC-Wales-Online/last-chance-to-see.png
+        Image: /assets/img/BBC-Wales-Online/last-chance-to-see.png
 
       - Layout-Classes: p-3 p-sm-1 align-content-center col-12 col-sm-6
         H3-Heading: Raise Your Game
-        Image: /assets/images/BBC-Wales-Online/raise-your-game.png
+        Image: /assets/img/BBC-Wales-Online/raise-your-game.png
 
 
 
@@ -125,10 +125,10 @@ content-block:
     Media:
       - Layout-Classes: pb-6 p-3 p-sm-1 align-content-center col-12 col-sm-6
         H3-Heading: BBC Wales Site
-        Image: /assets/images/BBC-Wales-Online/bbc-wales.png
+        Image: /assets/img/BBC-Wales-Online/bbc-wales.png
 
       - Layout-Classes: p-3 p-sm-1 align-content-center col-12 col-sm-6
         H3-Heading: BBC Cymru Site
-        Image: /assets/images/BBC-Wales-Online/bbc-cymru.png
+        Image: /assets/img/BBC-Wales-Online/bbc-cymru.png
 
 ---

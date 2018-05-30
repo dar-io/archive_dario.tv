@@ -5,7 +5,7 @@ date: 2011-01-10
 categories:
 description:
 image:
-cover-image: /assets/images/childrens/cbbc-cbeebies.png
+cover-image: /assets/img/childrens/cbbc-cbeebies.png
 prototype-link:
 
 content-block:
@@ -50,17 +50,17 @@ Overall responsibilities include design lead across popular CBBC and CBeebies ga
   - Theme-Classes: block-mb bg-snow
     Media:
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_04.png
+        Image: /assets/img/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_04.png
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_06.png
+        Image: /assets/img/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_06.png
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_07.png
+        Image: /assets/img/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_07.png
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_09.png
+        Image: /assets/img/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_09.png
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_11.png
+        Image: /assets/img/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_11.png
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_14.png
+        Image: /assets/img/childrens/Games-Gel/GEL_games_styleguide_v1.2_Draft_Page_14.png
 
     Description-Post-Media:
       - Layout-Classes: col-12
@@ -111,22 +111,22 @@ Overall responsibilities include design lead across popular CBBC and CBeebies ga
 
     Media:
       - Layout-Classes:  p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Wizards-vs-Aliens/01_wva.png
+        Image: /assets/img/childrens/Wizards-vs-Aliens/01_wva.png
 
       - Layout-Classes:  p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Wizards-vs-Aliens/02_wva.png
+        Image: /assets/img/childrens/Wizards-vs-Aliens/02_wva.png
 
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Wizards-vs-Aliens/03_wva.png
+        Image: /assets/img/childrens/Wizards-vs-Aliens/03_wva.png
 
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Wizards-vs-Aliens/04_wva.png
+        Image: /assets/img/childrens/Wizards-vs-Aliens/04_wva.png
 
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Wizards-vs-Aliens/05_wva.png
+        Image: /assets/img/childrens/Wizards-vs-Aliens/05_wva.png
 
       - Layout-Classes: p-1 align-content-center col-6 col-md-4
-        Image: /assets/images/childrens/Wizards-vs-Aliens/06_wva.png
+        Image: /assets/img/childrens/Wizards-vs-Aliens/06_wva.png
 
 
   - Theme-Classes: block-mt block-mb bg-snow
@@ -155,16 +155,16 @@ Overall responsibilities include design lead across popular CBBC and CBeebies ga
     Layout-Classes: mb-md-0 offset-md-0 offset-lg-2 col-sm-12 col-md-10
     Media:
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/Deadly_Madagascar/2-start.JPG
+        Image: /assets/img/childrens/Deadly_Madagascar/2-start.JPG
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/Deadly_Madagascar/5-missions.JPG
+        Image: /assets/img/childrens/Deadly_Madagascar/5-missions.JPG
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/Deadly_Madagascar/7-basecamp.JPG
+        Image: /assets/img/childrens/Deadly_Madagascar/7-basecamp.JPG
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/Deadly_Madagascar/8-mainGame.JPG
+        Image: /assets/img/childrens/Deadly_Madagascar/8-mainGame.JPG
 
     Description-Post-Media:
       - Layout-Classes: col-12
@@ -199,16 +199,16 @@ Overall responsibilities include design lead across popular CBBC and CBeebies ga
     Media:
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/go-jetters/01BigBenGame.jpg
+        Image: /assets/img/childrens/go-jetters/01BigBenGame.jpg
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/go-jetters/GJ-User-Flow-diagram.png
+        Image: /assets/img/childrens/go-jetters/GJ-User-Flow-diagram.png
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/go-jetters/02BigBenGame.jpg
+        Image: /assets/img/childrens/go-jetters/02BigBenGame.jpg
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/go-jetters/04BigBenGame.jpg
+        Image: /assets/img/childrens/go-jetters/04BigBenGame.jpg
 
     Description-Post-Media:
       - Layout-Classes: col-12
@@ -233,16 +233,16 @@ Overall responsibilities include design lead across popular CBBC and CBeebies ga
 
     Media:
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/bsp/12-again.png
+        Image: /assets/img/childrens/bsp/12-again.png
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/bsp/cbeebies-jubilee.png
+        Image: /assets/img/childrens/bsp/cbeebies-jubilee.png
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/bsp/MAP_All-Over-The-Place.png
+        Image: /assets/img/childrens/bsp/MAP_All-Over-The-Place.png
 
       - Layout-Classes: p-1 align-content-center col-6
-        Image: /assets/images/childrens/bsp/Mike-the-knight.png
+        Image: /assets/img/childrens/bsp/Mike-the-knight.png
 
       - Layout-Classes: p-1 col-12 align-content-center col-md-6
         Video-Classes: rounded videoWrapper

@@ -1,0 +1,62 @@
+.HYPE_scene .live-event-index__container {
+display: block;
+clear: both;
+padding-top: 12px;
+}
+
+.HYPE_scene .live-event-index__entries {
+display: block;
+visibility: visible;
+opacity: 1;
+-webkit-transition: opacity 0.8s linear;
+-moz-transition: opacity 0.8s linear;
+-ms-transition: opacity 0.8s linear;
+-o-transition: opacity 0.8s linear;
+transition: opacity 0.8s linear;
+min-height: 50px;
+width: 95%;
+}
+
+.HYPE_scene .live-event-index-item {
+margin-top: 12px;
+padding: 16px;
+background: #F2F2F2;
+overflow: hidden;
+}
+
+.HYPE_scene .live-event-index .date--v2 {
+display: block;
+}
+
+.HYPE_scene .live-event-index-item__text {
+clear: none;
+margin-top: 8px;
+color: #606060;
+}
+
+.HYPE_scene .live-event-index-item__text p:first-of-type {
+display: inline;
+}
+
+.HYPE_scene .live-event-index__container:after {
+clear: both;
+content: '\0020';
+display: block;
+height: 0;
+overflow: hidden;
+visibility: hidden;
+}
+
+.HYPE_scene a.faux-block-link__overlay-link {
+position: absolute;
+z-index: 0;
+opacity: 0;
+}
+
+.HYPE_scene .live-event-index {
+margin-bottom: 24px;
+}
+
+.HYPE_scene h3.live-event-index__header {
+margin: 0;
+}

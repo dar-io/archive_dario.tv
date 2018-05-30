@@ -6,8 +6,8 @@ categories:
 description:
 tags:
   - Case Study
-image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.002.png
-cover-image: /assets/images/Mundo-Hindi-Research-findings-Highlights/mundo-hindi-us.png
+image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.002.png
+cover-image: /assets/img/Mundo-Hindi-Research-findings-Highlights/mundo-hindi-us.png
 prototype-link: /assets/prototypes/hindi/index.html
 
 content-block:
@@ -29,7 +29,7 @@ content-block:
 
     Media:
       - Layout-Classes: pl-1 pr-1 align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/NewsResponsivev1.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/NewsResponsivev1.png
 
 
     Right-Side-Column:
@@ -106,7 +106,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12 col-lg-6 col-xl-7 mt-3  mt-lg-5
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/wireframes-news-responsive.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/wireframes-news-responsive.png
 
 
   - Theme-Classes: block-mt block-mb bg-gray-100
@@ -124,7 +124,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/ukchina-workshop-photos.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/ukchina-workshop-photos.png
         Figcaption: "Photos from the editorial workshop. Starting on the feature phone, the main task for this workshop was for editorial to use paper cutouts of components and lay them out across large printouts of Smart, Tablet and Desktop screens."
 
 
@@ -133,7 +133,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
     Description:
     Media:
     - Layout-Classes: align-content-center col-sm-12
-      Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/ukchina-workshop-wireframe.png
+      Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/ukchina-workshop-wireframe.png
       Figcaption: "Final wireframe outlining the content ordering for the <a class='' href='http://www.bbc.com/ukchina/simp'>BBC UK China website</a>. We had to deliver this for each of the 28 World service sites' editorial teams."
 
   - Theme-Classes: block-mt bg-snow
@@ -146,10 +146,10 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: mb-5 mb-md-0 mt-md-4 col-sm-12 col-md-6 col-lg-5 col-xl-5
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Homepage-designs.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Homepage-designs.png
 
       - Layout-Classes:  mt-4 align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/what-is-the-modular-component-framework.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/what-is-the-modular-component-framework.png
 
   - Theme-Classes:  block-mb block-mt bg-gray-100
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
@@ -187,7 +187,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12 col-lg-6 col-xl-6 mt-3  mt-lg-5
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.005.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.005.png
         Figcaption: "From left to right, MVP, Prototype and Legacy BBC News Site. The majority of the participants in this experiment preferred the prototype. The legacy BBC News site was the last of the choices, even when compared with the MVP."
 
   - Theme-Classes: bg-snow
@@ -229,7 +229,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
 
     Media:
-      - Full-width-image: /assets/images/Mundo-Hindi-Research-findings-Highlights/mvp-prototype-static.png
+      - Full-width-image: /assets/img/Mundo-Hindi-Research-findings-Highlights/mvp-prototype-static.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-stone-deep text-snow
@@ -246,7 +246,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.005.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.005.png
 
 
 
@@ -264,7 +264,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.006.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.006.png
 
 
 
@@ -284,7 +284,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.007.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.007.png
 
 
 
@@ -300,7 +300,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.013.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.013.png
 
 
   - Theme-Classes: collapse multi-collapse block-mb bg-navy-deep text-snow
@@ -315,7 +315,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.015.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.015.png
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy text-snow
     id: multiCollapse_7
@@ -337,7 +337,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.009.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.009.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy-deep text-snow
@@ -352,7 +352,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.010.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.010.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt block-mb bg-navy text-snow
@@ -365,7 +365,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.011.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.011.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy-deep text-snow
@@ -380,7 +380,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.012.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.012.png
 
 
 
@@ -396,7 +396,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.017.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.017.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy-deep text-snow
@@ -411,7 +411,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.018.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.018.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy text-snow
@@ -424,7 +424,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: mb-4 mb-md-0 align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.019.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.019.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy-deep text-snow
@@ -438,7 +438,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.020.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.020.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy text-snow
@@ -452,19 +452,19 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.021.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.021.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt block-mb bg-navy-deep text-snow
     id: multiCollapse_16
-    Pattern-Image:  /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights_articles.022.png
+    Pattern-Image:  /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights_articles.022.png
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-7 col-xl-6
     H2-Heading: Articles
     Description:
 
     Media:
       - Full-width-Classes: col-sm-10 align-content-right padding-zero
-        Full-width-image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.022.png
+        Full-width-image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.022.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt block-mb bg-navy text-snow
@@ -481,7 +481,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Full-width-Classes: col-sm-10 align-content-right padding-zero
-        Full-width-image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.023.png
+        Full-width-image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.023.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy-deep text-snow
@@ -494,7 +494,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Full-width-Classes: col-sm-10 align-content-right padding-zero
-        Full-width-image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.024.png
+        Full-width-image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.024.png
 
 
 
@@ -509,7 +509,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.025.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.025.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy-deep text-snow
@@ -518,7 +518,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.027.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.027.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt bg-navy text-snow
@@ -529,7 +529,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.028.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.028.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt block-mb bg-navy-deep text-snow
@@ -543,7 +543,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
       - Paragraph: "In Delhi, most users did not engaged with related stories. Few or any, didn't get to the end of the story. The large image was thought to be an advert or a footer of the page and therefore avoided. Also, the copy failed to promote further exploration."
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.029.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.029.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt block-mb bg-navy text-snow
@@ -559,7 +559,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
       - Paragraph: "<blockquote class='blockquote'> <p class='mb-0'>“I want to know why everyone is so interested.”</p> <footer class='blockquote-footer'>Female, Resp05 <cite title='Delhi'>Delhi 🇮🇳</cite></footer> </blockquote>"
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.030.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.030.png
 
 
   - Theme-Classes: collapse multi-collapse block-mt block-mb bg-navy-deep text-snow
@@ -574,7 +574,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.032.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.032.png
         Figcaption: "The words represent a final thought of the participates based on the adjective cards distributed by the end of each interview, provide subtile but nevertheless important information about the consumers preferences."
 
 
@@ -585,7 +585,7 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
       - H3-Heading: "What people thought of the website in Delhi"
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.033.png
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/Mundo-Hindi-Research-findings-Highlights.033.png
 
 
   - Theme-Classes: block-mt block-mb bg-gray-100
@@ -601,6 +601,6 @@ launched the UK and international BBC News sites, and helped launch 28 World Ser
 
     Media:
       - Layout-Classes: align-content-center col-sm-12
-        Image: /assets/images/Mundo-Hindi-Research-findings-Highlights/final-version-bbc-news-responsive-v1.jpg
+        Image: /assets/img/Mundo-Hindi-Research-findings-Highlights/final-version-bbc-news-responsive-v1.jpg
 
 ---

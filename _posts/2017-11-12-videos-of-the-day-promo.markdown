@@ -7,8 +7,8 @@ categories:
 tags:
   - Case Study
 description: "In 2016, I was tasked to improve the user experience"
-image: /assets/images/news-stream-promo/promo-videos-of-the-day.gif
-cover-image: /assets/images/news-stream-promo/promo-videos-of-the-day.gif
+image: /assets/img/news-stream-promo/promo-videos-of-the-day.gif
+cover-image: /assets/img/news-stream-promo/promo-videos-of-the-day.gif
 
 content-block:
   - Theme-Classes: block-mt bg-red text-snow
@@ -39,7 +39,7 @@ content-block:
           - Role: "UX research"
 
     Media:
-      - Full-width-image: /assets/images/news-stream-promo/videos-of-the-day.png
+      - Full-width-image: /assets/img/news-stream-promo/videos-of-the-day.png
 
   - Theme-Classes: block-mb block-mt bg-red text-snow
     Pattern-Image:
@@ -82,7 +82,7 @@ content-block:
     Media:
       - Layout-Classes: align-content-center col-sm-12
         Image-Classes:
-        Image: /assets/images/news-stream-promo/07_post-its_News_stream.png
+        Image: /assets/img/news-stream-promo/07_post-its_News_stream.png
         Figcaption: Ideas sketched on post-its following a meeting with the BA and iOS & Android engineers.
 
 
@@ -100,7 +100,7 @@ content-block:
       - Bullet: "We know that users who have visited VotD come back more frequently and view significantly more videos. But, there has been some potential adverse effects on the News app video viewing which has seen a (-24%) decline in daily video views."
 
     Media:
-      - Full-width-image: /assets/images/news-stream-promo/videos-of-the-day-flow-diagram-v2.gif
+      - Full-width-image: /assets/img/news-stream-promo/videos-of-the-day-flow-diagram-v2.gif
 
 
   - Theme-Classes: pb-4 block-mt bg-snow
@@ -117,7 +117,7 @@ content-block:
     Media:
       - Layout-Classes: mt-4 align-content-center col-sm-12 mb-4
         Image-Classes:
-        Image: /assets/images/news-stream-promo/VotD-carousel-engagement@4x.png
+        Image: /assets/img/news-stream-promo/VotD-carousel-engagement@4x.png
 
 
 
@@ -135,7 +135,7 @@ content-block:
       - Layout-Classes: align-content-center col-sm-8 col-md-4 col-lg-4
         Image-Classes:
         Figcaption-top: Original Ten to Watch promo before being renamed later to Videos of the Day.
-        Image: /assets/images/news-stream-promo/Ten_to_Watch_original promo.png
+        Image: /assets/img/news-stream-promo/Ten_to_Watch_original promo.png
 
 
   - Theme-Classes: block-mt bg-snow
@@ -159,18 +159,18 @@ content-block:
     Media:
       - Layout-Classes: align-content-center col-sm-8 col-md-4 col-lg-4 mb-4
         Image-Classes: border-bottom border-secondary border-w-2
-        Image: /assets/images/news-stream-promo/05_NewStoriesPromo_Final_version.gif
+        Image: /assets/img/news-stream-promo/05_NewStoriesPromo_Final_version.gif
         Figcaption-top: Hypothesis 1
         Figcaption: Hypothesis 1 – Original experience. A single entry point to Videos of the Day with rotating images from within the package and with video count.
 
       - Layout-Classes: align-content-center col-sm-8 col-md-4 col-lg-4 mb-4
-        Image: /assets/images/news-stream-promo/00_NewStoriesPromo_first_versions.gif
+        Image: /assets/img/news-stream-promo/00_NewStoriesPromo_first_versions.gif
         Image-Classes: border-bottom border-secondary border-w-2
         Figcaption-top: Hypothesis 2
         Figcaption: Hypothesis 2 – A single entry point to BBC Stories promo with rotating images and headlines from within the package of videos.
 
       - Layout-Classes: align-content-center col-sm-8 col-md-4 col-lg-4 mb-4
-        Image: /assets/images/news-stream-promo/06_NewStoriesPromo_Final_version.gif
+        Image: /assets/img/news-stream-promo/06_NewStoriesPromo_Final_version.gif
         Image-Classes: border-bottom border-secondary border-w-2
         Figcaption-top: Hypothesis 3
         Figcaption: Hypothesis 3 – Carousel featuring the total of videos within the package with images and headlines.
@@ -212,18 +212,18 @@ content-block:
     Media:
       - Layout-Classes: align-content-center col-4 mt-2
         Image-Classes: border-bottom border-secondary border-w-2 mt-2
-        Image: /assets/images/news-stream-promo/09_NewStoriesPromo_Exploration.gif
+        Image: /assets/img/news-stream-promo/09_NewStoriesPromo_Exploration.gif
         Figcaption-top:   
 
       - Layout-Classes: align-content-center col-4 mt-2
         Image-Classes: border-bottom border-secondary border-w-2 mt-2
-        Image: /assets/images/news-stream-promo/10_NewStoriesPromo_Exploration.gif
+        Image: /assets/img/news-stream-promo/10_NewStoriesPromo_Exploration.gif
         Figcaption-top:
         Figcaption:
 
       - Layout-Classes: align-content-center col-4 mt-2
         Image-Classes: border-bottom border-secondary border-w-2 mt-2
-        Image: /assets/images/news-stream-promo/11_NewStoriesPromo_Exploration.gif
+        Image: /assets/img/news-stream-promo/11_NewStoriesPromo_Exploration.gif
         Figcaption-top:
         Figcaption:
 
@@ -257,12 +257,12 @@ content-block:
     Media:
       - Layout-Classes: align-content-center col-sm-8 col-md-4 col-lg-4 mb-4
         Image-Classes: border-bottom border-secondary border-w-2
-        Image: /assets/images/news-stream-promo/05_NewStoriesPromo_Final_version.gif
+        Image: /assets/img/news-stream-promo/05_NewStoriesPromo_Final_version.gif
         Figcaption-top: Hypothesis 1 - Variant A
         Figcaption: Original experience – Editorial preferred option. A single entry point into a linear experience.
 
       - Layout-Classes: align-content-center col-sm-8 col-md-4 col-lg-4 mb-4
-        Image: /assets/images/news-stream-promo/06_NewStoriesPromo_Final_version.gif
+        Image: /assets/img/news-stream-promo/06_NewStoriesPromo_Final_version.gif
         Image-Classes: border-bottom border-secondary border-w-2
         Figcaption-top: Hypothesis 3 - Variant B
         Figcaption: Winning variant – 96% uplift in unique play conversion rate and 36% uplift in total plays/browser
@@ -295,7 +295,7 @@ content-block:
     Media:
       - Layout-Classes: align-content-center col-sm-6 col-md-4 col-lg-4
         Image-Classes:
-        Image: /assets/images/news-stream-promo/BBC-Stories-Image-Treatment_1.png
+        Image: /assets/img/news-stream-promo/BBC-Stories-Image-Treatment_1.png
         Figcaption-top:
         Figcaption:
 
@@ -314,13 +314,13 @@ content-block:
     Media:
       - Layout-Classes: align-content-center col-sm-12 col-md-6 col-lg-6
         Image-Classes:
-        Image: /assets/images/news-stream-promo/stories-photoshop-actions-template.gif
+        Image: /assets/img/news-stream-promo/stories-photoshop-actions-template.gif
         Figcaption-top: Photoshop actions in 'action'.
         Figcaption:
 
       - Layout-Classes: align-content-center col-sm-12 col-md-6 col-lg-6
         Image-Classes:
-        Image: /assets/images/news-stream-promo/stories-image-treatment.png
+        Image: /assets/img/news-stream-promo/stories-image-treatment.png
         Figcaption-top: Colour palette was limited to the BBC Stories visual identity.
         Figcaption:
 

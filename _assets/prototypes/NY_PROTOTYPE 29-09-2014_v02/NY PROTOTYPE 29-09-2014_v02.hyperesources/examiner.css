@@ -1,0 +1,82 @@
+.HYPE_scene .examiner .more-index-unit__image {
+margin-bottom: 0px;
+}
+
+.HYPE_scene .examiner .more-index-unit__meta {
+background-color: #EDEDED; 
+padding-bottom: 8px;
+padding-top: 8px;
+padding-left: 8px;
+padding-right: 8px; 
+/*border-bottom: 1px solid #ECE9E9; */
+/* border-left: 1px solid #ECE9E9; */
+/* border-right: 1px solid #ECE9E9; */
+}
+
+
+.HYPE_scene .examiner .byline span.name {
+color: #CB0000;
+}
+
+.HYPE_scene .examiner .byline .bbc-role {
+color: #414141;
+display: block;
+line-height: 16px;
+}
+
+.HYPE_scene .examiner .byline  p {
+display: inherit;
+margin: 0em 0;
+min-height: 54px;
+}
+
+
+.HYPE_scene .examiner .portrait img.js-image-replace {
+border-radius: 50%;
+background-color: #fff;
+/* border: 1px solid rgba(204, 204, 204, 0); */
+}	
+
+.HYPE_scene .examiner span.portrait.analysis {
+width: 56px;
+float: right;
+position: relative;
+top: -4px;
+right: 0px;
+height: 56px;
+}
+.HYPE_scene .examiner .byline{
+	display: block;
+	padding-bottom: 0px;
+	border-bottom: 0px solid #ededed;
+	min-height: 50px;
+	padding-top: 8px;
+}
+
+.HYPE_scene .examiner .byline a.more-index-unit {
+padding: 0;
+float: none;
+}
+
+
+.HYPE_scene .examiner .byline p.hide {
+display: none;
+}
+
+.HYPE_scene .examiner .unit__meta {
+border-bottom: 0px solid #CCC;
+margin-bottom: 0px;
+padding-bottom: 8px;
+}
+
+.HYPE_scene .examiner .more-index-unit__title {
+min-height: 66px;
+}
+
+.HYPE_scene .explainers .more-index-unit__image .programmes-icon {
+padding-left: 6px;
+}
+
+.HYPE_scene .explainers .unit__meta {
+padding-top: 8px;
+}

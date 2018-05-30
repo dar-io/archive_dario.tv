@@ -5,7 +5,7 @@ date: 2013-09-22
 categories:
 description:
 image:
-cover-image: /assets/images/iptv/iptv-cover-image.png
+cover-image: /assets/img/iptv/iptv-cover-image.png
 
 content-block:
 
@@ -22,8 +22,8 @@ content-block:
     Media:
       - Layout-Classes: pl-0 pr-0 align-content-center col-sm-12
         Video-Classes:
-        Video: /assets/images/iptv/Iptv_Sony_W850C.mp4
-        Video-Poster: /assets/images/iptv/poster-iptv-video.png
+        Video: /assets/img/iptv/Iptv_Sony_W850C.mp4
+        Video-Poster: /assets/img/iptv/poster-iptv-video.png
         Figcaption: Design by Ste Everington. Prototyping and motion study by me.
 
     Right-Side-Column:
@@ -68,8 +68,8 @@ content-block:
     Media:
       - Layout-Classes: pl-0 pr-0 align-content-center col-sm-12
         Video-Classes:
-        Video: /assets/images/iptv/iptv-lower-third-wireframe.mp4
-        Video-Poster: /assets/images/iptv/iptv-lower-third-wireframe.jpg
+        Video: /assets/img/iptv/iptv-lower-third-wireframe.mp4
+        Video-Poster: /assets/img/iptv/iptv-lower-third-wireframe.jpg
         Figcaption: Concept motion prototyped by me exploring how collection of items expands.
 
 
@@ -81,8 +81,8 @@ content-block:
     Media:
       - Layout-Classes: pl-0 pr-0 align-content-center col-sm-12
         Video-Classes: align-content-center
-        Video: /assets/images/iptv/collection-episodes.mp4
-        Video-Poster: /assets/images/iptv/collection-episodes.jpg
+        Video: /assets/img/iptv/collection-episodes.mp4
+        Video-Poster: /assets/img/iptv/collection-episodes.jpg
         Figcaption: Motion concept created in HTML5 exploring how users could access series episodes from the playback screen.
 
 
@@ -97,16 +97,16 @@ content-block:
 
     Media:
       - Layout-Classes: p-1 align-content-center col-12 col-md-6
-        Image: /assets/images/iptv/Lower_third_0000_----368-x-272-&-272x212-Collections----.png
+        Image: /assets/img/iptv/Lower_third_0000_----368-x-272-&-272x212-Collections----.png
 
       - Layout-Classes: p-1 align-content-center col-12 col-md-6
-        Image: /assets/images/iptv/Lower_third_0002_1.2-LOCKED-FOCUS-Collections-Vertical-Carousel.png
+        Image: /assets/img/iptv/Lower_third_0002_1.2-LOCKED-FOCUS-Collections-Vertical-Carousel.png
 
       - Layout-Classes: p-1 align-content-center col-12 col-md-6
-        Image: /assets/images/iptv/02_Main_Navigation_Signature_Pattern_150813_v1.jpg
+        Image: /assets/img/iptv/02_Main_Navigation_Signature_Pattern_150813_v1.jpg
 
       - Layout-Classes: p-1 align-content-center col-12 col-md-6
-        Image: /assets/images/iptv/Main_Navigation_Signature_Pattern_150813_v1.jpg
+        Image: /assets/img/iptv/Main_Navigation_Signature_Pattern_150813_v1.jpg
 
 
 ---

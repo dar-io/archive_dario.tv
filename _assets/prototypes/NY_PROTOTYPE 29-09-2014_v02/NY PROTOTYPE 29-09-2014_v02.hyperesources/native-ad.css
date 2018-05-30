@@ -1,0 +1,75 @@
+
+ 	.sponsor{ margin:14px 24px 10px 16px;}
+ 	.HYPE_scene .ad-container{
+		width:100%;
+		}
+		
+ 	.HYPE_scene .bold-pica{
+
+		font-weight:bold; 
+		display:block; 
+		padding:0px 0px 3px 0px;
+		}
+
+	.HYPE_scene .clear{
+		clear:both;
+		}
+	.HYPE_scene .image-responsive{ 
+		width:100%;
+		}
+	.HYPE_scene .text-native-ad{
+		padding:12px 24px 0px 24px;
+		}
+	
+
+
+.HYPE_scene .ad-container{
+background-color: #EDEDED;
+display: inline-block;
+margin-bottom: 24px;
+padding-bottom: 16px;
+}
+.HYPE_scene .ad-container .u-responsive-ratio img{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.HYPE_scene .ad-container .u-responsive-ratio {
+width: 100%;
+padding-bottom: 60%;
+position: relative;
+overflow: hidden;
+}
+.sponsor{ float:right; display:block;}
+.sponsor img{width:88px;height:31px;}
+.HYPE_scene p.advertisement{position:relative; bottom:4px; margin:0px;width:150px;display:inline-block;font-size:10px; line-height:14px; text-transform:uppercase;color:#505050; text-align:right!important;}
+
+
+
+.HYPE_scene .text-native-ad .topical__headline-link {
+display: inline-block;
+vertical-align: top;
+width: 100%;
+}
+
+.HYPE_scene .text-native-ad .topical__headline-link {
+padding-top: 11px;
+padding-bottom: 11px;
+}
+
+
+
+
+
+.HYPE_scene .text-native-ad .topical__headline-link {
+border-top: 1px solid #DDD;
+}
+
+.HYPE_scene .text-native-ad .topical__headline-link+.topical__headline-link:first {
+border-top: 1px solid #DDD;
+}
+
+

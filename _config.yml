@@ -1,9 +1,8 @@
+
 # Site settings
 baseurl: ""
 
-# Color settings (Hex value without #)
-color_alpha: ffffff
-color_beta: 222222
+
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
@@ -24,14 +23,25 @@ default_img:
 social:
   twitter:
 
+include: ['_pages']
+markdown: redcarpet
+kramdown:
+  input: GFM
+       
 # Build settings
-exclude: ["node_modules", "gulpfile.js", "assets/js/app.js", "README.md", "Gemfile", "Gemfile.lock"]
+exclude: [
+ "node_modules",
+ "gulpfile.js",
+ "assets/js/app.js",
+ "README.md",
+ "Gemfile",
+ "_assets",
+ "vendor",
+ "package.json",
+ "Gemfile.lock"]
+
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
-
-# Sass
-sass:
-  style: compressed
 
 # Gems
 plugins: [jekyll-sitemap, octopress-autoprefixer]

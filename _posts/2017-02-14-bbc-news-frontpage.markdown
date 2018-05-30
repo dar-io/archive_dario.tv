@@ -6,8 +6,8 @@ categories:
 tags:
   - Case Study
 description:
-image: /assets/images/homepage/homepage-background-image.png
-cover-image: /assets/images/homepage/homepage-cover-image.png
+image: /assets/img/homepage/homepage-background-image.png
+cover-image: /assets/img/homepage/homepage-cover-image.png
 
 content-block:
   - Theme-Classes: block-mt bg-red text-snow
@@ -35,7 +35,7 @@ content-block:
           - Role: "Interactive Design"
 
     Media:
-      - Full-width-image: /assets/images/homepage/cover-image-frontpage.png
+      - Full-width-image: /assets/img/homepage/cover-image-frontpage.png
 
 
   - Theme-Classes: block-mb block-mt bg-snow
@@ -118,7 +118,7 @@ content-block:
     Layout-Classes: offset-md-0 offset-lg-2 col-sm-12 col-md-10 col-lg-4 col-xl-4
 
     Media:
-      - Full-width-image: /assets/images/homepage/homepage_sketch-wide.jpg
+      - Full-width-image: /assets/img/homepage/homepage_sketch-wide.jpg
         Full-width-Classes: align-content-center
         Figcaption-top: "Early sketch of the News homepage focused on targeting underserved audiences and exploring the question: How Might We effectively showcase Features, Live, Video and Visual Journalism to surface the depth and breadth of content from across BBC News output?"
 
@@ -137,7 +137,7 @@ content-block:
       - Paragraph: "I shadowed senior front page editors and journalists to understand their workflow when curating stories to be featured on the news front page. I talked to engineers. I questioned everything and challenged any preconceived assumptions."
 
     Media:
-      - Full-width-image: /assets/images/homepage/01-sketch-top-stories.jpg
+      - Full-width-image: /assets/img/homepage/01-sketch-top-stories.jpg
         Layout-Classes: align-content-center
         Figcaption-top: "Early exploration of the Top stories slice with a variety of content types. The goal was to showcase depth and breath of news stories."
 
@@ -166,7 +166,7 @@ content-block:
       - Paragraph: "One of the outcomes of these sessions was the introduction of “Slices”. Slices run horizontally across the full width of the screen. They are easy to reorder, the content hierarchy is consistent across all the breakpoints. It also provides more flexibility for editorial to reorder content depending on the news agenda."
 
     Media:
-      - Full-width-image: /assets/images/homepage/wall-with-sketches.jpg
+      - Full-width-image: /assets/img/homepage/wall-with-sketches.jpg
         Layout-Classes: align-content-center
         Figcaption-top: "During our weekly design critique team meetings, we've encouraged designers to explore ideas on how they would see the BBC News homepage evolve."
 
@@ -184,7 +184,7 @@ content-block:
 
     Media:
       - Layout-Classes: align-content-center col-8 col-sm-8 col-md-3
-        Image: /assets/images/homepage/editorial-workshop_v1.jpeg
+        Image: /assets/img/homepage/editorial-workshop_v1.jpeg
         Figcaption: "Pruning, Grouping and Ordering content workshop with Editorial and Product stakeholders to define the content strategy for the BBC News homepage"
 
   - Theme-Classes: block-mb block-mt bg-f8f8f8
@@ -200,7 +200,7 @@ content-block:
 
     Media:
       - Layout-Classes: align-content-center col-12
-        Image: /assets/images/homepage/BBC_News_Personas.png
+        Image: /assets/img/homepage/BBC_News_Personas.png
         Figcaption-Full-width: "Key traits of BBC News personas: Headlines only, Social Mobile Tweeters, Local Feelgood, Social Connectors and Supervisual Snackers"
 
 
@@ -212,7 +212,7 @@ content-block:
       - H3-Heading: Designing in the Browser
     Media:
       - Layout-Classes: align-content-center col-12 col-sm-12 col-lg-8 mb-4 mt-3
-        Image: /assets/images/homepage/start-collider.gif
+        Image: /assets/img/homepage/start-collider.gif
         Figcaption: "I've built the BBC News frontpage using the BBC GEL SCSS Framework using a tool created by UX Designer Simon Sinclair known as Collider (<a href='http://atomicdesign.bradfrost.com/'>Based on Atomic Design</a>). "
 
 
@@ -242,7 +242,7 @@ content-block:
 
     Media:
         - Layout-Classes:  align-content-center
-          Full-width-image: /assets/images/homepage/design-prototype.jpg
+          Full-width-image: /assets/img/homepage/design-prototype.jpg
 
 
   - Theme-Classes: block-mb block-mt bg-snow
@@ -267,7 +267,7 @@ content-block:
           <br /> <a target="blank" class="chip" href="http://www.bbc.co.uk/news">2) Live BBC News Homepage</a>
 
     Media:
-      - Image: /assets/images/homepage/01_composition-homepage_evolution.jpg
+      - Image: /assets/img/homepage/01_composition-homepage_evolution.jpg
 
 
 
@@ -282,7 +282,7 @@ content-block:
       - Paragraph: "The page also does a much better job of getting people to video content, with 32% of video page views coming from the front page versus 10% previously. It is also making people come back more often. The front page users now come back on average 9% more often during a week than they did with the old page design."
 
     Media:
-      - Image: /assets/images/homepage/homepage-stats.png
+      - Image: /assets/img/homepage/homepage-stats.png
 
   - Theme-Classes: block-mb block-mt bg-gray-100
     Pattern-Image:

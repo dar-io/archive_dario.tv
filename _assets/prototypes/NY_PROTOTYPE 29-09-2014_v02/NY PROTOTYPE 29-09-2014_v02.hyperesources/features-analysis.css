@@ -1,0 +1,20 @@
+.HYPE_scene .bold-image-promo__image img {
+display: block;
+width: 100%;
+}
+
+.HYPE_scene .bold-image-promo__title {
+margin-top: 8px;
+margin-bottom: 0px;
+
+}
+
+.HYPE_scene .bold-image-promo__summary {
+color: #606060;
+margin-top: 1px;
+margin-bottom: 20px;
+}
+
+.HYPE_scene .bold-image-promo__image .responsive-image__label{
+	background-color:#EDEDED;
+}
