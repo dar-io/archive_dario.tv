@@ -2,7 +2,8 @@
 
 ## Process
 - run npm install
-- Bundle install
+- run npm install --save-dev gulp-gh-pages
+- run Bundle install
 - run gulp serve
 
 #paths
