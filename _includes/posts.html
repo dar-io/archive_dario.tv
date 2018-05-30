@@ -1,0 +1,32 @@
+
+<div  class="container block-mt">
+  <div class="row ">
+    <div class="col-12"  itemscope itemtype="http://schema.org/Blog">
+      <div id="portfolio" class="row d-flex">
+          <h2 class="col-12 mb-4 font-weight-light text-secondary">Portfolio</h2>
+        {% for post in site.posts %}
+          <div class="mb-4 col-12 col-sm-6 col-md-4" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <div class="h-100 preview__link wow slideInUp bg-white">
+              <a  href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+                <div class="preview__img ">
+                  <figure class="absolute-bg wow fadeIn" data-wow-delay="600ms" style="background-image: url('{{ post.cover-image }}');"></figure>
+                </div>
+                <div class="p-4">
+                  <time class="type-size-13 preview__date text-secondary" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                  <h5 itemprop="name">{{ post.title }}</h5>
+                </div>
+              </a>
+              {% if post.tags %}
+                <div class="pb-4 pl-4 pr-4">
+                  {% for tag in post.tags %}
+                    <a class="type-size-13 p-2 btn-sm btn-light" href="{{ site.baseurl }}/tag/{{ tag | downcase | slugify }}">{{ tag }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

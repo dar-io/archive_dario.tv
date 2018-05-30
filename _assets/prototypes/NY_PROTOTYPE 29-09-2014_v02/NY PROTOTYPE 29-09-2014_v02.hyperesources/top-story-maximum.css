@@ -1,0 +1,37 @@
+.HYPE_scene .hard-news-unit--maximum .hard-news-unit__headline-container {
+background-color: #FFF;
+padding-right: .5em;
+padding-top: 0.4em;
+position: relative;
+width: 80%;
+margin-top: -38px;
+}
+
+.HYPE_scene .top-stories__max-volume .related-content-links {
+margin-top: 15px;
+}
+
+.HYPE_scene .related-content-links--stretch-on-wide .related-content-links__list-item {
+display: inline-block;
+margin-right: 8.33333%;
+vertical-align: top;
+width: 41.66667%;
+}
+
+.HYPE_scene .related-content-links--stretch-on-wide .related-content-links__link {
+padding-bottom: 10px;
+padding-top: 10px;
+}
+
+.HYPE_scene .related-content-links__list-item+.related-content-links__list-item {
+border-top: 1px solid #DDD;
+}
+
+.HYPE_scene .related-content-links--stretch-on-wide .related-content-links__list-item:first-child+.related-content-links__list-item {
+border-top: 0;
+}
+
+.HYPE_scene .related-content-links__link {
+color: #000;
+display: block;
+}

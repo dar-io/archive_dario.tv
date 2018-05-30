@@ -1,0 +1,246 @@
+---
+layout: default
+---
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  {% for item in page.content-block %}
+    <section id="{{item.id}}" class="position-relative opener {{item.Theme-Classes}}"  style="background-size: cover; background-image: url('{{ item.Pattern-Image }}');">
+
+
+      <div class="container">
+        <div class="row">
+          {% if item.Left-Side-Column == nil %}
+          {% else %}
+            <div class="h6 offset-lg-0 col-12 col-lg-2">
+              <div class="row">
+
+                {% for entry in item.Left-Side-Column %}
+                  <div class="{{ entry.Classes }}">
+                    {% if entry.Heading == nil %}
+                    {% else %}
+                      <h6 class="mb-1">{{ entry.Heading }}</h6>
+                    {% endif %}
+                    <span class="type-size-15 font-weight-normal">{{ entry.Item }}</span>
+                  </div>
+                {% endfor %}
+
+              </div>
+            </div>
+          {% endif %}
+          {% for entry in item.Media-Top %}
+
+            {% if entry.Image == nil %}
+            <div class="{{ entry.Layout-Classes }}">
+               <figcaption class="figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+            </div>
+            {% endif %}
+
+            {% if entry.Image %}
+                <div class="{{ entry.Layout-Classes }}">
+                  {% if entry.Figcaption-top %}
+                  <figcaption class="figure-caption text-center"><small>{{ entry.Figcaption-top }}</small></figcaption>
+                  {% endif %}
+                  <img class="rounded img-fluid mx-auto w-100 {{ entry.Image-Classes }}"  src="{{ site.baseurl }}{{ entry.Image }}" alt="{{ entry.Figcaption }}">
+                  {% if entry.Figcaption %}
+                  <figcaption class="figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+                  {% endif %}
+                </div>
+            {% endif %}
+
+          {% endfor %}
+
+          <div class="{{item.Layout-Classes}}">
+
+            {% if item.H1-Heading and item.Subheading %}
+              <h5 class="mb-5 font-weight-normal text-secondary">{{item.Subheading | textilize}}</h5>
+              <h1 class="display-4 mb-5 font-weight-bold">{{item.H1-Heading }}</h1>
+            {% endif %}
+
+            {% if item.H1-Heading and item.Subheading == nil and item.H2-Heading == nil %}
+              <h1 class="display-4 mb-5 font-weight-bold">{{item.H1-Heading }}</h1>
+            {% endif %}
+
+            {% if item.H2-Heading and item.H1-Heading == nil and item.Subheading== nil %}
+              <h2 class="h1 mb-5 font-weight-bold">{{item.H2-Heading}}</h2>
+            {% endif %}
+
+            {% if item.Subheading and item.H2-Heading == nil and item.H1-Heading == nil  %}
+              <h6 class="mb-4 font-weight-medium text-secondary">{{item.Subheading | textilize}}</h6>
+            {% endif %}
+            {% if item.H2-Heading and item.Subheading and item.H1-Heading == nil %}
+              <h5 class="mb-5 font-weight-normal text-secondary">{{item.Subheading | textilize}}</h5>
+              <h2 class="mb-5 h1 font-weight-bold">{{item.H2-Heading}}</h2>
+
+            {% endif %}
+            {% if item.H1-Heading and item.H2-Heading and item.Subheading == nil %}
+                <h1 class="mb-5 font-weight-bold">{{item.H1-Heading}}</h1>
+                <h2 class="h1 mb-2 font-weight-bold">{{item.H2-Heading}}</h2>
+            {% endif %}
+
+            {% for entry in item.Description %}
+              {% if entry.H3-Heading %}
+                <h4 class="font-weight-medium mb-2">{{entry.H3-Heading}}</h4>
+              {% endif %}
+              {% if entry.Heading %}
+                <h6 class="font-weight-medium">{{entry.Heading}}</h6>
+              {% endif %}
+              {% if entry.Paragraph %}
+                <p class="font-weight-normal">{{entry.Paragraph | textilize}}</p>
+              {% endif %}
+            {% endfor %}
+
+            {% if item.U-List == nil %}
+            {% else %}
+              <ul class="Bullet type-size-16">
+                {% for entry in item.U-List %}
+                  {% if entry.Bullet == nil %}
+                  {% else %}
+                    <li class="font-weight-normal mb-4">{{ entry.Bullet }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if item.O-List == nil %}
+            {% else %}
+              <ol class="Bullet type-size-16">
+                {% for entry in item.O-List %}
+                  {% if entry.Bullet == nil %}
+                  {% else %}
+                    <li class="font-weight-normal mb-4">{{ entry.Bullet }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ol>
+            {% endif %}
+
+            {% for entry in item.Description-post-bullet %}
+              {% if entry.H3-Heading %}
+                <h4 class="font-weight-medium mb-2">{{entry.H3-Heading}}</h4>
+              {% endif %}
+              {% if entry.Heading %}
+                <h6 class="font-weight-medium">{{entry.Heading}}</h6>
+              {% endif %}
+              {% if entry.Paragraph %}
+                <p class="font-weight-normal">{{entry.Paragraph | textilize}}</p>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+
+          {% include project-detail-card.html %}
+
+
+
+          {% for entry in item.Media %}
+
+            {% if entry.Image == nil %}
+            {% else %}
+                <div class="{{ entry.Layout-Classes }}">
+
+                  {% if entry.H3-Heading %}
+                    <h4 class="font-weight-medium mb-2">{{entry.H3-Heading}}</h4>
+                  {% endif %}
+                  {% if entry.Figcaption-top %}
+                  <figcaption class="align-content-center figure-caption text-center"><small>{{ entry.Figcaption-top }}</small></figcaption>
+                  {% endif %}
+                  <img class="rounded img-fluid mx-auto w-100 {{ entry.Image-Classes }}" src="{{ site.baseurl }}{{ entry.Image }}" alt="{{ entry.Figcaption }}">
+                  {% if entry.Figcaption %}
+                  <figcaption class="align-content-center figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+                  {% endif %}
+                </div>
+            {% endif %}
+
+            {% if entry.Video-social == nil %}
+            {% else %}
+                <div class="{{ entry.Layout-Classes }}">
+                  <div class="{{ entry.Video-Classes }}">
+                      <iframe class="embed-responsive-item" src="{{ entry.Video-social }}" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+                  </div>
+                  {% if entry.Figcaption %}
+                  <figcaption class="align-content-center figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+                  {% endif %}
+                </div>
+            {% endif %}
+
+            {% if entry.Video == nil %}
+            {% else %}
+                <div class="d-block {{ entry.Layout-Classes }}">
+                  {% if entry.Figcaption-top %}
+                  <figcaption class="align-content-center figure-caption text-center mb-1"><small>{{ entry.Figcaption-top }}</small></figcaption>
+                  {% endif %}
+                  <video class="rounded img-fluid mx-auto w-100 {{ entry.Video-Classes }}" controls muted autoplay loop preload="auto" name="media" poster="{{ entry.Video-Poster }}">
+                    <source src="{{ entry.Video }}" type="video/mp4">
+                    Your browser does not support the HTML5 videos.
+                  </video>
+                  {% if entry.Figcaption %}
+                  <figcaption class="align-content-center figure-caption text-center mt-1"><small>{{ entry.Figcaption }}</small></figcaption>
+                  {% endif %}
+                </div>
+
+
+            {% endif %}
+
+          {% endfor %}
+
+          {% for entry in item.Description-Post-Media %}
+            <div class="text-center {{entry.Layout-Classes}}">
+                {% if entry.Figcaption %}
+                  <figcaption class="figure-caption w-100 align-content-center text-center mt-1"><small>{{ entry.Figcaption | textilize }}</small></figcaption>
+                {% endif %}
+                {% if entry.Paragraph %}
+                  <p class="font-weight-normal"><small>{{entry.Paragraph | textilize}}</small></p>
+                {% endif %}
+
+            </div>
+          {% endfor %}
+
+          {% include secondary-content-column.html %}
+
+
+        </div>
+
+      </div>
+
+
+      {% for entry in item.Media %}
+
+        {% if entry.Full-width-image == nil %}
+        {% else %}
+            <div class="{{ entry.Full-width-Classes }}">
+              {% if entry.Figcaption-top %}
+              <figcaption class="figure-caption w-100 align-content-center text-center"><small>{{ entry.Figcaption-top }}</small></figcaption>
+              {% endif %}
+              <img  class="img-fluid mx-auto w-100" src="{{ site.baseurl }}{{ entry.Full-width-image }}" alt="{{ entry.Figcaption-Full-width }}">
+              {% if entry.Figcaption-Full-width %}
+              <figcaption class="figure-caption w-100 align-content-center text-center"><small>{{ entry.Figcaption-Full-width }}</small></figcaption>
+              {% endif %}
+            </div>
+        {% endif %}
+      {% endfor %}
+    </section>
+  {% endfor %}
+
+<!-- FOOTER -->
+{% if page.tags.size > 0 %}
+<section class="bg-white border-top border-bottom border-light pb-3 pt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        Tags:
+          {% for tag in page.tags %}
+            <a class="type-size-13 p-2 btn-sm btn-light" href="{{ site.baseurl }}/tag/{{ tag | downcase | slugify }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}
+          {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+
+
+
+
+  {% include posts.html %}
+
+</article>

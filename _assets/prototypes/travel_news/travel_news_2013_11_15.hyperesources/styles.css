@@ -1,0 +1,131 @@
+.infoBox{
+	padding-top: 19px;
+}
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius:0px;
+}
+
+.search-box input {
+  display:block;
+  width:448px;
+  border:0;
+  font-size:16px;
+  padding:7px 1rem;
+    background-color: #5D6061;
+  font-family: arial;
+  font-weight:bold;
+  line-height: 
+
+}
+
+.search-box {
+    position: relative;
+    width: 480px;
+
+}
+
+li a{
+	color:#fff;
+}
+
+.search-box input:focus + .results { display: block }
+
+.search-box .results {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cbcfe2 #c8cee7 #c4c7d7;
+
+    background-color: #fdfdfd;
+
+}
+
+.search-box .results li { display: block }
+
+.search-box .results li:first-child { margin-top: -1px }
+
+.search-box .results li:first-child:before, .search-box .results li:first-child:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px outset transparent;
+}
+
+.search-box .results li:first-child:before {
+    border-bottom: 5px solid #c4c7d7;
+    top: -11px;
+}
+
+.search-box .results li:first-child:after {
+    border-bottom: 5px solid #fdfdfd;
+    top: -10px;
+}
+
+.search-box .results li:first-child:hover:before, .search-box .results li:first-child:hover:after { display: none }
+
+.search-box .results li:last-child { margin-bottom: -1px }
+
+.search-box .results a {
+    display: block;
+    position: relative;
+    margin: 0 -1px;
+    padding: 6px 40px 6px 10px;
+    color: #808394;
+    font-weight: 500;
+    border: 1px solid transparent;
+ 
+}
+
+.search-box .results a span { font-weight: 200 }
+
+.search-box .results a:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -9px;
+    background: url("http://cssdeck.com/uploads/media/items/7/7BNkBjd.png") 0 0 no-repeat;
+}
+
+.search-box .results a:hover {
+    text-decoration: none;
+    color: #fff;
+    border-color: #2380dd #2179d5 #1a60aa;
+    background-color: #338cdf;
+
+ 
+  
+}
+
+.lt-ie9 .search-box input { line-height: 26px }

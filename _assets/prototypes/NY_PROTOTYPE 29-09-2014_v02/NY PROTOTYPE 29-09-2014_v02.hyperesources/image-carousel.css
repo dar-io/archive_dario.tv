@@ -1,0 +1,130 @@
+
+
+.HYPE_scene .flex {
+  background: #fff;
+  padding: 0px;
+      display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-start;
+  -webkit-flex-wrap:  wrap-reverse;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-flex-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.HYPE_scene .image6, .HYPE_scene .image10, .HYPE_scene .image9, .HYPE_scene .image8, .HYPE_scene .image7, .HYPE_scene .image6, .HYPE_scene .image5, .HYPE_scene .image4, .HYPE_scene .image3,.HYPE_scene .image2,.HYPE_scene .image1, .HYPE_scene .flex-4by3, .HYPE_scene .flex-3by4, .HYPE_scene .flex-1by1, .HYPE_scene .flex-2by1, .HYPE_scene .flex-1by2, .HYPE_scene .flex-3by1, .HYPE_scene .flex-1by3 {
+  margin: 2px;
+  background-color: #efefef;
+  background-size: cover;
+  position: relative;
+}
+.HYPE_scene .image6:before, .HYPE_scene .image10:before, .HYPE_scene .image9:before, .HYPE_scene .image8:before, .HYPE_scene .image7:before, .HYPE_scene .image6, .HYPE_scene .image5:before, .HYPE_scene .image4:before, .HYPE_scene .image3:before, .HYPE_scene .image2:before,.HYPE_scene .image1:before, .HYPE_scene .flex-4by3:before, .HYPE_scene .flex-3by4:before, .HYPE_scene .flex-1by1:before, .HYPE_scene .flex-2by1:before, .HYPE_scene .flex-1by2:before, .HYPE_scene .flex-3by1:before, .HYPE_scene .flex-1by3:before {
+  content: "";
+  display: block;
+}
+
+
+.HYPE_scene .flex-3by4, .HYPE_scene .flex-1by1, .HYPE_scene .image3, .HYPE_scene .flex-1by3, .HYPE_scene .flex-2by1, .HYPE_scene .flex-1by2, .HYPE_scene .flex-4by3, .HYPE_scene .image1, .HYPE_scene .flex-3by1,.HYPE_scene .image2,.HYPE_scene .image4,.HYPE_scene .image5,.HYPE_scene .image6{
+flex-grow: 1;
+flex-basis: 1px;
+-webkit-flex-grow: 1;
+-webkit-flex-basis: 1px;
+height: 100%;
+width: 100%;
+}
+
+
+
+
+.HYPE_scene .image6:before, .HYPE_scene .flex-1by3:before, .HYPE_scene .flex-2by1:before, .HYPE_scene .flex-1by1:before, .HYPE_scene .image3:before, .HYPE_scene .flex-4by3:before, .HYPE_scene .image1:before, .HYPE_scene .flex-3by4:before, .HYPE_scene .flex-1by2:before, .HYPE_scene .flex-3by1:before,.HYPE_scene .image2:before,.HYPE_scene .image4:before,.HYPE_scene .image5:before {
+  padding-top: 57%;
+}
+
+
+
+
+
+	
+.HYPE_scene .picture-carousel {
+position: absolute;
+bottom: 0;
+left: 0;
+color: #FFF;
+background: rgba(0, 0, 0, 0.6);
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.68) 41%, rgba(0,0,0,0.9) 100%);
+/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0)), color-stop(41%,rgba(0, 0, 0, 0.68)), color-stop(100%,rgba(0, 0, 0, 0.9))); */
+/* background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.68) 41%,rgba(0, 0, 0, 0.9) 100%); */
+background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.68) 41%,rgba(0,0,0,0.9) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.68) 41%,rgba(0,0,0,0.9) 100%);
+/* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.68) 41%,rgba(0, 0, 0, 0.9) 100%); */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e6000000',GradientType=0 );
+display: block;
+z-index: 999;
+width: 100%;
+padding: 6px 8px 8px 42px;
+margin-right: 4px;
+box-sizing: border-box;
+}
+	
+
+.HYPE_scene span.top-left.icon-photo {
+position: absolute;
+bottom: 0px;
+left: 0px;
+background-color: #FFF;
+color: #000;
+padding: 4px 8px 0px 5px;
+/* border-radius: 16px; */
+font-size: 28px;
+z-index: 9999;
+}
+
+.HYPE_scene span.gallery-headline {
+font-size: 14px;
+line-height: 18px;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+/* padding-top: 0px; */
+}
+
+
+.HYPE_scene span.photo-count {
+font-size: 16px;
+vertical-align: 6px;
+padding-left: 4px;
+display: none;
+}
+
+.HYPE_scene .image6:hover, .HYPE_scene .flex-2by1:hover, .HYPE_scene .image5:hover, .HYPE_scene .flex-4by3:hover, .HYPE_scene .image1:hover, .HYPE_scene .flex-3by1:hover, .HYPE_scene .image4:hover, .HYPE_scene .flex-1by2:hover, .HYPE_scene .image2:hover, .HYPE_scene .flex-3by4:hover, .HYPE_scene .flex-1by3:hover {
+	opacity: 0.9;
+cursor: pointer;
+}
+
+
+.HYPE_scene .progress-bar{
+background:#cb0000;
+display:block;
+height:4px;
+width:100%;
+}
+
+.HYPE_scene .progress-bar-track{
+background:#ccc;
+display:block;
+height:4px;
+width:100%;
+
+}
+
+.HYPE_scene #picture-gallery .flex.hover-progressbar{opacity:1;}
+.HYPE_scene #picture-gallery .hover-progressbar,.HYPE_scene #video-carousel-1 .hover-progressbar{opacity:0;}
+.HYPE_scene #picture-gallery:hover .hover-progressbar, .HYPE_scene #video-carousel-1:hover .hover-progressbar {
+opacity: 1;
+}

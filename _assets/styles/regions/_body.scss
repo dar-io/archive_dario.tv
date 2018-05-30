@@ -1,0 +1,86 @@
+/**
+ * Body
+ */
+body {
+  min-height: 100vh;
+  color: #3b3b3b;
+
+}
+
+
+
+/**
+ * Sections
+ */
+section {
+  position: relative;
+}
+
+.section-padding {
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+
+  @media (min-width: $mq-sm) {
+    padding-top: 0em;
+    padding-bottom: 3em;
+  }
+
+  &--half {
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    @media (min-width: $mq-sm) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+  }
+}
+
+.grid {
+  max-width: 816px;
+  margin-right: 24px;
+  margin-left: 24px;
+
+  @media (min-width: $mq-md) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--double {
+    padding-left: 1em;
+    padding-right: 1em;
+
+
+    @media (min-width: $mq-sm) {
+      margin-right: 24px;
+      margin-left: 24px;
+    }
+    @media (min-width: $mq-md) {
+      margin-right: 4em;
+      margin-left: 4em;
+    }
+    @media (min-width: $mq-lg) {
+      margin-right: 8em;
+      margin-left: 8em;
+      max-width: 1190px;
+    }
+    @media (min-width: $mq-xl) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media (min-width: $mq-xxl) {
+
+    }
+  }
+}
+
+.section-header {
+  text-align: center;
+  overflow: hidden;
+
+  span {
+    @include nth-animation-delay();
+
+    display: inline-block;
+  }
+}

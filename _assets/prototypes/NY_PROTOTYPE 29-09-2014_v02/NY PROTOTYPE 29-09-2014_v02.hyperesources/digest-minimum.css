@@ -1,0 +1,96 @@
+.HYPE_scene .digest-minimum [class^="icon-"], .HYPE_scene .digest-minimum [class*=" icon-"]{
+	padding-bottom: 16px;
+padding-right: 8px;
+}	
+
+.HYPE_scene li.topic-title {
+color: #CB0000;
+
+}
+
+.HYPE_scene  li.headline {
+padding: 8px 0;
+}
+
+.HYPE_scene  .digest-items .headline {
+font-weight: bold;
+}
+
+.HYPE_scene .digest-minimum.videos .digest-items .headline {
+padding-top: 0px;
+}
+
+.HYPE_scene ul.digest-items {
+float: left;
+background-color: #FFF;
+padding: 0px 0px 0px 0px;
+display: inline-block;
+border-left: 0px solid #FFF;
+margin: 0px 0 0px 0;
+
+}
+.HYPE_scene ul.digest-items:nth-child(odd){
+
+}
+
+.HYPE_scene .digest-minimum{
+
+	background-color: #FFF;
+	display: inline-block;
+	margin-bottom: 16px;
+	width: 190px;
+	vertical-align: top;
+}
+
+.HYPE_scene .digest-minimum.videos{
+	width: 272px;
+	margin-right: -1px;
+
+}
+
+.HYPE_scene .digest-minimum .programmes-icon span[class^="icon-"]{
+padding-right: 0px;
+color: #000;
+padding-left: 2px;
+}
+
+.HYPE_scene .digest [class^="icon-"] {
+padding-right: 8px;
+}
+
+.HYPE_scene .videos .digest-items .headline{
+	font-weight: normal;
+}
+
+.HYPE_scene a.topic {
+color: #CB0000;
+margin-bottom: 8px;
+display: block;
+}
+
+.HYPE_scene .external-icon {
+position: absolute;
+bottom: 0px;
+background: #FFF;
+padding: 4px 0px 0px 8px;
+font-size: 28px;
+color: #000;
+line-height: 20px;
+}
+
+.HYPE_scene .features-and-analysis__stories .external-icon {
+background-color: #EDEDED;
+padding: 4px 6px 0px 8px;
+}
+
+.HYPE_scene .entertainment-now h2.group-title {
+
+}
+
+.HYPE_scene .videos ul.digest-items:hover {
+cursor: pointer;
+}
+
+.HYPE_scene .videos ul.digest-items:hover span.regular-pica{
+color: #1167A8;
+}

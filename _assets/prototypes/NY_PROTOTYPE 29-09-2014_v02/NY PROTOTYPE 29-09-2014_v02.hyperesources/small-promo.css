@@ -1,0 +1,63 @@
+.small-promo-group {
+overflow: hidden;
+}
+
+.promo-unit-spacer {
+margin-left: -8px;
+margin-right: -8px;
+}
+
+.small-promo-group__body {
+margin-top: 16px;
+}
+
+.small-promo-group .small-image-promo {
+width: 33.33333%;
+}
+
+.promo-unit-spacer .bold-image-promo, .promo-unit-spacer .small-image-promo, .promo-unit-spacer .vertical-promo__small-unit {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-o-box-sizing: border-box;
+box-sizing: border-box;
+display: inline-block;
+margin-right: -4px;
+vertical-align: top;
+padding-left: 8px;
+padding-right: 8px;
+
+}
+
+.HYPE_scene  .features-and-analysis .bold-image-promo{
+	width: 100%;
+}
+
+.small-image-promo--side-by-side .small-image-promo__image {
+margin-right: 0;
+}
+
+.faux-block-link a, .faux-block-link abbr[title] {
+position: relative;
+z-index: 1;
+}
+
+.HYPE_scene .small-image-promo__title {
+margin-top: 8px;
+display: block;
+font-weight: bold;
+margin-bottom: 2px;
+}
+
+.HYPE_scene .small-image-promo ul.mini-info-list {
+margin: 2px 0 0 0;
+}
+
+.HYPE_scene .small-promo-group__title {
+margin: 0px;
+font-weight: 400;
+}
+
+.HYPE_scene .small-promo-group{
+	margin-top:40px;
+}
