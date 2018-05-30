@@ -109,6 +109,21 @@ gulp.task('clean:svg', function(callback) {
 });
 
 
+// Optimizes and copies image files.
+gulp.task('build:lottie', function() {
+    return gulp.src('_assets/lottie/**/*')
+        // .pipe(svgmin())
+        .pipe(gulp.dest('assets/lottie'))
+        .pipe(gulp.dest('_site/assets/lottie'))
+        .pipe(browserSync.stream());
+});
+// Deletes SVG.
+gulp.task('clean:lottie', function(callback) {
+    del(['assets/lottie', '_site/assets/lottie']);
+    callback();
+});
+
+
 // Runs jekyll build command.
 gulp.task('build:jekyll', function() {
     var shellCommand = 'bundle exec jekyll build --config _config.yml';
@@ -130,13 +145,14 @@ gulp.task('clean', ['clean:jekyll',
     'clean:images',
     'clean:prototypes',
     'clean:svg',
+    'clean:lottie',
     'clean:scripts',
     'clean:styles']);
 
 // Builds site anew.
 gulp.task('build', function(callback) {
     runSequence('clean',
-        ['build:scripts', 'build:images', 'build:prototypes', 'build:svg', 'build:styles'],
+        ['build:scripts', 'build:images', 'build:prototypes', 'build:svg',  'build:lottie', 'build:styles'],
         'build:jekyll',
         callback);
 });
@@ -145,7 +161,7 @@ gulp.task('build', function(callback) {
 gulp.task('build:local', function(callback) {
     runSequence('clean',
         'build:jekyll:local',
-        ['build:scripts', 'build:images', 'build:prototypes', 'build:svg', 'build:styles'],
+        ['build:scripts', 'build:images', 'build:prototypes', 'build:svg',  'build:lottie', 'build:styles'],
         callback);
 });
 
@@ -202,6 +218,9 @@ gulp.task('serve', ['build:local'], function() {
 
     // Watch svg files; changes are piped to browserSync.
     gulp.watch('_assets/svg/**/*', ['build:svg']);
+
+    // Watch for lottie files; changes are piped to browserSync.
+    gulp.watch('_assets/lottie/**/*', ['build:lottie']);
 
     // Watch posts.
     gulp.watch('_posts/**/*.+(md|markdown|MD)', ['build:jekyll:watch']);
